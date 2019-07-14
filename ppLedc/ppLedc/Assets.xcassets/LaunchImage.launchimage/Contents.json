@@ -80,17 +80,18 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "appLaunchImage_640.png",
+      "filename" : "appLaunchImage_640@2x.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
     },
     {
-      "orientation" : "portrait",
-      "idiom" : "iphone",
       "extent" : "full-screen",
-      "minimum-system-version" : "7.0",
+      "idiom" : "iphone",
       "subtype" : "retina4",
+      "filename" : "appLaunchImage_640-1.png",
+      "minimum-system-version" : "7.0",
+      "orientation" : "portrait",
       "scale" : "2x"
     },
     {

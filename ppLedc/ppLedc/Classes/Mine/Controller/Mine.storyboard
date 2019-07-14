@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mine View Controller-->
         <scene sceneID="A20-b3-Sct">
             <objects>
-                <viewController id="vZN-4h-Ift" sceneMemberID="viewController">
+                <viewController id="vZN-4h-Ift" customClass="MineViewController" customModule="ppLedc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJt-CL-OIl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
