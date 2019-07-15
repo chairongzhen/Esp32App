@@ -8,7 +8,7 @@
 
 import UIKit
 private let kTitleViewH : CGFloat = 40
-class MineViewController: UIViewController {
+class MineViewController: PPBaseViewController {
     private lazy var pageTitleView : PageTitleView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles  = ["扫一扫","我的设备"]
@@ -47,8 +47,6 @@ extension MineViewController {
         // cancel the scrollview inner margin
         automaticallyAdjustsScrollViewInsets = false
         
-        // setting navigation bar
-        setupNavigationBar()
         
         // setting title view
         view.addSubview(pageTitleView)
@@ -58,20 +56,6 @@ extension MineViewController {
         pageContentView.backgroundColor = UIColor.purple
     }
     
-    private func setupNavigationBar() {
-        // 设置左侧item
-        let btn = UIButton()
-        btn.setImage(UIImage(named: "logo"), for: .normal)
-        btn.sizeToFit()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
-        // 设置右侧item
-        let size = CGSize(width: 40, height: 40)
-        let addItem = UIBarButtonItem(imageName: "add", highImageName: "add_h", size: size)
-        let qrcodeItem = UIBarButtonItem(imageName: "scan", highImageName: "scan_h", size: size)
-        let profile = UIBarButtonItem(imageName: "profile", highImageName: "profile_h", size: size)
-        navigationItem.rightBarButtonItems = [profile,addItem,qrcodeItem]
-        
-    }
 }
 
 

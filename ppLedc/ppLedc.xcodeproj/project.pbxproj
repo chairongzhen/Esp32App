@@ -20,6 +20,11 @@
 		F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B536B22D8DB1D00167B97 /* Main.storyboard */; };
 		F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B536F22D8DBF800167B97 /* MainViewController.swift */; };
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
+		F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2A822DC1DDB009E29B6 /* NewTableViewCell.swift */; };
+		F758E2B122DC4A92009E29B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2B022DC4A92009E29B6 /* LoginViewController.swift */; };
+		F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2B222DC6AE8009E29B6 /* RegisterViewController.swift */; };
+		F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2BA22DC969B009E29B6 /* PPUtil.swift */; };
+		F758E2BF22DC9D00009E29B6 /* PPBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2BE22DC9D00009E29B6 /* PPBaseViewController.swift */; };
 		F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F0C22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift */; };
 		F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F0E22DA0C1B009E1299 /* PageTitleView.swift */; };
 		F75D3F1122DA1A9F009E1299 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1022DA1A9F009E1299 /* Common.swift */; };
@@ -43,6 +48,11 @@
 		F71B536B22D8DB1D00167B97 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F71B536F22D8DBF800167B97 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		F758E2A822DC1DDB009E29B6 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		F758E2B022DC4A92009E29B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F758E2B222DC6AE8009E29B6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F758E2BA22DC969B009E29B6 /* PPUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPUtil.swift; sourceTree = "<group>"; };
+		F758E2BE22DC9D00009E29B6 /* PPBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPBaseViewController.swift; sourceTree = "<group>"; };
 		F75D3F0C22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		F75D3F0E22DA0C1B009E1299 /* PageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		F75D3F1022DA1A9F009E1299 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -92,6 +102,7 @@
 		F71B531022D8653D00167B97 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F758E2A222DC0F32009E29B6 /* Profile */,
 				F71B536022D8DB0000167B97 /* Main */,
 				F71B535D22D8DB0000167B97 /* Basic */,
 				F71B536422D8DB0000167B97 /* Repeat */,
@@ -174,6 +185,7 @@
 			children = (
 				F71B536B22D8DB1D00167B97 /* Main.storyboard */,
 				F71B536F22D8DBF800167B97 /* MainViewController.swift */,
+				F758E2BE22DC9D00009E29B6 /* PPBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,11 +281,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F758E2A222DC0F32009E29B6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F758E2A322DC0F32009E29B6 /* Controller */,
+				F758E2A422DC0F32009E29B6 /* Model */,
+				F758E2A522DC0F32009E29B6 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F758E2A322DC0F32009E29B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F758E2B022DC4A92009E29B6 /* LoginViewController.swift */,
+				F758E2B222DC6AE8009E29B6 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F758E2A422DC0F32009E29B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F758E2A522DC0F32009E29B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F758E2A822DC1DDB009E29B6 /* NewTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F75D3F0A22D9BD26009E1299 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				F75D3F0B22D9BD79009E1299 /* Extension */,
 				F75D3F1022DA1A9F009E1299 /* Common.swift */,
+				F758E2BA22DC969B009E29B6 /* PPUtil.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -362,17 +409,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F712F40022DB773700585544 /* SettingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
 				F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */,
 				F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */,
 				F75D3F1322DB026C009E1299 /* PageContentView.swift in Sources */,
+				F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */,
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
+				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F75D3F1122DA1A9F009E1299 /* Common.swift in Sources */,
 				F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */,
+				F758E2B122DC4A92009E29B6 /* LoginViewController.swift in Sources */,
 				F712F3FE22DB75E100585544 /* MineViewController.swift in Sources */,
+				F758E2BF22DC9D00009E29B6 /* PPBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
