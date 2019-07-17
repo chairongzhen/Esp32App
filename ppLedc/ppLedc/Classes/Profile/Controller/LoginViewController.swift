@@ -6,6 +6,9 @@
 //  Copyright © 2019 rzchai. All rights reserved.
 //
 
+// https://www.polypite.com/service/gettest
+// https://www.polypite.com/service/posttest
+
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -22,13 +25,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var imgRightHandGone : UIImageView!
     
     var showType : LoginShowType = LoginShowType.NONE
+    let loginButton = UIButton(type: .custom)
+    let registButton = UIButton(type: .custom)
     
+    private lazy var profileVM : ProfileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "用户登陆"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "用户注册", style: .plain, target: self, action: #selector(gotoRegisterView))
         setupUI()
+        
     }
     
 
@@ -37,7 +44,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 extension LoginViewController {
     private func setupUI() {
 
-        
         // owl header
         let imgLogin = UIImageView(frame: CGRect(x: kScreenW / 2 - 211 / 2, y: 100, width: 211, height: 109))
         imgLogin.image =  UIImage(named: "login_n")
@@ -85,6 +91,7 @@ extension LoginViewController {
         txtUser.layer.borderWidth = 0.5
         txtUser.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtUser.leftViewMode = UITextField.ViewMode.always
+        txtUser.placeholder = "请输入用户名"
 
         // username left icon
         let imgUser = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
@@ -101,6 +108,7 @@ extension LoginViewController {
         txtPwd.isSecureTextEntry = true
         txtPwd.leftView  = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtPwd.leftViewMode = UITextField.ViewMode.always
+        txtPwd.placeholder = "请输入密码"
 
         // password left icon
         let imgPwd = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
@@ -109,14 +117,14 @@ extension LoginViewController {
         vLogin.addSubview(txtPwd)
         
         
-        let loginButton = UIButton(type: .custom)
+        
         loginButton.frame = CGRect(x: kScreenW / 2 - 40, y: vLogin.frame.size.height - 40, width: 80, height: 30)
         loginButton.setTitle("登陆", for: .normal)
         loginButton.addTarget(self, action: #selector(loginButtonClick), for: .touchUpInside)
         loginButton.backgroundColor = UIColor.orange
         vLogin.addSubview(loginButton)
         
-        let registButton = UIButton(type: .custom)
+        
         registButton.frame = CGRect(x: kScreenW / 2 - 40 + 90, y: vLogin.frame.size.height - 40, width: 80, height: 30)
         registButton.setTitle("注册", for: .normal)
         registButton.addTarget(self, action: #selector(gotoRegisterView), for: .touchUpInside)
@@ -160,14 +168,50 @@ extension LoginViewController {
         
     }
     
+    private func userLogin(username: String, pwd: String) {
+        profileVM.userLogin(username: username, pwd: pwd) { (message) in
+            if message == "success" {
+                let userinfo = UserDefaults.standard
+                userinfo.set(self.profileVM.userInfo.username, forKey: "username")
+                userinfo.set(self.profileVM.userInfo.nickname, forKey: "nickname")
+                userinfo.set(self.profileVM.userInfo.openid, forKey: "openid")
+                
+                self.present(MainViewController(), animated: true, completion: nil)
+            } else {
+                let alertController = UIAlertController(title: message,
+                                                        message: nil, preferredStyle: .alert)
+                self.present(alertController, animated: true, completion: nil)
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    self.presentedViewController?.dismiss(animated: false, completion: nil)
+                    
+                }
+            }
+        }        
+    }
+    
     @objc func loginButtonClick() {
-        self.present(MainViewController(), animated: true, completion: nil)
+        if txtUser.text == "" {
+            
+            return
+        }
+        
+        if txtPwd.text == "" {
+            print("密码为空")
+            return
+        }
+        
+        userLogin(username: txtUser.text!, pwd: txtPwd.text!)
+        loginButton.isEnabled = false
+        self.perform(#selector(changeButtonStatus), with: nil, afterDelay: 7.0)
     }
     
     @objc func gotoRegisterView() {
-        navigationController?.pushViewController(RegisterViewController(), animated: true)
+        self.present(RegisterViewController(), animated: true, completion: nil)
     }
     
+    @objc func changeButtonStatus(){
+        loginButton.isEnabled = true
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

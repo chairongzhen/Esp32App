@@ -8,7 +8,6 @@
 
 import UIKit
 
-private let kTitleViewH : CGFloat = 40
 
 class BasicViewController:  PPBaseViewController {
     // lazy load properties
@@ -22,7 +21,7 @@ class BasicViewController:  PPBaseViewController {
     
     private lazy var pageContentView : PageContentView = {[weak self] in
         // Setting the content frame
-        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         
         // Setting the child controller
@@ -42,11 +41,13 @@ class BasicViewController:  PPBaseViewController {
         super.viewDidLoad()
         setupUI();
     }
+    
 }
 
 // setting UI
 extension BasicViewController {
     private func setupUI() {
+//        self.navigationController?.isNavigationBarHidden = false
         // cancel the scrollview inner margin
         automaticallyAdjustsScrollViewInsets = false
         
@@ -74,3 +75,5 @@ extension BasicViewController : PageContentViewDelegate {
         pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
+
+

@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let kTitleViewH : CGFloat = 40
-
 class SettingViewController: PPBaseViewController {
     private lazy var pageTitleView : PageTitleView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
@@ -21,7 +19,7 @@ class SettingViewController: PPBaseViewController {
     
     private lazy var pageContentView : PageContentView = {[weak self] in
         // Setting the content frame
-        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         
         // Setting the child controller

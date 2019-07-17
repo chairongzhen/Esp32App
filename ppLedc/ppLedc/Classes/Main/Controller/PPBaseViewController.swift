@@ -13,6 +13,7 @@ class PPBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        
     }
 
 }
@@ -26,11 +27,16 @@ extension PPBaseViewController {
         btn.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         // 设置右侧item
-        let size = CGSize(width: 40, height: 40)
-        let addItem = UIBarButtonItem(imageName: "add", highImageName: "add_h", size: size)
-        let qrcodeItem = UIBarButtonItem(imageName: "scan", highImageName: "scan_h", size: size)
-        let profile = UIBarButtonItem(imageName: "profile", highImageName: "profile_h", size: size)
+        let qrcodeItem = UIBarButtonItem(image: UIImage(named: "add"), style: UIBarButtonItem.Style.plain, target: self, action: Selector("quit"))
+        let addItem = UIBarButtonItem(image: UIImage(named: "scan"), style: UIBarButtonItem.Style.plain, target: self, action: Selector("quit"))
+        let profile = UIBarButtonItem(image: UIImage(named: "quit"), style: UIBarButtonItem.Style.plain, target: self, action: Selector("quit"))
         navigationItem.rightBarButtonItems = [profile,addItem,qrcodeItem]
-        
+    }
+    
+    @objc private func quit() {
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "nickname")
+        UserDefaults.standard.removeObject(forKey: "openid")
+        self.present(LoginViewController(), animated: true, completion: nil)
     }
 }
