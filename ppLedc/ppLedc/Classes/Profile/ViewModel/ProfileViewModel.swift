@@ -15,7 +15,7 @@ class ProfileViewModel {
 
 extension ProfileViewModel {
     func userRegister(username: String, pwd: String, nickname: String, finished: @escaping (_ message: String) ->()) {
-        let params: [String: String] = ["username": username, "pwd": pwd, nickname: nickname]
+        let params: [String: String] = ["username": username, "pwd": pwd, "nickname": nickname]
         NetworkTools.postRequest(URLString: apiRegister, parameters: params as [String : NSString]) { (result) in
             guard let resultDict = result as? [String: NSObject] else {
                 return

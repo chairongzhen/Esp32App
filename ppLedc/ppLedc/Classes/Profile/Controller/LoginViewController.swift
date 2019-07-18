@@ -92,6 +92,8 @@ extension LoginViewController {
         txtUser.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtUser.leftViewMode = UITextField.ViewMode.always
         txtUser.placeholder = "请输入用户名"
+        txtUser.autocorrectionType = UITextAutocorrectionType.no
+        txtUser.autocapitalizationType = UITextAutocapitalizationType.none
 
         // username left icon
         let imgUser = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))

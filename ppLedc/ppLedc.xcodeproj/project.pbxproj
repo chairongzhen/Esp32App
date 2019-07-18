@@ -33,6 +33,9 @@
 		F75D3F1122DA1A9F009E1299 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1022DA1A9F009E1299 /* Common.swift */; };
 		F75D3F1322DB026C009E1299 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1222DB026C009E1299 /* PageContentView.swift */; };
 		F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1422DB064A009E1299 /* UIColor-Extension.swift */; };
+		F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */; };
+		F7A652A522E0635000B31AF6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A422E0635000B31AF6 /* Setting.swift */; };
+		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
 		F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC61F322DDD4D70009027C /* NetworkTools.swift */; };
 		F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC61F622DDDCF40009027C /* ProfileViewModel.swift */; };
 		F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */; };
@@ -69,6 +72,9 @@
 		F75D3F1022DA1A9F009E1299 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		F75D3F1222DB026C009E1299 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		F75D3F1422DB064A009E1299 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSetrtingViewController.swift; sourceTree = "<group>"; };
+		F7A652A422E0635000B31AF6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		F7FC61F322DDD4D70009027C /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		F7FC61F622DDDCF40009027C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		F71B535722D8DB0000167B97 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				F7A652A122E061B200B31AF6 /* ViewModel */,
 				F71B537522D8DEEE00167B97 /* Model */,
 				F71B537622D8DEEE00167B97 /* View */,
 				F71B535822D8DB0000167B97 /* Controller */,
@@ -162,6 +169,7 @@
 			children = (
 				F71B535922D8DB0000167B97 /* Setting.storyboard */,
 				F712F3FF22DB773700585544 /* SettingViewController.swift */,
+				F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +299,7 @@
 		F71B537522D8DEEE00167B97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7A652A422E0635000B31AF6 /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +380,14 @@
 				F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F7A652A122E061B200B31AF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F7FC61F522DDDCC30009027C /* ViewModel */ = {
@@ -511,6 +528,8 @@
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,
 				F712F40022DB773700585544 /* SettingViewController.swift in Sources */,
+				F7A652A522E0635000B31AF6 /* Setting.swift in Sources */,
+				F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
 				F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */,
 				F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */,
@@ -522,6 +541,7 @@
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,
 				F75D3F1122DA1A9F009E1299 /* Common.swift in Sources */,
+				F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */,
 				F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */,
 				F758E2B122DC4A92009E29B6 /* LoginViewController.swift in Sources */,
 				F712F3FE22DB75E100585544 /* MineViewController.swift in Sources */,

@@ -27,9 +27,9 @@ extension PPBaseViewController {
         btn.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         // 设置右侧item
-        let qrcodeItem = UIBarButtonItem(image: UIImage(named: "add"), style: UIBarButtonItem.Style.plain, target: self, action: Selector("quit"))
-        let addItem = UIBarButtonItem(image: UIImage(named: "scan"), style: UIBarButtonItem.Style.plain, target: self, action: Selector("quit"))
-        let profile = UIBarButtonItem(image: UIImage(named: "quit"), style: UIBarButtonItem.Style.plain, target: self, action: Selector("quit"))
+        let qrcodeItem = UIBarButtonItem(image: UIImage(named: "add"), style: UIBarButtonItem.Style.plain, target: self, action: Selector(("quit")))
+        let addItem = UIBarButtonItem(image: UIImage(named: "scan"), style: UIBarButtonItem.Style.plain, target: self, action: Selector(("quit")))
+        let profile = UIBarButtonItem(image: UIImage(named: "quit"), style: UIBarButtonItem.Style.plain, target: self, action: Selector(("quit")))
         navigationItem.rightBarButtonItems = [profile,addItem,qrcodeItem]
     }
     

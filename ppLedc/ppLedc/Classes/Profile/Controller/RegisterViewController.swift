@@ -67,6 +67,8 @@ extension RegisterViewController {
         txtUser.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtUser.leftViewMode = UITextField.ViewMode.always
         txtUser.placeholder = "请输入用户名"
+        txtUser.autocorrectionType = UITextAutocorrectionType.no
+        txtUser.autocapitalizationType = UITextAutocapitalizationType.none
         let imgUser = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
         imgUser.image = UIImage(named: "user")
         txtUser.leftView!.addSubview(imgUser)
@@ -113,6 +115,8 @@ extension RegisterViewController {
         nickName.leftView  = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         nickName.leftViewMode = UITextField.ViewMode.always
         nickName.placeholder = "请输入昵称(可为空)"
+        nickName.autocorrectionType = UITextAutocorrectionType.no
+        nickName.autocapitalizationType = UITextAutocapitalizationType.none
         
         // password left icon
         let imgPwd3 = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))

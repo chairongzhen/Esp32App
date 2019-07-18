@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userinfo = UserDefaults.standard
         let username: Any? = userinfo.object(forKey: "username")
         if let username = username {
-            print(username)
+            print(userinfo.object(forKey: "openid"))
         } else {
             self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         }

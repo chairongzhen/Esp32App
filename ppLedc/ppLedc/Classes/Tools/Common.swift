@@ -17,6 +17,9 @@ let kTitleViewH : CGFloat = 40
 
 
 // api service address
-let apiLogin = "https://www.polypite.com/service/login"
+let apiLogin = "https://www.polypite.com/service/applogin"
 let apiRegister = "https://www.polypite.com/service/register"
+let apiGetSet = "https://www.polypite.com/service/getset"
+let apiUpdateSet = "https://www.polypite.com/service/updateset"
+
 

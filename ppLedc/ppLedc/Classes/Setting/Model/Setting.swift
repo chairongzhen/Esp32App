@@ -1,24 +1,22 @@
 //
-//  UserInfo.swift
+//  Setting.swift
 //  ppLedc
 //
-//  Created by 柴荣臻 on 2019/7/16.
+//  Created by 柴荣臻 on 2019/7/18.
 //  Copyright © 2019 rzchai. All rights reserved.
 //
 
 import UIKit
 
-class UserInfo: NSObject {
-    @objc var uid : String = ""
-    @objc var username : String = ""
-    @objc var nickname : String = ""
-    @objc var openid : String = ""
+class Setting: NSObject {
+    @objc var repeatMode : String = ""
+    @objc var productionMode : String = ""
     
     override init() {
         super.init()
     }
     
-    init(dict : [String : NSObject]) {
+    init(dict: [String: String]) {
         super.init()
         setValuesForKeys(dict)
     }
