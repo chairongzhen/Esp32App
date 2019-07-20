@@ -24,5 +24,24 @@ extension PPAlertBaseViewController {
             self.presentedViewController?.dismiss(animated: false, completion: nil)
             
         }
+    }    
+    func getOpenid() -> String {
+        guard let openid : String =  UserDefaults.standard.object(forKey: "openid") as? String else {
+            return ""
+        }
+        return openid
+    }
+    
+    func alertMessage(title: String, message: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    func alertMessage(title: String, message: String, target: UIViewController) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+        present(MainViewController(), animated: true, completion: nil)
     }
 }

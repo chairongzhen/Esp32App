@@ -8,7 +8,6 @@
 
 import UIKit
 
-private var modeType = [["固定": "select","循环": "no"],["产品": "select","测试": "no"]]
 private var repeatTypeOption = ["固定","循环"]
 private var productiontOption = ["产品","测试"]
 var repeatMode = machineType.repeatType.fixMode
@@ -22,7 +21,7 @@ class ModeSetrtingViewController: PPAlertBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad() 
-        getOpenid()
+        openid = self.getOpenid()
         getSettingData()
         setupUI()
     }
@@ -30,10 +29,6 @@ class ModeSetrtingViewController: PPAlertBaseViewController {
 }
 
 extension ModeSetrtingViewController {
-    func getOpenid() {
-        openid = UserDefaults.standard.object(forKey: "openid") as! String
-    }
-    
     func setupUI() {
         modeTable.backgroundColor = UIColor.white
         modeTable.delegate = self

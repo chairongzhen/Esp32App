@@ -23,6 +23,10 @@
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
 		F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */; };
 		F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730CC5622DE04EA004DEE1D /* UserInfo.swift */; };
+		F733ED4222E186AB0089CD54 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */; };
+		F753E09322E3588100FEA8A3 /* FixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753E09222E3588100FEA8A3 /* FixViewController.swift */; };
+		F753E09622E359CF00FEA8A3 /* LightSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753E09522E359CF00FEA8A3 /* LightSettingView.swift */; };
+		F753E09A22E35A2300FEA8A3 /* LightSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F753E09922E35A2300FEA8A3 /* LightSettingView.xib */; };
 		F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2A822DC1DDB009E29B6 /* NewTableViewCell.swift */; };
 		F758E2B122DC4A92009E29B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2B022DC4A92009E29B6 /* LoginViewController.swift */; };
 		F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758E2B222DC6AE8009E29B6 /* RegisterViewController.swift */; };
@@ -36,6 +40,10 @@
 		F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */; };
 		F7A652A522E0635000B31AF6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A422E0635000B31AF6 /* Setting.swift */; };
 		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
+		F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A822E088ED00B31AF6 /* MyViewController.swift */; };
+		F7F9ADF522E0ABA8003DC0E2 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ADF422E0ABA8003DC0E2 /* MyTableViewCell.swift */; };
+		F7F9ADFA22E0BA18003DC0E2 /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ADF922E0BA18003DC0E2 /* MyViewModel.swift */; };
+		F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ADFB22E0BD5D003DC0E2 /* Machine.swift */; };
 		F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC61F322DDD4D70009027C /* NetworkTools.swift */; };
 		F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC61F622DDDCF40009027C /* ProfileViewModel.swift */; };
 		F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */; };
@@ -62,6 +70,10 @@
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAlertBaseViewController.swift; sourceTree = "<group>"; };
 		F730CC5622DE04EA004DEE1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		F753E09222E3588100FEA8A3 /* FixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewController.swift; sourceTree = "<group>"; };
+		F753E09522E359CF00FEA8A3 /* LightSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingView.swift; sourceTree = "<group>"; };
+		F753E09922E35A2300FEA8A3 /* LightSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LightSettingView.xib; sourceTree = "<group>"; };
 		F758E2A822DC1DDB009E29B6 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
 		F758E2B022DC4A92009E29B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F758E2B222DC6AE8009E29B6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +87,10 @@
 		F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSetrtingViewController.swift; sourceTree = "<group>"; };
 		F7A652A422E0635000B31AF6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		F7A652A822E088ED00B31AF6 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		F7F9ADF422E0ABA8003DC0E2 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		F7F9ADF922E0BA18003DC0E2 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
+		F7F9ADFB22E0BD5D003DC0E2 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		F7FC61F322DDD4D70009027C /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		F7FC61F622DDDCF40009027C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
@@ -177,6 +193,7 @@
 		F71B535A22D8DB0000167B97 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				F7F9ADF822E0BA08003DC0E2 /* ViewModel */,
 				F71B537822D8DEFC00167B97 /* Model */,
 				F71B537722D8DEFC00167B97 /* View */,
 				F71B535B22D8DB0000167B97 /* Controller */,
@@ -189,6 +206,8 @@
 			children = (
 				F71B535C22D8DB0000167B97 /* Mine.storyboard */,
 				F712F3FD22DB75E100585544 /* MineViewController.swift */,
+				F7A652A822E088ED00B31AF6 /* MyViewController.swift */,
+				F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +215,7 @@
 		F71B535D22D8DB0000167B97 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				F753E09422E3589D00FEA8A3 /* ViewModel */,
 				F71B537222D8DED800167B97 /* Model */,
 				F71B537122D8DED800167B97 /* View */,
 				F71B535E22D8DB0000167B97 /* Controller */,
@@ -208,6 +228,7 @@
 			children = (
 				F71B535F22D8DB0000167B97 /* Basic.storyboard */,
 				F71B537922D8DF1500167B97 /* BasicViewController.swift */,
+				F753E09222E3588100FEA8A3 /* FixViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +292,8 @@
 		F71B537122D8DED800167B97 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F753E09522E359CF00FEA8A3 /* LightSettingView.swift */,
+				F753E09922E35A2300FEA8A3 /* LightSettingView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +337,7 @@
 		F71B537722D8DEFC00167B97 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F7F9ADF422E0ABA8003DC0E2 /* MyTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,8 +345,16 @@
 		F71B537822D8DEFC00167B97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7F9ADFB22E0BD5D003DC0E2 /* Machine.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F753E09422E3589D00FEA8A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F758E2A222DC0F32009E29B6 /* Profile */ = {
@@ -386,6 +418,14 @@
 			isa = PBXGroup;
 			children = (
 				F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7F9ADF822E0BA08003DC0E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9ADF922E0BA18003DC0E2 /* MyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -464,6 +504,7 @@
 				F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */,
 				F71B536A22D8DB0000167B97 /* Repeat.storyboard in Resources */,
 				F71B536822D8DB0000167B97 /* Mine.storyboard in Resources */,
+				F753E09A22E35A2300FEA8A3 /* LightSettingView.xib in Resources */,
 				F71B536922D8DB0000167B97 /* Basic.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,18 +572,25 @@
 				F7A652A522E0635000B31AF6 /* Setting.swift in Sources */,
 				F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
+				F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */,
 				F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */,
 				F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */,
 				F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */,
+				F733ED4222E186AB0089CD54 /* QRCodeViewController.swift in Sources */,
 				F75D3F1322DB026C009E1299 /* PageContentView.swift in Sources */,
+				F753E09622E359CF00FEA8A3 /* LightSettingView.swift in Sources */,
+				F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */,
 				F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */,
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,
+				F7F9ADF522E0ABA8003DC0E2 /* MyTableViewCell.swift in Sources */,
+				F7F9ADFA22E0BA18003DC0E2 /* MyViewModel.swift in Sources */,
 				F75D3F1122DA1A9F009E1299 /* Common.swift in Sources */,
 				F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */,
 				F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */,
+				F753E09322E3588100FEA8A3 /* FixViewController.swift in Sources */,
 				F758E2B122DC4A92009E29B6 /* LoginViewController.swift in Sources */,
 				F712F3FE22DB75E100585544 /* MineViewController.swift in Sources */,
 				F758E2BF22DC9D00009E29B6 /* PPBaseViewController.swift in Sources */,

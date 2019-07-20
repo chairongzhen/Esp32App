@@ -10,7 +10,7 @@ import UIKit
 class MineViewController: PPBaseViewController {
     private lazy var pageTitleView : PageTitleView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles  = ["扫一扫","我的设备"]
+        let titles  = ["我的设备","扫一扫"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
         return titleView
@@ -23,11 +23,8 @@ class MineViewController: PPBaseViewController {
         
         // Setting the child controller
         var childVcs = [UIViewController]()
-        for _ in 0..<2 {
-            var vc = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childVcs.append(vc)
-        }
+        childVcs.append(MyViewController())
+        childVcs.append(QRCodeViewController())
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
         return contentView

@@ -26,11 +26,11 @@
             </objects>
             <point key="canvasLocation" x="-2223" y="1320"/>
         </scene>
-        <!--基本设置-->
+        <!--固定模式-->
         <scene sceneID="fEE-Be-ie3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="05Z-ou-pDg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="基本设置" image="basic" id="d4y-jA-AfT"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="05Z-ou-pDg" userLabel="固定模式" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="固定设置" image="basic" id="d4y-jA-AfT" userLabel="固定模式"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MRd-Wa-xz1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

@@ -21,5 +21,8 @@ let apiLogin = "https://www.polypite.com/service/applogin"
 let apiRegister = "https://www.polypite.com/service/register"
 let apiGetSet = "https://www.polypite.com/service/getset"
 let apiUpdateSet = "https://www.polypite.com/service/updateset"
+let apiGetBinds = "https://www.polypite.com/service/getbinds"
+let apiUnBind = "https://www.polypite.com/service/unbindforapp"
+let apiBindMid = "https://www.polypite.com/service/bindmid"
 
 
