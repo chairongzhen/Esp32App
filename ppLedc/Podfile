@@ -4,5 +4,6 @@ use_frameworks!
 target 'ppLedc' do
 
 pod 'Alamofire'
-
+pod 'Charts'
 end
+

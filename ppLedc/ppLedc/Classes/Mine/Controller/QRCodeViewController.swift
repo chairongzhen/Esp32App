@@ -95,11 +95,13 @@ extension QRCodeViewController {
     
     func found(code: String) {
         self.tabBarController?.selectedIndex = 0
+        
         let mid : String = code.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")[0].replacingOccurrences(of: "mid:", with: "")
         if mid == "" {
             return
         }
         bindMid(mid: mid)
+        
     }
     
     override var prefersStatusBarHidden: Bool {

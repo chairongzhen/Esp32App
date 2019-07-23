@@ -16,10 +16,10 @@ extension SettingViewModel {
             guard let isSuccess  = resultDict["isSuccess"] as? Bool else {
                 return
             }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if(isSuccess) {
                 let content = resultDict["content"] as! [String: NSObject]
-                self.setting = Setting(dict: content as! [String : String])
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.setting = Setting(dict: content as! [String : String])                
                 finished("success")
             } else {
                 let message = resultDict["message"] as? String

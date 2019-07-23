@@ -21,6 +21,9 @@
 		F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B536B22D8DB1D00167B97 /* Main.storyboard */; };
 		F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B536F22D8DBF800167B97 /* MainViewController.swift */; };
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
+		F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCB22E5F30E0094A800 /* FixData.swift */; };
+		F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */; };
+		F72D8DD022E702190094A800 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCF22E702190094A800 /* TestViewController.swift */; };
 		F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */; };
 		F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730CC5622DE04EA004DEE1D /* UserInfo.swift */; };
 		F733ED4222E186AB0089CD54 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */; };
@@ -68,6 +71,9 @@
 		F71B536B22D8DB1D00167B97 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F71B536F22D8DBF800167B97 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		F72D8DCB22E5F30E0094A800 /* FixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixData.swift; sourceTree = "<group>"; };
+		F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewModel.swift; sourceTree = "<group>"; };
+		F72D8DCF22E702190094A800 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAlertBaseViewController.swift; sourceTree = "<group>"; };
 		F730CC5622DE04EA004DEE1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +291,7 @@
 			children = (
 				F71B536622D8DB0000167B97 /* Repeat.storyboard */,
 				F712F3FB22DB72B700585544 /* RepeatViewController.swift */,
+				F72D8DCF22E702190094A800 /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 		F71B537222D8DED800167B97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F72D8DCB22E5F30E0094A800 /* FixData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 		F753E09422E3589D00FEA8A3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -544,12 +553,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -565,6 +576,7 @@
 			files = (
 				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
+				F72D8DD022E702190094A800 /* TestViewController.swift in Sources */,
 				F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */,
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,
@@ -572,6 +584,7 @@
 				F7A652A522E0635000B31AF6 /* Setting.swift in Sources */,
 				F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
+				F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */,
 				F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */,
 				F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */,
 				F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */,
@@ -582,6 +595,7 @@
 				F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */,
 				F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */,
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
+				F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,

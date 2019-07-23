@@ -16,10 +16,11 @@ class MineViewController: PPBaseViewController {
         return titleView
         }()
     
-    private lazy var pageContentView : PageContentView = {[weak self] in
+      lazy var pageContentView : PageContentView = {[weak self] in
         // Setting the content frame
         let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabBarH
         let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
+        
         
         // Setting the child controller
         var childVcs = [UIViewController]()
@@ -43,13 +44,13 @@ extension MineViewController {
         // cancel the scrollview inner margin
         automaticallyAdjustsScrollViewInsets = false
         
-        
         // setting title view
         view.addSubview(pageTitleView)
         
         // settting content view
         view.addSubview(pageContentView)
-        pageContentView.backgroundColor = UIColor.purple
+        
+        
     }
     
 }

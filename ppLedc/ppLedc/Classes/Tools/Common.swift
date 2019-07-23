@@ -17,12 +17,13 @@ let kTitleViewH : CGFloat = 40
 
 
 // api service address
-let apiLogin = "https://www.polypite.com/service/applogin"
+let apiLogin = "https://www.polypite.com/service/applogin/"
 let apiRegister = "https://www.polypite.com/service/register"
 let apiGetSet = "https://www.polypite.com/service/getset"
 let apiUpdateSet = "https://www.polypite.com/service/updateset"
 let apiGetBinds = "https://www.polypite.com/service/getbinds"
 let apiUnBind = "https://www.polypite.com/service/unbindforapp"
 let apiBindMid = "https://www.polypite.com/service/bindmid"
-
+let apiUpdateFix = "https://www.polypite.com/service/updatefix"
+let apiGetFix = "https://www.polypite.com/service/getfix"
 
