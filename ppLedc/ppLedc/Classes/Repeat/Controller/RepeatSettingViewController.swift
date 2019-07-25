@@ -27,15 +27,15 @@ class RepeatSettingViewController: PPAlertBaseViewController {
 //       let groupView = ButtonGroupView.buttonGroupView()
 //       return groupView
 //    }()
-    private var tags : [Int] = []
-    private var l1val : [Int] = []
-    private var l2val : [Int] = []
-    private var l3val : [Int] = []
-    private var l4val : [Int] = []
-    private var l5val : [Int] = []
-    private var l6val : [Int] = []
-    private var l7val : [Int] = []
-    private var l8val : [Int] = []
+    private var tags : [Int] = [0,143,144]
+    private var l1val : [Int] = [0,0,0]
+    private var l2val : [Int] = [0,0,0]
+    private var l3val : [Int] = [0,0,0]
+    private var l4val : [Int] = [0,0,0]
+    private var l5val : [Int] = [0,0,0]
+    private var l6val : [Int] = [0,0,0]
+    private var l7val : [Int] = [0,0,0]
+    private var l8val : [Int] = [0,0,0]
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -43,6 +43,7 @@ class RepeatSettingViewController: PPAlertBaseViewController {
     }
     
 }
+
 
 extension RepeatSettingViewController {
     private func setupUI() {
@@ -57,32 +58,32 @@ extension RepeatSettingViewController {
     private func drawButtonGroup() {
 //        buttonGroupView.frame = CGRect(x: 30, y: 290, width: kScreenW, height: 40)
 //        self.view.addSubview(buttonGroupView)
-        btnAdd.frame = CGRect(x: 30, y: 290, width: 44, height: 44)
+        btnAdd.frame = CGRect(x: 30, y: 270, width: 44, height: 44)
         btnAdd.setImage(UIImage(named: "repeatadd"), for: .normal)
         btnAdd.addTarget(self, action: #selector(btnAddClicked), for: .touchUpInside)
         self.view.addSubview(btnAdd)
         
-        btnMinus.frame = CGRect(x: 84, y: 290, width: 44, height: 44)
+        btnMinus.frame = CGRect(x: 84, y: 270, width: 44, height: 44)
         btnMinus.setImage(UIImage(named: "minus"), for: .normal)
         btnMinus.addTarget(self, action: #selector(btnMinusClicked), for: .touchUpInside)
         self.view.addSubview(btnMinus)
         
-        btnModify.frame = CGRect(x: 138, y: 290, width: 44, height: 44)
+        btnModify.frame = CGRect(x: 138, y: 270, width: 44, height: 44)
         btnModify.setImage(UIImage(named: "modify"), for: .normal)
         btnModify.addTarget(self, action: #selector(btnModifyClicked), for: .touchUpInside)
         self.view.addSubview(btnModify)
         
-        btnNext.frame = CGRect(x: 192, y: 290, width: 44, height: 44)
+        btnNext.frame = CGRect(x: 192, y: 270, width: 44, height: 44)
         btnNext.setImage(UIImage(named: "next"), for: .normal)
         btnNext.addTarget(self, action: #selector(btnNextClicked), for: .touchUpInside)
         self.view.addSubview(btnNext)
         
-        btnPrevious.frame = CGRect(x: 248, y: 290, width: 44, height: 44)
+        btnPrevious.frame = CGRect(x: 248, y: 270, width: 44, height: 44)
         btnPrevious.setImage(UIImage(named: "previous"), for: .normal)
         btnPrevious.addTarget(self, action: #selector(btnPreviousClicked), for: .touchUpInside)
         self.view.addSubview(btnPrevious)
         
-        btnEmpty.frame = CGRect(x: 302, y: 290, width: 44, height: 44)
+        btnEmpty.frame = CGRect(x: 302, y: 270, width: 44, height: 44)
         btnEmpty.setImage(UIImage(named: "trash"), for: .normal)
         btnEmpty.addTarget(self, action: #selector(btnEmptyClicked), for: .touchUpInside)
         self.view.addSubview(btnEmpty)
@@ -90,7 +91,7 @@ extension RepeatSettingViewController {
     }
     
     private func drawBottomSlider() {
-        sliderTime.frame = CGRect(x: 20, y: 260, width: kScreenW - 50, height: 20)
+        sliderTime.frame = CGRect(x: 20, y: 240, width: kScreenW - 50, height: 20)
         sliderTime.minimumValue = 0
         sliderTime.maximumValue = 143
         sliderTime.tintColor = UIColor.orange
@@ -150,7 +151,7 @@ extension RepeatSettingViewController {
     }
     
     private func drawChart() {
-        self.chartView.frame = CGRect(x: 0, y: 80, width: kScreenW - 20, height: 200)
+        self.chartView.frame = CGRect(x: 0, y: 80, width: kScreenW - 20, height:  180)
         chartView.delegate = self
         self.view.addSubview(chartView)
         getData()
@@ -313,16 +314,6 @@ extension RepeatSettingViewController {
     }
     
     private func getData() {
-        self.tags = [0,143,144]
-        self.l1val = [0,0,0]
-        self.l2val = [0,0,0]
-        self.l3val = [0,0,0]
-        self.l4val = [0,0,0]
-        self.l5val = [0,0,0]
-        self.l6val = [0,0,0]
-        self.l7val = [0,0,0]
-        self.l8val = [0,0,0]
-        
         repeatViewModel.getRepeatData(openid: getOpenid()) { (message) in
             self.tags = self.repeatViewModel.tags
             self.l1val = self.repeatViewModel.l1val
@@ -379,20 +370,6 @@ extension RepeatSettingViewController {
             
             self.chartSetting()
         }
-        
-
-        
-//        tags = [0,50,87]
-//        l1val = [20,85,100]
-//        l2val = [0,24,100]
-//        l3val = [5,83,100]
-//        l4val = [0,14,100]
-//        l5val = [8,91,100]
-//        l6val = [100,13,100]
-//        l7val = [0,83,100]
-//        l8val = [18,15,100]
-        
-
     }
     
     
@@ -413,7 +390,10 @@ extension RepeatSettingViewController {
     }
     
     @objc private func btnAddClicked() {
-        print("add")
+        let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
+        let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
+        mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
+        pageContentView.setCurrentIndex(currentIndex: 1)
     }
     
     @objc private func btnMinusClicked() {

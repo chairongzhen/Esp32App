@@ -113,4 +113,21 @@ extension PPAlertBaseViewController {
         }
         return "\(hourstr):\(minstr)"
     }
+    
+    func locatePageContentView(currentView:UIViewController)->PageContentView{
+        var vc:UIResponder = currentView
+        while vc.isKind(of: PageContentView.self) != true {
+            vc = vc.next!
+        }
+        return vc as! PageContentView
+    }
+    
+    func locateMainController(currentView:UIView)->UIViewController{
+        var vc:UIResponder = currentView
+        while vc.isKind(of: UIViewController.self) != true {
+            vc = vc.next!
+        }
+        return vc as! UIViewController
+    }
+    
 }

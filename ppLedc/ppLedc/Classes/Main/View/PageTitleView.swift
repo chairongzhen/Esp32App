@@ -155,6 +155,21 @@ extension PageTitleView {
 
 // expose func
 extension PageTitleView {
+    func setCurrentIndex(sourceIndex : Int, targetIndex : Int) {
+        currentIndex = targetIndex
+        
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+        sourceLabel.textColor = UIColor.gray
+        targetLabel.textColor = UIColor.orange
+        
+        if targetIndex == 1 {
+            scrollLine.frame.origin.x = targetLabel.frame.origin.x
+        } else {
+            scrollLine.frame.origin.x = 0
+        }
+    }
     func setTitleWithProgress(progress : CGFloat, sourceIndex : Int, targetIndex : Int) {
         // 1. get source & target label
         let sourceLabel = titleLabels[sourceIndex]

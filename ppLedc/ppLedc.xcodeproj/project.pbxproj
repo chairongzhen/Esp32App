@@ -23,7 +23,6 @@
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
 		F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCB22E5F30E0094A800 /* FixData.swift */; };
 		F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */; };
-		F72D8DD022E702190094A800 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCF22E702190094A800 /* TestViewController.swift */; };
 		F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */; };
 		F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730CC5622DE04EA004DEE1D /* UserInfo.swift */; };
 		F73256A222E7583F00EC4591 /* RepeatSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */; };
@@ -77,7 +76,6 @@
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		F72D8DCB22E5F30E0094A800 /* FixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixData.swift; sourceTree = "<group>"; };
 		F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewModel.swift; sourceTree = "<group>"; };
-		F72D8DCF22E702190094A800 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAlertBaseViewController.swift; sourceTree = "<group>"; };
 		F730CC5622DE04EA004DEE1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatSettingViewController.swift; sourceTree = "<group>"; };
@@ -300,7 +298,6 @@
 			children = (
 				F71B536622D8DB0000167B97 /* Repeat.storyboard */,
 				F712F3FB22DB72B700585544 /* RepeatViewController.swift */,
-				F72D8DCF22E702190094A800 /* TestViewController.swift */,
 				F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */,
 			);
 			path = Controller;
@@ -598,7 +595,6 @@
 				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
-				F72D8DD022E702190094A800 /* TestViewController.swift in Sources */,
 				F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */,
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,

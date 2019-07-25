@@ -62,6 +62,11 @@ extension RepeatViewController {
 }
 
 
+extension RepeatViewController {
+    func changeTitleIndex(sourceIndex : Int, targetIndex : Int) {
+        pageTitleView.setCurrentIndex(sourceIndex : sourceIndex, targetIndex : targetIndex)
+    }
+}
 
 // take the pageTitleView 's protocol
 extension RepeatViewController : PageTitleViewDelegate {
@@ -77,3 +82,4 @@ extension RepeatViewController : PageContentViewDelegate {
         pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
+	
