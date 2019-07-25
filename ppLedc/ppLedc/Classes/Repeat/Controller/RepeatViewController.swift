@@ -26,7 +26,8 @@ class RepeatViewController: PPBaseViewController {
         
         // Setting the child controller
         var childVcs = [UIViewController]()
-        for _ in 0..<2 {
+        childVcs.append(RepeatSettingViewController())
+        for _ in 0..<1 {
             var vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)

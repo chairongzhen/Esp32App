@@ -83,7 +83,6 @@ extension FixViewController {
 extension FixViewController {
     private func setupUI() {
         self.view.addSubview(lightSetting)
-        
     }
     
     @objc func textChange(_ textField:UITextField) {
