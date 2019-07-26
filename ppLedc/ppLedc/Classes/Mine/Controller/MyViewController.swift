@@ -18,8 +18,6 @@ class MyViewController: PPAlertBaseViewController {
         setupUI()
         loadBinds()
     }
-    
-
 }
 
 extension MyViewController {
@@ -40,7 +38,7 @@ extension MyViewController {
         tableView.reloadData()
     }
     
-    private func loadBinds() {
+    func loadBinds() {
         let openid: String = self.getOpenid()
         if openid == "" { return }
         myViewMode.getBinds(openid: openid) { (message) in

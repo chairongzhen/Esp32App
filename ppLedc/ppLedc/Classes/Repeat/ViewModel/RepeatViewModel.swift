@@ -51,5 +51,45 @@ extension RepeatViewModel {
             }
         }
     }
+    
+    func delTag(openid: String, tag: String, finished: @escaping (_ message: String) ->()) {
+        let params : [String: String] = ["openid": openid,"tag": tag]
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        NetworkTools.postRequest(URLString: apiDelTag, parameters: params as [String : NSString]) { (result) in
+            guard let resultDict = result as? [String: NSObject] else {
+                return
+            }
+            guard let isSuccess  = resultDict["isSuccess"] as? Bool else {
+                return
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if(isSuccess) {
+                finished("success")
+            } else {
+                let message = resultDict["message"] as! String
+                finished(message)
+            }
+        }
+    }
+    
+    func emptyTags(openid: String, finished: @escaping (_ message: String) ->()) {
+        let params : [String: String] = ["openid": openid]
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        NetworkTools.postRequest(URLString: apiEmpty, parameters: params as [String : NSString]) { (result) in
+            guard let resultDict = result as? [String: NSObject] else {
+                return
+            }
+            guard let isSuccess  = resultDict["isSuccess"] as? Bool else {
+                return
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if(isSuccess) {
+                finished("success")
+            } else {
+                let message = resultDict["message"] as! String
+                finished(message)
+            }
+        }
+    }
 }
 

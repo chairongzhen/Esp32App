@@ -53,6 +53,14 @@ extension MineViewController {
         
     }
     
+    func changeTitleIndex(sourceIndex : Int, targetIndex : Int) {
+        pageTitleView.setCurrentIndex(sourceIndex : sourceIndex, targetIndex : targetIndex)
+    }
+    
+    
+    func reloadBinds() {
+        
+    }
 }
 
 

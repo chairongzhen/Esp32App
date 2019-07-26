@@ -44,6 +44,7 @@ extension QRCodeViewController {
         myViewMode.bindMid(openid: openid, mid: mid) { (message) in
             if message == "success" {
                 print("machine name: \(mid) has added")
+                self.autoHideAlertMessage(message: "添加成功,如果未显示请手动下拉刷新页面")
             } else {
                 self.autoHideAlertMessage(message: message)
             }
@@ -94,14 +95,15 @@ extension QRCodeViewController {
     }
     
     func found(code: String) {
-        self.tabBarController?.selectedIndex = 0
-        
         let mid : String = code.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")[0].replacingOccurrences(of: "mid:", with: "")
         if mid == "" {
             return
         }
         bindMid(mid: mid)
-        
+        let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
+        let mainViewController : MineViewController = self.locateMainController(currentView: pageContentView) as! MineViewController
+        mainViewController.changeTitleIndex(sourceIndex: 1, targetIndex: 0)
+        pageContentView.setCurrentIndex(currentIndex: 0)
     }
     
     override var prefersStatusBarHidden: Bool {

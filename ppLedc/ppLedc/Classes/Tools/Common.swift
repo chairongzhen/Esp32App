@@ -52,4 +52,6 @@ let apiBindMid = "https://www.polypite.com/service/bindmid"
 let apiUpdateFix = "https://www.polypite.com/service/updatefix"
 let apiGetFix = "https://www.polypite.com/service/getfix"
 let apiGetRepeats = "https://www.polypite.com/service/getrepeats"
+let apiDelTag = "https://www.polypite.com/service/deltag"
+let apiEmpty = "https://www.polypite.com/service/emptytagsios"
 

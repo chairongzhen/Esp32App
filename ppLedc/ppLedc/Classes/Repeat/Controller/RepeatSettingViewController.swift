@@ -23,6 +23,7 @@ class RepeatSettingViewController: PPAlertBaseViewController {
     private lazy var btnPrevious : UIButton = UIButton()
     private lazy var btnEmpty : UIButton = UIButton()
     private lazy var repeatViewModel : RepeatViewModel = RepeatViewModel()
+    
 //    private lazy var buttonGroupView : ButtonGroupView = {
 //       let groupView = ButtonGroupView.buttonGroupView()
 //       return groupView
@@ -66,11 +67,13 @@ extension RepeatSettingViewController {
         btnMinus.frame = CGRect(x: 84, y: 270, width: 44, height: 44)
         btnMinus.setImage(UIImage(named: "minus"), for: .normal)
         btnMinus.addTarget(self, action: #selector(btnMinusClicked), for: .touchUpInside)
+        btnMinus.isEnabled = false
         self.view.addSubview(btnMinus)
         
         btnModify.frame = CGRect(x: 138, y: 270, width: 44, height: 44)
         btnModify.setImage(UIImage(named: "modify"), for: .normal)
         btnModify.addTarget(self, action: #selector(btnModifyClicked), for: .touchUpInside)
+        btnModify.isEnabled = false
         self.view.addSubview(btnModify)
         
         btnNext.frame = CGRect(x: 192, y: 270, width: 44, height: 44)
@@ -143,6 +146,15 @@ extension RepeatSettingViewController {
             chartView.xAxis.removeLimitLine(line)
         }
         let currentTimeLine = ChartLimitLine(limit: timeline, label: "")
+        
+        if self.tags.contains(Int(timeline)) {
+            btnMinus.isEnabled = true
+            btnModify.isEnabled = true
+        } else {
+            btnMinus.isEnabled = false
+            btnModify.isEnabled = false
+        }
+        
         currentTimeLine.lineColor = .orange
         currentTimeLine.lineWidth = 2
         chartView.xAxis.addLimitLine(currentTimeLine)
@@ -381,6 +393,7 @@ extension RepeatSettingViewController {
         timeStepper.value = Double(slider.value)
         txtTime.text = kXAxises[Int(slider.value)]
         drawChartLine(timeline: Double(slider.value))
+        
     }
     
     @objc private func timeStepperChanged(sender: UIStepper) {
@@ -397,23 +410,73 @@ extension RepeatSettingViewController {
     }
     
     @objc private func btnMinusClicked() {
-        print("minus")
+        let current : Int = Int(self.chartView.xAxis.limitLines[0].limit)
+        repeatViewModel.delTag(openid: self.getOpenid(), tag: String(current)) { (message) in
+            if message == "success" {
+                self.getData()
+                self.chartView.data?.notifyDataChanged()
+                self.chartView.notifyDataSetChanged()
+            } else {
+                self.autoHideAlertMessage(message: "数据异常,请联系商家")
+            }
+        }
     }
     
     @objc private func btnModifyClicked() {
-        print("modify")
+        let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
+        let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
+        mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
+        pageContentView.setCurrentIndex(currentIndex: 1)
     }
     
     @objc private func btnNextClicked() {
-        print("next")
+        var current : Int = 0
+        if self.chartView.xAxis.limitLines.count == 0 {
+            current  = self.getCurrentTimeIndex()
+        } else {
+            current = Int(self.chartView.xAxis.limitLines[0].limit)
+        }
+        
+        for val in self.tags {
+            if current == 143 {
+                drawChartLine(timeline: Double(0))
+                break;
+            } else if val > current {
+                drawChartLine(timeline: Double(val))
+                break;
+            }
+        }
     }
     
     @objc private func btnPreviousClicked() {
-        print("previous")
+        var current : Int = 0
+        if self.chartView.xAxis.limitLines.count == 0 {
+            current  = self.getCurrentTimeIndex()
+        } else {
+            current = Int(self.chartView.xAxis.limitLines[0].limit)
+        }
+        
+        for val in self.tags.reversed() {
+            if current == 0 {
+                drawChartLine(timeline: Double(143))
+                break;
+            } else if val < current {
+                drawChartLine(timeline: Double(val))
+                break;
+            }
+        }
     }
     
     @objc private func btnEmptyClicked() {
-        print("empty")
+        repeatViewModel.emptyTags(openid: self.getOpenid()) { (message) in
+            if message == "success" {
+                self.getData()
+                self.chartView.data?.notifyDataChanged()
+                self.chartView.notifyDataSetChanged()
+            } else {
+                self.autoHideAlertMessage(message: "数据异常,请联系商家")
+            }
+        }
     }
 }
 
