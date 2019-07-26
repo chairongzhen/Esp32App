@@ -24,11 +24,12 @@
 		F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCB22E5F30E0094A800 /* FixData.swift */; };
 		F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */; };
 		F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */; };
+		F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F583022EAC7E1001E18F5 /* DetailSettingView.swift */; };
+		F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72F583222EAC948001E18F5 /* DetailSettingView.xib */; };
+		F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F583422EACF38001E18F5 /* RepeatDetailViewController.swift */; };
 		F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730CC5622DE04EA004DEE1D /* UserInfo.swift */; };
 		F73256A222E7583F00EC4591 /* RepeatSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */; };
 		F733ED4222E186AB0089CD54 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */; };
-		F73D681922E8A43400345F19 /* ButtonGroup.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73D681822E8A43400345F19 /* ButtonGroup.xib */; };
-		F73D681D22E8A8A000345F19 /* ButtonGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D681C22E8A8A000345F19 /* ButtonGroupView.swift */; };
 		F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D681E22E9B0F300345F19 /* RepeatViewModel.swift */; };
 		F753E09322E3588100FEA8A3 /* FixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753E09222E3588100FEA8A3 /* FixViewController.swift */; };
 		F753E09622E359CF00FEA8A3 /* LightSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753E09522E359CF00FEA8A3 /* LightSettingView.swift */; };
@@ -77,11 +78,12 @@
 		F72D8DCB22E5F30E0094A800 /* FixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixData.swift; sourceTree = "<group>"; };
 		F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewModel.swift; sourceTree = "<group>"; };
 		F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAlertBaseViewController.swift; sourceTree = "<group>"; };
+		F72F583022EAC7E1001E18F5 /* DetailSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSettingView.swift; sourceTree = "<group>"; };
+		F72F583222EAC948001E18F5 /* DetailSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailSettingView.xib; sourceTree = "<group>"; };
+		F72F583422EACF38001E18F5 /* RepeatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDetailViewController.swift; sourceTree = "<group>"; };
 		F730CC5622DE04EA004DEE1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatSettingViewController.swift; sourceTree = "<group>"; };
 		F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
-		F73D681822E8A43400345F19 /* ButtonGroup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonGroup.xib; sourceTree = "<group>"; };
-		F73D681C22E8A8A000345F19 /* ButtonGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupView.swift; sourceTree = "<group>"; };
 		F73D681E22E9B0F300345F19 /* RepeatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatViewModel.swift; sourceTree = "<group>"; };
 		F753E09222E3588100FEA8A3 /* FixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewController.swift; sourceTree = "<group>"; };
 		F753E09522E359CF00FEA8A3 /* LightSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingView.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				F71B536622D8DB0000167B97 /* Repeat.storyboard */,
 				F712F3FB22DB72B700585544 /* RepeatViewController.swift */,
 				F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */,
+				F72F583422EACF38001E18F5 /* RepeatDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,8 +326,8 @@
 		F71B537322D8DEE700167B97 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F73D681822E8A43400345F19 /* ButtonGroup.xib */,
-				F73D681C22E8A8A000345F19 /* ButtonGroupView.swift */,
+				F72F583222EAC948001E18F5 /* DetailSettingView.xib */,
+				F72F583022EAC7E1001E18F5 /* DetailSettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,8 +528,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */,
+				F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */,
 				F71B530222D81CB300167B97 /* LaunchScreen.storyboard in Resources */,
-				F73D681922E8A43400345F19 /* ButtonGroup.xib in Resources */,
 				F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */,
 				F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */,
 				F71B536A22D8DB0000167B97 /* Repeat.storyboard in Resources */,
@@ -595,12 +598,12 @@
 				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
+				F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */,
 				F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */,
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,
 				F712F40022DB773700585544 /* SettingViewController.swift in Sources */,
 				F7A652A522E0635000B31AF6 /* Setting.swift in Sources */,
-				F73D681D22E8A8A000345F19 /* ButtonGroupView.swift in Sources */,
 				F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
 				F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */,
@@ -615,6 +618,7 @@
 				F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */,
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
 				F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */,
+				F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,

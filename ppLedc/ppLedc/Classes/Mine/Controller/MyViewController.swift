@@ -17,6 +17,7 @@ class MyViewController: PPAlertBaseViewController {
         super.viewDidLoad()
         setupUI()
         loadBinds()
+        NotificationCenter.default.addObserver(self, selector: #selector(upDataChange(notif:)), name: NSNotification.Name(rawValue: "binded"), object: nil)
     }
 }
 
@@ -64,6 +65,10 @@ extension MyViewController {
     }
     
     @objc func refreshDown() {
+        loadBinds()
+    }
+    
+    @objc func upDataChange(notif: NSNotification){
         loadBinds()
     }
 

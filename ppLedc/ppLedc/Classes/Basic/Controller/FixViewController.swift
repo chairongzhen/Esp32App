@@ -20,9 +20,7 @@ class FixViewController: PPAlertBaseViewController {
         settingView.txtSix.addTarget(self, action: #selector(txtSixChanged(_:)), for: .allEditingEvents)
         settingView.txtSeven.addTarget(self, action: #selector(txtSevenChanged(_:)), for: .allEditingEvents)
         settingView.txtEight.addTarget(self, action: #selector(txtEightChanged(_:)), for: .allEditingEvents)
-        
         settingView.btnOpenAll.setImage(UIImage(named: "openall")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        
         settingView.btnCloseAll.setImage(UIImage(named: "closeall")?.withRenderingMode(.alwaysOriginal), for: .normal)
         getFixData()
         return settingView

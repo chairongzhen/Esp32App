@@ -124,6 +124,8 @@ extension RepeatSettingViewController {
         chartView.xAxis.addLimitLine(currentTimeLine)
         timeStepper.value = Double(currentIndex)
         self.view.addSubview(txtTime)
+        let currentTimeIndex = UserDefaults.standard
+        currentTimeIndex.set(currentIndex, forKey: "currentTimeIndex")
     }
     
     private func drawTimeStepper() {
@@ -393,13 +395,16 @@ extension RepeatSettingViewController {
         timeStepper.value = Double(slider.value)
         txtTime.text = kXAxises[Int(slider.value)]
         drawChartLine(timeline: Double(slider.value))
-        
+        let currentTimeIndex = UserDefaults.standard
+        currentTimeIndex.set(Int(slider.value), forKey: "currentTimeIndex")
     }
     
     @objc private func timeStepperChanged(sender: UIStepper) {
         let currentval : Int  = Int(sender.value)
         txtTime.text = kXAxises[currentval]
         drawChartLine(timeline: Double(currentval))
+        let currentTimeIndex = UserDefaults.standard
+        currentTimeIndex.set(currentval, forKey: "currentTimeIndex")
     }
     
     @objc private func btnAddClicked() {
@@ -407,6 +412,8 @@ extension RepeatSettingViewController {
         let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
         mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
         pageContentView.setCurrentIndex(currentIndex: 1)
+        let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"s"), object: nil, userInfo: ["currentTimeIndex":currentIndx])
     }
     
     @objc private func btnMinusClicked() {

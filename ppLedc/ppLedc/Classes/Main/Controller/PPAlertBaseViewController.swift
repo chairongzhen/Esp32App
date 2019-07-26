@@ -67,6 +67,10 @@ extension PPAlertBaseViewController {
         return result
     }
     
+    func getSelectedtimeLine(value: Int) -> String {
+        return kXAxises[value]
+    }
+    
     func getCurrentTimeLine() -> String {
         let currentDate = Date()
         let formatter = DateFormatter()
