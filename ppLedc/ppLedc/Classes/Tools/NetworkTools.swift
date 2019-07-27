@@ -35,4 +35,5 @@ class NetworkTools {
     class func postRequest(URLString: String, parameters: [String:NSString]? = nil,finishedCallback: @escaping (_ result : AnyObject) -> ()) {
         requestData(type: .POST, URLString: URLString, parameters: parameters, finishedCallback: finishedCallback)
     }
+    
 }

@@ -39,6 +39,7 @@ class PageContentView: UIView {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
+        collectionView.isScrollEnabled = false
         return collectionView
         
     }()

@@ -10,6 +10,7 @@ import UIKit
 
 class DetailSettingView: UIView {
 
+    @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var sliderOne: UISlider!
     @IBOutlet weak var sliderTwo: UISlider!
     @IBOutlet weak var sliderThree: UISlider!

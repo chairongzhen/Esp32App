@@ -39,6 +39,7 @@ class RepeatSettingViewController: PPAlertBaseViewController {
     private var l8val : [Int] = [0,0,0]
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(upDataChange(notif:)), name: NSNotification.Name(rawValue: "cdchanged"), object: nil)
         setupUI()
         
     }
@@ -57,11 +58,14 @@ extension RepeatSettingViewController {
     }
     
     private func drawButtonGroup() {
-//        buttonGroupView.frame = CGRect(x: 30, y: 290, width: kScreenW, height: 40)
-//        self.view.addSubview(buttonGroupView)
         btnAdd.frame = CGRect(x: 30, y: 270, width: 44, height: 44)
         btnAdd.setImage(UIImage(named: "repeatadd"), for: .normal)
         btnAdd.addTarget(self, action: #selector(btnAddClicked), for: .touchUpInside)
+        if self.tags.contains(self.getCurrentTimeIndex()) {
+            btnAdd.isEnabled = false
+        } else {
+            btnAdd.isEnabled = true
+        }
         self.view.addSubview(btnAdd)
         
         btnMinus.frame = CGRect(x: 84, y: 270, width: 44, height: 44)
@@ -152,10 +156,14 @@ extension RepeatSettingViewController {
         if self.tags.contains(Int(timeline)) {
             btnMinus.isEnabled = true
             btnModify.isEnabled = true
+            btnAdd.isEnabled = false
         } else {
             btnMinus.isEnabled = false
             btnModify.isEnabled = false
+            btnAdd.isEnabled = true
         }
+        
+        
         
         currentTimeLine.lineColor = .orange
         currentTimeLine.lineWidth = 2
@@ -329,60 +337,67 @@ extension RepeatSettingViewController {
     
     private func getData() {
         repeatViewModel.getRepeatData(openid: getOpenid()) { (message) in
-            self.tags = self.repeatViewModel.tags
-            self.l1val = self.repeatViewModel.l1val
-            self.l2val = self.repeatViewModel.l2val
-            self.l3val = self.repeatViewModel.l3val
-            self.l4val = self.repeatViewModel.l4val
-            self.l5val = self.repeatViewModel.l5val
-            self.l6val = self.repeatViewModel.l6val
-            self.l7val = self.repeatViewModel.l7val
-            self.l8val = self.repeatViewModel.l8val
-
-            var has0 : Bool = false
-            var has143 : Bool = false
             
-            for el in self.tags {
-                if el == 0 {
-                    has0 = true
-                } else if el == 143 {
-                    has143 = true
+            if message == "success" {
+                self.tags = self.repeatViewModel.tags
+                self.l1val = self.repeatViewModel.l1val
+                self.l2val = self.repeatViewModel.l2val
+                self.l3val = self.repeatViewModel.l3val
+                self.l4val = self.repeatViewModel.l4val
+                self.l5val = self.repeatViewModel.l5val
+                self.l6val = self.repeatViewModel.l6val
+                self.l7val = self.repeatViewModel.l7val
+                self.l8val = self.repeatViewModel.l8val
+                
+                var has0 : Bool = false
+                var has143 : Bool = false
+                
+                for el in self.tags {
+                    if el == 0 {
+                        has0 = true
+                    } else if el == 143 {
+                        has143 = true
+                    }
                 }
+                
+                if !has0 {
+                    self.tags.insert(0, at: 0)
+                    self.l1val.insert(0, at:0)
+                    self.l2val.insert(0, at: 0)
+                    self.l3val.insert(0, at: 0)
+                    self.l4val.insert(0, at: 0)
+                    self.l5val.insert(0, at: 0)
+                    self.l6val.insert(0, at: 0)
+                    self.l7val.insert(0, at: 0)
+                    self.l8val.insert(0, at: 0)
+                }
+                if !has143 {
+                    self.tags.append(143)
+                    self.l1val.append(0)
+                    self.l2val.append(0)
+                    self.l3val.append(0)
+                    self.l4val.append(0)
+                    self.l5val.append(0)
+                    self.l6val.append(0)
+                    self.l7val.append(0)
+                    self.l8val.append(0)
+                }
+                self.tags.append(144)
+                self.l1val.append(self.l1val[0])
+                self.l2val.append(self.l2val[0])
+                self.l3val.append(self.l3val[0])
+                self.l4val.append(self.l4val[0])
+                self.l5val.append(self.l5val[0])
+                self.l6val.append(self.l6val[0])
+                self.l7val.append(self.l7val[0])
+                self.l8val.append(self.l8val[0])
+                
+                self.chartSetting()
+                self.chartView.data?.notifyDataChanged()
+                self.chartView.notifyDataSetChanged()
             }
             
-            if !has0 {
-                self.tags.insert(0, at: 0)
-                self.l1val.insert(0, at:0)
-                self.l2val.insert(0, at: 0)
-                self.l3val.insert(0, at: 0)
-                self.l4val.insert(0, at: 0)
-                self.l5val.insert(0, at: 0)
-                self.l6val.insert(0, at: 0)
-                self.l7val.insert(0, at: 0)
-                self.l8val.insert(0, at: 0)
-            }
-            if !has143 {
-                self.tags.append(143)
-                self.l1val.append(0)
-                self.l2val.append(0)
-                self.l3val.append(0)
-                self.l4val.append(0)
-                self.l5val.append(0)
-                self.l6val.append(0)
-                self.l7val.append(0)
-                self.l8val.append(0)
-            }
-            self.tags.append(144)
-            self.l1val.append(self.l1val[0])
-            self.l2val.append(self.l2val[0])
-            self.l3val.append(self.l3val[0])
-            self.l4val.append(self.l4val[0])
-            self.l5val.append(self.l5val[0])
-            self.l6val.append(self.l6val[0])
-            self.l7val.append(self.l7val[0])
-            self.l8val.append(self.l8val[0])
             
-            self.chartSetting()
         }
     }
     
@@ -391,6 +406,10 @@ extension RepeatSettingViewController {
 }
 
 extension RepeatSettingViewController {
+    @objc func upDataChange(notif: NSNotification){
+        getData()
+    }
+    
     @objc private func sliderTimeChanged(slider:UISlider) {
         timeStepper.value = Double(slider.value)
         txtTime.text = kXAxises[Int(slider.value)]
@@ -412,7 +431,7 @@ extension RepeatSettingViewController {
         let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
         mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
         pageContentView.setCurrentIndex(currentIndex: 1)
-        let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int        
+        let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int
         NotificationCenter.default.post(name: NSNotification.Name(rawValue:"s"), object: nil, userInfo: ["currentTimeIndex":currentIndx])
     }
     
@@ -434,6 +453,8 @@ extension RepeatSettingViewController {
         let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
         mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
         pageContentView.setCurrentIndex(currentIndex: 1)
+        let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"s"), object: nil, userInfo: ["currentTimeIndex":currentIndx])
     }
     
     @objc private func btnNextClicked() {
@@ -447,12 +468,23 @@ extension RepeatSettingViewController {
         for val in self.tags {
             if current == 143 {
                 drawChartLine(timeline: Double(0))
+                txtTime.text = kXAxises[0]
+                timeStepper.value = Double(0)
+                let currentTimeIndex = UserDefaults.standard
+                currentTimeIndex.set(0, forKey: "currentTimeIndex")
+                self.sliderTime.value = Float(0)
                 break;
             } else if val > current {
                 drawChartLine(timeline: Double(val))
+                txtTime.text = kXAxises[val]
+                timeStepper.value = Double(val)
+                let currentTimeIndex = UserDefaults.standard
+                currentTimeIndex.set(val, forKey: "currentTimeIndex")
+                self.sliderTime.value = Float(val)
                 break;
             }
         }
+        
     }
     
     @objc private func btnPreviousClicked() {
@@ -466,9 +498,19 @@ extension RepeatSettingViewController {
         for val in self.tags.reversed() {
             if current == 0 {
                 drawChartLine(timeline: Double(143))
+                txtTime.text = kXAxises[143]
+                timeStepper.value = Double(143)
+                let currentTimeIndex = UserDefaults.standard
+                currentTimeIndex.set(143, forKey: "currentTimeIndex")
+                self.sliderTime.value = 143
                 break;
             } else if val < current {
                 drawChartLine(timeline: Double(val))
+                txtTime.text = kXAxises[val]
+                timeStepper.value = Double(val)
+                let currentTimeIndex = UserDefaults.standard
+                currentTimeIndex.set(val, forKey: "currentTimeIndex")
+                self.sliderTime.value = Float(val)
                 break;
             }
         }
@@ -478,8 +520,7 @@ extension RepeatSettingViewController {
         repeatViewModel.emptyTags(openid: self.getOpenid()) { (message) in
             if message == "success" {
                 self.getData()
-                self.chartView.data?.notifyDataChanged()
-                self.chartView.notifyDataSetChanged()
+                
             } else {
                 self.autoHideAlertMessage(message: "数据异常,请联系商家")
             }

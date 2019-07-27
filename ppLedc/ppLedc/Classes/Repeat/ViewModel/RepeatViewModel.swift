@@ -18,6 +18,15 @@ class RepeatViewModel {
     lazy var l6val : [Int] = []
     lazy var l7val : [Int] = []
     lazy var l8val : [Int] = []
+    
+    lazy var l1 : String = "0"
+    lazy var l2 : String = "0"
+    lazy var l3 : String = "0"
+    lazy var l4 : String = "0"
+    lazy var l5 : String = "0"
+    lazy var l6 : String = "0"
+    lazy var l7 : String = "0"
+    lazy var l8 : String = "0"
 }
 
 extension RepeatViewModel {
@@ -91,5 +100,55 @@ extension RepeatViewModel {
             }
         }
     }
+    
+    func getTagValues(openid: String, tag: String, finished: @escaping (_ message: String) ->()) {
+        let params : [String: String] = ["openid": openid,"tag": tag]
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        NetworkTools.postRequest(URLString: apiGetTagVal, parameters: params as [String : NSString]) { (result) in
+            guard let resultDict = result as? [String: NSObject] else {
+                return
+            }
+            guard let isSuccess  = resultDict["isSuccess"] as? Bool else {
+                return
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if(isSuccess) {
+                let content = resultDict["content"] as! [String: NSObject]
+                self.l1 = (content["l1"] as? NSNumber)!.stringValue
+                self.l2 = (content["l2"] as? NSNumber)!.stringValue
+                self.l3 = (content["l3"] as? NSNumber)!.stringValue
+                self.l4 = (content["l4"] as? NSNumber)!.stringValue
+                self.l5 = (content["l5"] as? NSNumber)!.stringValue
+                self.l6 = (content["l6"] as? NSNumber)!.stringValue
+                self.l7 = (content["l7"] as? NSNumber)!.stringValue
+                self.l8 = (content["l8"] as? NSNumber)!.stringValue
+                finished("success")
+            } else {
+                let message = resultDict["message"] as? String
+                finished(message!)
+            }
+        }
+    }
+    
+    func updateTagVals(openid: String,tag: String ,lights: String, finished: @escaping (_ message: String) ->()) {
+        let params : [String: String] = ["openid": openid,"tag": tag,"lights": lights]
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        NetworkTools.postRequest(URLString: apiUpdateTagVal, parameters: params as [String : NSString]) { (result) in
+            guard let resultDict = result as? [String: NSObject] else {
+                return
+            }
+            guard let isSuccess  = resultDict["isSuccess"] as? Bool else {
+                return
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            if(isSuccess) {
+                finished("success")
+            } else {
+                let message = resultDict["message"] as! String
+                finished(message)
+            }
+        }
+    }
+    
 }
 

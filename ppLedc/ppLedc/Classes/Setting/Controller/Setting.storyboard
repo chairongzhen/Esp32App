@@ -26,12 +26,11 @@
             </objects>
             <point key="canvasLocation" x="1067" y="1320"/>
         </scene>
-        <!--用户信息-->
+        <!--设备信息-->
         <scene sceneID="1b3-zf-ZIt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TNc-90-Vwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WcK-Kq-0g4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="用户信息" image="setting" id="C9W-bU-hFG"/>
+                    <tabBarItem key="tabBarItem" title="设备信息" image="setting" id="C9W-bU-hFG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Zi-qt-iZU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -42,6 +41,7 @@
                         <segue destination="htU-8g-KDG" kind="relationship" relationship="rootViewController" id="MmG-Hf-Foh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNc-90-Vwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.6666666666667" y="612.72321428571422"/>
         </scene>

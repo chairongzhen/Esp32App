@@ -35,6 +35,7 @@ class RepeatViewController: PPBaseViewController {
 //        }
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
+        
         return contentView
         }()
     

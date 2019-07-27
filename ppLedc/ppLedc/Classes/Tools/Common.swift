@@ -54,4 +54,6 @@ let apiGetFix = "https://www.polypite.com/service/getfix"
 let apiGetRepeats = "https://www.polypite.com/service/getrepeats"
 let apiDelTag = "https://www.polypite.com/service/deltag"
 let apiEmpty = "https://www.polypite.com/service/emptytagsios"
+let apiGetTagVal = "https://www.polypite.com/service/gettagvalueios"
+let apiUpdateTagVal = "https://www.polypite.com/service/updatetags"
 

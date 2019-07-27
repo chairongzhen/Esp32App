@@ -27,6 +27,8 @@
 		F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F583022EAC7E1001E18F5 /* DetailSettingView.swift */; };
 		F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72F583222EAC948001E18F5 /* DetailSettingView.xib */; };
 		F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F583422EACF38001E18F5 /* RepeatDetailViewController.swift */; };
+		F72F676422ECA8C500787029 /* SystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F676222ECA8C500787029 /* SystemViewController.swift */; };
+		F72F676522ECA8C500787029 /* SystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72F676322ECA8C500787029 /* SystemViewController.xib */; };
 		F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730CC5622DE04EA004DEE1D /* UserInfo.swift */; };
 		F73256A222E7583F00EC4591 /* RepeatSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */; };
 		F733ED4222E186AB0089CD54 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */; };
@@ -81,6 +83,8 @@
 		F72F583022EAC7E1001E18F5 /* DetailSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSettingView.swift; sourceTree = "<group>"; };
 		F72F583222EAC948001E18F5 /* DetailSettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailSettingView.xib; sourceTree = "<group>"; };
 		F72F583422EACF38001E18F5 /* RepeatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDetailViewController.swift; sourceTree = "<group>"; };
+		F72F676222ECA8C500787029 /* SystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewController.swift; sourceTree = "<group>"; };
+		F72F676322ECA8C500787029 /* SystemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemViewController.xib; sourceTree = "<group>"; };
 		F730CC5622DE04EA004DEE1D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F73256A122E7583F00EC4591 /* RepeatSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatSettingViewController.swift; sourceTree = "<group>"; };
 		F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				F71B535922D8DB0000167B97 /* Setting.storyboard */,
 				F712F3FF22DB773700585544 /* SettingViewController.swift */,
 				F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */,
+				F72F676222ECA8C500787029 /* SystemViewController.swift */,
+				F72F676322ECA8C500787029 /* SystemViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */,
+				F72F676522ECA8C500787029 /* SystemViewController.xib in Resources */,
 				F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */,
 				F71B530222D81CB300167B97 /* LaunchScreen.storyboard in Resources */,
 				F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */,
@@ -608,6 +615,7 @@
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
 				F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */,
 				F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */,
+				F72F676422ECA8C500787029 /* SystemViewController.swift in Sources */,
 				F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */,
 				F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */,
 				F730CC5722DE04EA004DEE1D /* UserInfo.swift in Sources */,

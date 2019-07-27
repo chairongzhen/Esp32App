@@ -25,11 +25,12 @@ class SettingViewController: PPBaseViewController {
         // Setting the child controller
         var childVcs = [UIViewController]()
         childVcs.append(ModeSetrtingViewController())
-        for _ in 0..<1 {
-            var vc = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childVcs.append(vc)
-        }
+        childVcs.append(SystemViewController())
+//        for _ in 0..<1 {
+//            var vc = UIViewController()
+//            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+//            childVcs.append(vc)
+//        }
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         contentView.delegate = self
         return contentView
