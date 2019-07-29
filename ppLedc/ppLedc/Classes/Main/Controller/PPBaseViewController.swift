@@ -27,8 +27,9 @@ extension PPBaseViewController {
         btn.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         // 设置右侧item
-        let profile = UIBarButtonItem(image: UIImage(named: "quit"), style: UIBarButtonItem.Style.plain, target: self, action: Selector(("quit")))
-        navigationItem.rightBarButtonItems = [profile]
+        let checkout = UIBarButtonItem(image: UIImage(named: "quit"), style: UIBarButtonItem.Style.plain, target: self, action: Selector(("quit")))
+        let offline = UIBarButtonItem(image: UIImage(named: "offline"), style: UIBarButtonItem.Style.plain, target: self, action: Selector(("offline")))
+        navigationItem.rightBarButtonItems = [checkout,offline]
     }
     
     @objc private func quit() {
@@ -36,5 +37,10 @@ extension PPBaseViewController {
         UserDefaults.standard.removeObject(forKey: "nickname")
         UserDefaults.standard.removeObject(forKey: "openid")
         self.present(LoginViewController(), animated: true, completion: nil)
+    }
+    
+    @objc private func offline() {
+        //self.present(WiFiViewController(), animated: true, completion: nil)
+        self.navigationController?.pushViewController(OfflineViewController(), animated: true)
     }
 }

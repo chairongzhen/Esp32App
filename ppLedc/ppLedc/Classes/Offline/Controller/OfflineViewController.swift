@@ -20,6 +20,7 @@ class OfflineViewController: PPAlertBaseViewController {
         super.viewDidLoad()
         title = "离线操作"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "WiFi设置", style: .plain, target: self, action: #selector(gotoWiFi))
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         
     }
     
@@ -46,29 +47,29 @@ extension OfflineViewController {
     }
     
     
-    func getInterfaces() -> Bool {
-        guard let unwrappedCFArrayInterfaces = CNCopySupportedInterfaces() else {
-            print("this must be a simulator, no interfaces found")
-            return false
-        }
-        guard let swiftInterfaces = (unwrappedCFArrayInterfaces as NSArray) as? [String] else {
-            print("System error: did not come back as array of Strings")
-            return false
-        }
-        for interface in swiftInterfaces {
-            print("Looking up SSID info for \(interface)") // en0
-            guard let unwrappedCFDictionaryForInterface = CNCopyCurrentNetworkInfo(interface as CFString) else {
-                print("System error: \(interface) has no information")
-                return false
-            }
-            guard let SSIDDict = (unwrappedCFDictionaryForInterface as NSDictionary) as? [String: AnyObject] else {
-                print("System error: interface information is not a string-keyed dictionary")
-                return false
-            }
-            for d in SSIDDict.keys {
-                print("\(d): \(SSIDDict[d]!)")
-            }
-        }
-        return true
-    }
+//    func getInterfaces() -> Bool {
+//        guard let unwrappedCFArrayInterfaces = CNCopySupportedInterfaces() else {
+//            print("this must be a simulator, no interfaces found")
+//            return false
+//        }
+//        guard let swiftInterfaces = (unwrappedCFArrayInterfaces as NSArray) as? [String] else {
+//            print("System error: did not come back as array of Strings")
+//            return false
+//        }
+//        for interface in swiftInterfaces {
+//            print("Looking up SSID info for \(interface)") // en0
+//            guard let unwrappedCFDictionaryForInterface = CNCopyCurrentNetworkInfo(interface as CFString) else {
+//                print("System error: \(interface) has no information")
+//                return false
+//            }
+//            guard let SSIDDict = (unwrappedCFDictionaryForInterface as NSDictionary) as? [String: AnyObject] else {
+//                print("System error: interface information is not a string-keyed dictionary")
+//                return false
+//            }
+//            for d in SSIDDict.keys {
+//                print("\(d): \(SSIDDict[d]!)")
+//            }
+//        }
+//        return true
+//    }
 }

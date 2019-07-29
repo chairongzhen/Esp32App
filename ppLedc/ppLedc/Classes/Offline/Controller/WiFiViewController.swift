@@ -52,8 +52,8 @@ extension WiFiViewController {
         let ssid: Any? = ssidinfo.object(forKey: "ssid")
         let pwd: Any? = ssidinfo.object(forKey: "pwd")
         if ssid != nil {
-            self.txtSsid.text = ssid
-            self.txtPwd.text = pwd
+            self.txtSsid.text = ssid as? String
+            self.txtPwd.text = pwd as? String
         }
     }
 }
