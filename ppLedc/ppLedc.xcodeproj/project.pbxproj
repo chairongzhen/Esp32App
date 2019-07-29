@@ -50,6 +50,11 @@
 		F7A652A522E0635000B31AF6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A422E0635000B31AF6 /* Setting.swift */; };
 		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
 		F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A822E088ED00B31AF6 /* MyViewController.swift */; };
+		F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242722EEE528005A6E0D /* WiFiViewController.swift */; };
+		F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B7242822EEE528005A6E0D /* WiFiViewController.xib */; };
+		F7B7242D22EEEC31005A6E0D /* OfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */; };
+		F7B7242E22EEEC31005A6E0D /* OfflineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B7242C22EEEC31005A6E0D /* OfflineViewController.xib */; };
+		F7B7243022EF00EE005A6E0D /* OfflineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242F22EF00EE005A6E0D /* OfflineViewModel.swift */; };
 		F7F9ADF522E0ABA8003DC0E2 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ADF422E0ABA8003DC0E2 /* MyTableViewCell.swift */; };
 		F7F9ADFA22E0BA18003DC0E2 /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ADF922E0BA18003DC0E2 /* MyViewModel.swift */; };
 		F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ADFB22E0BD5D003DC0E2 /* Machine.swift */; };
@@ -106,6 +111,11 @@
 		F7A652A422E0635000B31AF6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		F7A652A822E088ED00B31AF6 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		F7B7242722EEE528005A6E0D /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
+		F7B7242822EEE528005A6E0D /* WiFiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WiFiViewController.xib; sourceTree = "<group>"; };
+		F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewController.swift; sourceTree = "<group>"; };
+		F7B7242C22EEEC31005A6E0D /* OfflineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineViewController.xib; sourceTree = "<group>"; };
+		F7B7242F22EF00EE005A6E0D /* OfflineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewModel.swift; sourceTree = "<group>"; };
 		F7F9ADF422E0ABA8003DC0E2 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		F7F9ADF922E0BA18003DC0E2 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
 		F7F9ADFB22E0BD5D003DC0E2 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		F71B531022D8653D00167B97 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7B7242222EEE181005A6E0D /* Offline */,
 				F758E2A222DC0F32009E29B6 /* Profile */,
 				F71B536022D8DB0000167B97 /* Main */,
 				F71B535D22D8DB0000167B97 /* Basic */,
@@ -457,6 +468,50 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F7B7242222EEE181005A6E0D /* Offline */ = {
+			isa = PBXGroup;
+			children = (
+				F7B7242322EEE181005A6E0D /* ViewModel */,
+				F7B7242422EEE181005A6E0D /* Controller */,
+				F7B7242522EEE181005A6E0D /* Model */,
+				F7B7242622EEE181005A6E0D /* View */,
+			);
+			path = Offline;
+			sourceTree = "<group>";
+		};
+		F7B7242322EEE181005A6E0D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7B7242F22EF00EE005A6E0D /* OfflineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7B7242422EEE181005A6E0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7B7242722EEE528005A6E0D /* WiFiViewController.swift */,
+				F7B7242822EEE528005A6E0D /* WiFiViewController.xib */,
+				F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */,
+				F7B7242C22EEEC31005A6E0D /* OfflineViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7B7242522EEE181005A6E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7B7242622EEE181005A6E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F7F9ADF822E0BA08003DC0E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,8 +589,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */,
+				F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */,
 				F72F676522ECA8C500787029 /* SystemViewController.xib in Resources */,
 				F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */,
+				F7B7242E22EEEC31005A6E0D /* OfflineViewController.xib in Resources */,
 				F71B530222D81CB300167B97 /* LaunchScreen.storyboard in Resources */,
 				F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */,
 				F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */,
@@ -603,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
+				F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
 				F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */,
@@ -615,6 +673,7 @@
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
 				F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */,
 				F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */,
+				F7B7243022EF00EE005A6E0D /* OfflineViewModel.swift in Sources */,
 				F72F676422ECA8C500787029 /* SystemViewController.swift in Sources */,
 				F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */,
 				F75D3F0F22DA0C1B009E1299 /* PageTitleView.swift in Sources */,
@@ -625,6 +684,7 @@
 				F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */,
 				F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */,
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
+				F7B7242D22EEEC31005A6E0D /* OfflineViewController.swift in Sources */,
 				F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */,
 				F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,

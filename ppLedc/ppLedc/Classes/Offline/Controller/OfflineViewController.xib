@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfflineViewController" customModule="ppLedc" customModuleProvider="target">
+            <connections>
+                <outlet property="btnClose" destination="Mib-tp-XoH" id="gnS-xD-BqD"/>
+                <outlet property="btnMain" destination="y6T-o5-OmM" id="TJK-pm-xaQ"/>
+                <outlet property="btnOpen" destination="1vF-Ms-XMq" id="CyG-DI-TmS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vF-Ms-XMq">
+                    <rect key="frame" x="157" y="433" width="100" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7cg-nr-C1C"/>
+                        <constraint firstAttribute="width" constant="100" id="eqE-UG-CuL"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="全部打开"/>
+                    <connections>
+                        <action selector="btnOnClicked:" destination="-1" eventType="touchUpInside" id="oLw-z5-UGI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mib-tp-XoH">
+                    <rect key="frame" x="157" y="483" width="100" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2fN-my-Cdy"/>
+                        <constraint firstAttribute="width" constant="100" id="UME-lW-Dcv"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="全部关闭"/>
+                    <connections>
+                        <action selector="btnOffClicked:" destination="-1" eventType="touchUpInside" id="QJK-5F-Acn"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备测试" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVX-3q-VYd">
+                    <rect key="frame" x="176" y="395" width="62" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="D1S-ki-lGY"/>
+                        <constraint firstAttribute="height" constant="18" id="ebk-8U-TiU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6T-o5-OmM">
+                    <rect key="frame" x="157" y="533" width="100" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="OH1-Nx-Xel"/>
+                        <constraint firstAttribute="height" constant="30" id="j04-a6-byp"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="进入主程序"/>
+                    <connections>
+                        <action selector="btnMainClicked:" destination="-1" eventType="touchUpInside" id="8oj-vz-kJ8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="y6T-o5-OmM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4pT-qH-GLF"/>
+                <constraint firstItem="1vF-Ms-XMq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9Fb-YY-s8M"/>
+                <constraint firstItem="1vF-Ms-XMq" firstAttribute="top" secondItem="EVX-3q-VYd" secondAttribute="bottom" constant="20" id="9Zc-Ah-Sv1"/>
+                <constraint firstItem="Mib-tp-XoH" firstAttribute="top" secondItem="1vF-Ms-XMq" secondAttribute="bottom" constant="20" id="EZr-6l-wFt"/>
+                <constraint firstItem="Mib-tp-XoH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TP2-lt-amT"/>
+                <constraint firstItem="y6T-o5-OmM" firstAttribute="top" secondItem="Mib-tp-XoH" secondAttribute="bottom" constant="20" id="dj7-WY-qIT"/>
+                <constraint firstItem="EVX-3q-VYd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eYZ-7R-hbe"/>
+                <constraint firstItem="1vF-Ms-XMq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xND-5r-QIJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+</document>

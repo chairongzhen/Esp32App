@@ -28,6 +28,17 @@ class NetworkTools {
         }
     }
     
+    class func internatRequest(type: MethodType,URLString: String,parameters: [String:NSString]? = nil,finishedCallback: @escaping (_ result : AnyObject) -> ()) {
+        let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
+        Alamofire.request(URLString, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString { (response) in
+            guard let result = response.result.value else {
+                print(response.error!)
+                return;
+            }
+            finishedCallback(result as AnyObject)
+        }
+    }
+    
     class func getRequest(URLString: String, parameters: [String:NSString]? = nil,finishedCallback: @escaping (_ result : AnyObject) -> ()) {
         requestData(type: .GET, URLString: URLString, parameters: parameters, finishedCallback: finishedCallback)
     }
