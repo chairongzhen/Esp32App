@@ -24,7 +24,7 @@ class MyViewController: PPAlertBaseViewController {
 extension MyViewController {
     private func setupUI() {
         tableView.backgroundColor = UIColor.white
-        tableView.setEditing(!tableView.isEditing, animated: true)
+        //tableView.setEditing(!tableView.isEditing, animated: true)
         
 
         refreshControl.addTarget(self, action: #selector(refreshDown),
@@ -100,10 +100,13 @@ extension MyViewController : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
     }
-
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "解绑";
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

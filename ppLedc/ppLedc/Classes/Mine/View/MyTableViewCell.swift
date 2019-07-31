@@ -27,7 +27,7 @@ class MyTableViewCell: UITableViewCell {
             
             // 3. set status111
             if machine.online == "online" {
-                statusLabel.text = "\(machine.ip) (仅限局域网内可访问)"
+                statusLabel.text = " 内网地址:\(machine.ip)"
             } else {
                 statusLabel.text = "离线"
             }
