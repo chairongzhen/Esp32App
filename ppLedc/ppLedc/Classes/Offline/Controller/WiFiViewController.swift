@@ -43,6 +43,7 @@ extension WiFiViewController {
         }
         
         offlineViewModel.settingWiFi(ssid: txtSsid.text!, pwd: txtPwd.text!) { (message) in
+            self.autoHideAlertMessage(message: "操作成功,请稍等设备正在连接中")
             print("message")
         }
     }
