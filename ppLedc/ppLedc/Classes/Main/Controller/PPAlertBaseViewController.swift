@@ -139,4 +139,14 @@ extension PPAlertBaseViewController {
         return vc as! UIViewController
     }
     
+    func checkEspId(input : String) -> Bool {
+        let pattern = "^esp_+[A-Z,a-z,\\d]{12}$";
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        if let results = regex?.matches(in: input, options: [], range: NSRange(location: 0, length: input.count)), results.count != 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

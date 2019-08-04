@@ -21,6 +21,8 @@
 		F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B536B22D8DB1D00167B97 /* Main.storyboard */; };
 		F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B536F22D8DBF800167B97 /* MainViewController.swift */; };
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
+		F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729C03D22F7148F00336A4F /* AddViewController.swift */; };
+		F729C04022F7148F00336A4F /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F729C03E22F7148F00336A4F /* AddViewController.xib */; };
 		F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCB22E5F30E0094A800 /* FixData.swift */; };
 		F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */; };
 		F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */; };
@@ -82,6 +84,8 @@
 		F71B536B22D8DB1D00167B97 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F71B536F22D8DBF800167B97 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		F729C03D22F7148F00336A4F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F729C03E22F7148F00336A4F /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		F72D8DCB22E5F30E0094A800 /* FixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixData.swift; sourceTree = "<group>"; };
 		F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewModel.swift; sourceTree = "<group>"; };
 		F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAlertBaseViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 				F712F3FD22DB75E100585544 /* MineViewController.swift */,
 				F7A652A822E088ED00B31AF6 /* MyViewController.swift */,
 				F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */,
+				F729C03D22F7148F00336A4F /* AddViewController.swift */,
+				F729C03E22F7148F00336A4F /* AddViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				F7B7242E22EEEC31005A6E0D /* OfflineViewController.xib in Resources */,
 				F71B530222D81CB300167B97 /* LaunchScreen.storyboard in Resources */,
 				F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */,
+				F729C04022F7148F00336A4F /* AddViewController.xib in Resources */,
 				F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */,
 				F71B536A22D8DB0000167B97 /* Repeat.storyboard in Resources */,
 				F71B536822D8DB0000167B97 /* Mine.storyboard in Resources */,
@@ -661,6 +668,7 @@
 			files = (
 				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
 				F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */,
+				F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
 				F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */,

@@ -158,10 +158,13 @@ extension PageTitleView {
     func setCurrentIndex(sourceIndex : Int, targetIndex : Int) {
         currentIndex = targetIndex
         
-        let sourceLabel = titleLabels[sourceIndex]
+        for titlelable in titleLabels {
+            titlelable.textColor = UIColor.gray
+        }
+
+        //let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]
-        
-        sourceLabel.textColor = UIColor.gray
+        //sourceLabel.textColor = UIColor.gray
         targetLabel.textColor = UIColor.orange
         
         if targetIndex == 1 {

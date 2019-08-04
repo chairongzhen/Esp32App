@@ -99,8 +99,13 @@ extension QRCodeViewController {
         if mid == "" {
             return
         }
-        bindMid(mid: mid)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"binded"), object: nil, userInfo: nil)
+        if self.checkEspId(input: mid) {
+            bindMid(mid: mid)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue:"binded"), object: nil, userInfo: nil)
+        } else {
+            self.autoHideAlertMessage(message: "无法解析设备编号,请确认二维码是否正确")
+        }
+
         let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
         let mainViewController : MineViewController = self.locateMainController(currentView: pageContentView) as! MineViewController
         mainViewController.changeTitleIndex(sourceIndex: 1, targetIndex: 0)
