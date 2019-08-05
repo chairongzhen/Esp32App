@@ -95,21 +95,22 @@ extension QRCodeViewController {
     }
     
     func found(code: String) {
-        let mid : String = code.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")[0].replacingOccurrences(of: "mid:", with: "")
+        var mid : String = code.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")[0].replacingOccurrences(of: "mid:", with: "")
         if mid == "" {
             return
         }
+        mid = "esp_\(mid)"
         if self.checkEspId(input: mid) {
             bindMid(mid: mid)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue:"binded"), object: nil, userInfo: nil)
         } else {
-            self.autoHideAlertMessage(message: "无法解析设备编号,请确认二维码是否正确")
+            self.alertMessage(title: "二维码错误", message: "无法解析设备编号,请确认二维码是否正确")
         }
 
         let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
         let mainViewController : MineViewController = self.locateMainController(currentView: pageContentView) as! MineViewController
-        mainViewController.changeTitleIndex(sourceIndex: 1, targetIndex: 0)
-        pageContentView.setCurrentIndex(currentIndex: 0)
+        mainViewController.changeTitleIndex(sourceIndex: 2, targetIndex: 1)
+        pageContentView.setCurrentIndex(currentIndex: 1)
         
     }
     

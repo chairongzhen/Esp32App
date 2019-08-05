@@ -44,6 +44,7 @@ class PageContentView: UIView {
         
     }()
     
+    
     // define constructor func
     init(frame: CGRect, childVcs : [UIViewController], parentViewController: UIViewController?) {
         self.childVcs = childVcs

@@ -19,6 +19,11 @@ class AddViewController: PPAlertBaseViewController {
         super.viewDidLoad()
         setupUI()
     }
+    
+    // 点击屏幕收起键盘
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
 extension AddViewController {
@@ -50,14 +55,16 @@ extension AddViewController {
         let mid = "esp_" + txtAdd.text!.uppercased()
         if !self.checkEspId(input: mid) {
                 self.autoHideAlertMessage(message: "设备号格式有误,请检查后重新输入")
+                txtAdd.text = ""
                 return;
             } else {
                 bindMid(mid: mid)
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue:"binded"), object: nil, userInfo: nil)
+                txtAdd.text = ""
                 let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
                 let mainViewController : MineViewController = self.locateMainController(currentView: pageContentView) as! MineViewController
-                mainViewController.changeTitleIndex(sourceIndex: 1, targetIndex: 0)
-                pageContentView.setCurrentIndex(currentIndex: 0)
+                mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
+                pageContentView.setCurrentIndex(currentIndex: 1)
             }
 
     }
