@@ -3,20 +3,24 @@ PODS:
   - Charts (3.3.0):
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
+  - QRCodeReader.swift (10.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Charts
+  - QRCodeReader.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Charts
+    - QRCodeReader.swift
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
 
-PODFILE CHECKSUM: 9b1271164a826911a2f15309c499138b3e8578c1
+PODFILE CHECKSUM: 2397667dfd98a768084aa357516da36a231a4ddf
 
 COCOAPODS: 1.5.3

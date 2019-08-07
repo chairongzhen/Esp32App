@@ -99,7 +99,7 @@ extension QRCodeViewController {
         if mid == "" {
             return
         }
-        mid = "esp_\(mid)"
+        //mid = "esp_\(mid)"
         if self.checkEspId(input: mid) {
             bindMid(mid: mid)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue:"binded"), object: nil, userInfo: nil)
