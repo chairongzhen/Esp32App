@@ -11,6 +11,7 @@ import UIKit
 class Setting: NSObject {
     @objc var repeatMode : String = ""
     @objc var productionMode : String = ""
+    @objc var autoUpdate : String = ""
     
     override init() {
         super.init()

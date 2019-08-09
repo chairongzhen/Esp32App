@@ -28,8 +28,8 @@ extension SettingViewModel {
         }
     }
     
-    func updateSetting(openid: String, repeatMode: String,productionMode: String,finished: @escaping (_ message: String) ->()) {
-        let params : [String: String] = ["openid": openid,"repeatmode": repeatMode, "productionmode": productionMode]
+    func updateSetting(openid: String, repeatMode: String,productionMode: String,autoUpdateMode: String,finished: @escaping (_ message: String) ->()) {
+        let params : [String: String] = ["openid": openid,"repeatmode": repeatMode, "productionmode": productionMode,"updatemode":autoUpdateMode]
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         NetworkTools.postRequest(URLString: apiUpdateSet, parameters: params as [String : NSString]) { (result) in
             guard let resultDict = result as? [String: NSObject] else {

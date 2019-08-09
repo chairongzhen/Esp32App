@@ -10,8 +10,10 @@ import UIKit
 
 private var repeatTypeOption = ["固定","循环"]
 private var productiontOption = ["产品","测试"]
+private var autoUpdateOption = ["否","是"]
 var repeatMode = machineType.repeatType.fixMode
 var productionMode = machineType.productionType.prductionMode
+var autoUpdateMode = machineType.autoUpdate.none
 private var openid : String = ""
 
 
@@ -51,6 +53,13 @@ extension ModeSetrtingViewController {
                 } else {
                     productionMode = .testMode
                 }
+                
+                if myset.autoUpdate == "auto" {
+                    autoUpdateMode = .auto
+                } else {
+                    autoUpdateMode = .none
+                }
+                
                 self.modeTable.reloadData()
             } else {
                 return
@@ -72,7 +81,15 @@ extension ModeSetrtingViewController {
         } else {
             productionModeStr = "test"
         }
-        settingVM.updateSetting(openid: openid, repeatMode: repeatModeStr, productionMode: productionModeStr) { (message) in
+        
+        var autoUpdateModeStr : String = ""
+        if autoUpdateMode == .auto {
+            autoUpdateModeStr = "auto"
+        } else {
+            autoUpdateModeStr = "none"
+        }
+        
+        settingVM.updateSetting(openid: openid, repeatMode: repeatModeStr, productionMode: productionModeStr, autoUpdateMode: autoUpdateModeStr) { (message) in
             if message == "success" {
 
             } else {
@@ -86,7 +103,7 @@ extension ModeSetrtingViewController {
 extension ModeSetrtingViewController : UITableViewDataSource,UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -132,6 +149,21 @@ extension ModeSetrtingViewController : UITableViewDataSource,UITableViewDelegate
                 }
             }
             
+        }  else if indexPath.section == 2 {
+            cell?.textLabel?.text = autoUpdateOption[indexPath.row]
+            if autoUpdateMode == .none {
+                if indexPath.row == 0 {
+                    cell?.accessoryType = .checkmark
+                } else {
+                    cell?.accessoryType = .none
+                }
+            } else if autoUpdateMode == .auto {
+                if indexPath.row == 1 {
+                    cell?.accessoryType = .checkmark
+                } else {
+                    cell?.accessoryType = .none
+                }
+            }
         }
         return cell!
     }
@@ -146,10 +178,12 @@ extension ModeSetrtingViewController : UITableViewDataSource,UITableViewDelegate
         headerLabel.textColor = UIColor.white
         headerLabel.backgroundColor = UIColor.clear
         headerLabel.font = UIFont.systemFont(ofSize: 16)
-        if(section == 0) {
+        if section == 0 {
             headerLabel.text = "循环模式"
-        } else {
+        } else if section == 1 {
             headerLabel.text = "运行模式"
+        } else {
+            headerLabel.text = "自动更新固件"
         }
         headerView.addSubview(headerLabel)
         headerView.backgroundColor = UIColor.lightGray
@@ -170,6 +204,12 @@ extension ModeSetrtingViewController : UITableViewDataSource,UITableViewDelegate
             } else {
                 productionMode = .testMode
             }
+        } else if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                autoUpdateMode = .none
+            } else {
+                autoUpdateMode = .auto
+            }
         }
         
         tableView.reloadData()
@@ -186,5 +226,9 @@ enum machineType {
     enum productionType {
         case prductionMode
         case testMode
+    }
+    enum autoUpdate {
+        case none
+        case auto
     }
 }
