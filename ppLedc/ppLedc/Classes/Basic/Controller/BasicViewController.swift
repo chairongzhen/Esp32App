@@ -41,6 +41,11 @@ class BasicViewController:  PPBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI();
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
 }

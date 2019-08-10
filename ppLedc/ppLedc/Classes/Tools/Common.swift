@@ -56,8 +56,13 @@ let apiDelTag = "https://www.polypite.com/service/deltag"
 let apiEmpty = "https://www.polypite.com/service/emptytagsios"
 let apiGetTagVal = "https://www.polypite.com/service/gettagvalueios"
 let apiUpdateTagVal = "https://www.polypite.com/service/updatetags"
+let apiWxLogin = "https://www.polypite.com/service/wxlogin"
 
 // esp32 api
 let apiOn = "http://192.168.4.1/ioson"
 let apiOff = "http://192.168.4.1/iosoff"
 let apiOnline = "http://192.168.4.1/online"
+
+// wechat
+let wechat_appId = "wx2758cd51f692e56b"
+let wwechat_appSecret = "85de83538b70389f26776cdeb788f679"

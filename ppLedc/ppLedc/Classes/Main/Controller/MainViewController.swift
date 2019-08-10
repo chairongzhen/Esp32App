@@ -17,6 +17,10 @@ class MainViewController: UITabBarController {
         addChildVc(storyName: "Setting")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     private func addChildVc(storyName: String) {
         let childVc = UIStoryboard(name: storyName, bundle: nil).instantiateInitialViewController()!
         addChild(childVc)

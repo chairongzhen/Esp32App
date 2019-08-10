@@ -31,8 +31,12 @@ class FixViewController: PPAlertBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension FixViewController {
@@ -82,6 +86,8 @@ extension FixViewController {
     private func setupUI() {
         self.view.addSubview(lightSetting)
     }
+    
+    
     
     @objc func textChange(_ textField:UITextField) {
         let textField : UITextField = textField

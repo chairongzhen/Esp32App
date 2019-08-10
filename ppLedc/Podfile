@@ -6,5 +6,6 @@ target 'ppLedc' do
 pod 'Alamofire'
 pod 'Charts'
 pod 'QRCodeReader.swift'
+pod 'WechatOpenSDK'
 end
 

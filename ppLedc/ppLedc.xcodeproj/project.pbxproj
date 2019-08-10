@@ -23,6 +23,8 @@
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
 		F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729C03D22F7148F00336A4F /* AddViewController.swift */; };
 		F729C04022F7148F00336A4F /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F729C03E22F7148F00336A4F /* AddViewController.xib */; };
+		F72D40D922FDC00900C28959 /* WechatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D40D822FDC00900C28959 /* WechatUser.swift */; };
+		F72D40DB22FE6E0900C28959 /* String-Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D40DA22FE6E0900C28959 /* String-Exension.swift */; };
 		F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCB22E5F30E0094A800 /* FixData.swift */; };
 		F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */; };
 		F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */; };
@@ -69,6 +71,7 @@
 		76851A2A0FFCF3D32E3451C7 /* Pods-ppLedc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ppLedc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc.debug.xcconfig"; sourceTree = "<group>"; };
 		B578069C95F6B523D90F2062 /* Pods_ppLedc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ppLedc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B2EF08513908DFF7FF72CB /* Pods-ppLedc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ppLedc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc.release.xcconfig"; sourceTree = "<group>"; };
+		F70F614B22FD75CE009E5034 /* ppLight_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppLight_bridge.h; sourceTree = "<group>"; };
 		F712F3FB22DB72B700585544 /* RepeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatViewController.swift; sourceTree = "<group>"; };
 		F712F3FD22DB75E100585544 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		F712F3FF22DB773700585544 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		F729C03D22F7148F00336A4F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		F729C03E22F7148F00336A4F /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		F72D40D822FDC00900C28959 /* WechatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatUser.swift; sourceTree = "<group>"; };
+		F72D40DA22FE6E0900C28959 /* String-Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Exension.swift"; sourceTree = "<group>"; };
 		F72D8DCB22E5F30E0094A800 /* FixData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixData.swift; sourceTree = "<group>"; };
 		F72D8DCD22E5F3CF0094A800 /* FixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixViewModel.swift; sourceTree = "<group>"; };
 		F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPAlertBaseViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 				F71B52FE22D81CB300167B97 /* Assets.xcassets */,
 				F71B530022D81CB300167B97 /* LaunchScreen.storyboard */,
 				F71B530322D81CB300167B97 /* Info.plist */,
+				F70F614B22FD75CE009E5034 /* ppLight_bridge.h */,
 			);
 			path = ppLedc;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				F730CC5622DE04EA004DEE1D /* UserInfo.swift */,
+				F72D40D822FDC00900C28959 /* WechatUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +469,7 @@
 				F75D3F0C22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift */,
 				F75D3F1422DB064A009E1299 /* UIColor-Extension.swift */,
 				F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */,
+				F72D40DA22FE6E0900C28959 /* String-Exension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -677,10 +685,12 @@
 				F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */,
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,
+				F72D40DB22FE6E0900C28959 /* String-Exension.swift in Sources */,
 				F712F40022DB773700585544 /* SettingViewController.swift in Sources */,
 				F7A652A522E0635000B31AF6 /* Setting.swift in Sources */,
 				F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
+				F72D40D922FDC00900C28959 /* WechatUser.swift in Sources */,
 				F72D8DCC22E5F30E0094A800 /* FixData.swift in Sources */,
 				F7F9ADFC22E0BD5D003DC0E2 /* Machine.swift in Sources */,
 				F7B7243022EF00EE005A6E0D /* OfflineViewModel.swift in Sources */,
@@ -859,6 +869,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rzchai.ppLedc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/chairongzhen/swift/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -880,6 +891,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rzchai.ppLedc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/chairongzhen/swift/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

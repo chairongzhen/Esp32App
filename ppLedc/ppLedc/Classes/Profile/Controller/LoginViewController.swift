@@ -6,8 +6,6 @@
 //  Copyright © 2019 rzchai. All rights reserved.
 //
 
-// https://www.polypite.com/service/gettest
-// https://www.polypite.com/service/posttest
 
 import UIKit
 
@@ -28,14 +26,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     let loginButton = UIButton(type: .custom)
     let registButton = UIButton(type: .custom)
     
+    
     private lazy var profileVM : ProfileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "用户登陆"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "用户注册", style: .plain, target: self, action: #selector(gotoRegisterView))
+        NotificationCenter.default.addObserver(self, selector: #selector(upDataChange(notif:)), name: NSNotification.Name(rawValue: "wlogin"), object: nil)
         setupUI()
-        
     }
     
 
@@ -43,7 +42,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 extension LoginViewController {
     private func setupUI() {
-
+        
         // owl header
         let imgLogin = UIImageView(frame: CGRect(x: kScreenW / 2 - 211 / 2, y: 100, width: 211, height: 109))
         imgLogin.image =  UIImage(named: "login_n")
@@ -119,7 +118,6 @@ extension LoginViewController {
         vLogin.addSubview(txtPwd)
         
         
-        
         loginButton.frame = CGRect(x: kScreenW / 2 - 40, y: vLogin.frame.size.height - 40, width: 80, height: 30)
         loginButton.setTitle("登陆", for: .normal)
         loginButton.addTarget(self, action: #selector(loginButtonClick), for: .touchUpInside)
@@ -133,6 +131,14 @@ extension LoginViewController {
         registButton.backgroundColor = UIColor.orange
         vLogin.addSubview(registButton)
         
+        if WXApi.isWXAppInstalled() {
+            let btnWeChat: UIButton = UIButton();
+            btnWeChat.setImage(UIImage(named: "wechat"), for: .normal);
+            btnWeChat.frame = CGRect(x: kScreenW / 2 - 100, y: vLogin.frame.size.height - 55, width: 60, height: 60)
+            btnWeChat.addTarget(self, action: #selector(btnWeChatClicked), for: .touchUpInside)
+            vLogin.addSubview(btnWeChat)
+        }
+
         self.view.backgroundColor = UIColor.white
 
     }
@@ -213,6 +219,19 @@ extension LoginViewController {
     
     @objc func changeButtonStatus(){
         loginButton.isEnabled = true
+    }
+    
+    @objc func btnWeChatClicked() {
+        let req = SendAuthReq()
+        req.scope = "snsapi_userinfo"
+        req.state = "App"
+        if !WXApi.send(req) {
+            print("weixin sendreq failed")
+        }
+    }
+    
+    @objc func upDataChange(notif: NSNotification){
+        self.present(MainViewController(), animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
