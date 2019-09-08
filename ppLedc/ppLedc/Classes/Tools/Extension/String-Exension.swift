@@ -22,4 +22,6 @@ extension String {
         }
         return returnStr.replacingOccurrences(of: "\\r\\n", with: "\n")
     }
+    
+    
 }

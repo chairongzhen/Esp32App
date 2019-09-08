@@ -3,12 +3,14 @@ PODS:
   - Charts (3.3.0):
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
+  - CheckVersion_Swift (0.0.1)
   - QRCodeReader.swift (10.1.0)
   - WechatOpenSDK (1.8.4)
 
 DEPENDENCIES:
   - Alamofire
   - Charts
+  - CheckVersion_Swift
   - QRCodeReader.swift
   - WechatOpenSDK
 
@@ -16,15 +18,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Charts
+    - CheckVersion_Swift
     - QRCodeReader.swift
     - WechatOpenSDK
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Charts: e0dd4cd8f257bccf98407b58183ddca8e8d5b578
+  CheckVersion_Swift: 2e84ad4f489e548f1bc656eded3ca0701055b756
   QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
 
-PODFILE CHECKSUM: fbb1d7a7c0940404e9bb9d2d76616db557d2f456
+PODFILE CHECKSUM: 045f021b08727459ce3b72f75e6aef14894e7500
 
 COCOAPODS: 1.5.3

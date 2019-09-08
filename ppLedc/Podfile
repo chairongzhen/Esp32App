@@ -7,5 +7,6 @@ pod 'Alamofire'
 pod 'Charts'
 pod 'QRCodeReader.swift'
 pod 'WechatOpenSDK'
+pod 'CheckVersion_Swift'
 end
 

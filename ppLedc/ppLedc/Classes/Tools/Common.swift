@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kBundleId : String = Bundle.main.bundleIdentifier ?? ""
+let kLocalVersion: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 let kStatusBarH : CGFloat = UIApplication.shared.statusBarFrame.size.height
 let kNavigationBarH : CGFloat = 44
 let kTabBarH : CGFloat = 44

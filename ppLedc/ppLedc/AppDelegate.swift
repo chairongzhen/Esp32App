@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CheckVersion_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //CheckVersion.checkVersion(kBundleId, nil)
+        
         WXApi.registerApp(wechat_appId)
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = 	UIColor.orange
