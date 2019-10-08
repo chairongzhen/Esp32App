@@ -39,6 +39,10 @@ class LightSettingView: UIView {
     @IBOutlet weak var btnOpenAll: UIButton!
     @IBOutlet weak var btnCloseAll: UIButton!
     
+    @IBOutlet weak var btnSave: UIButton!
+    
+
+    
     private lazy var fixViewModel : FixViewModel = FixViewModel()
 }
 
@@ -60,25 +64,25 @@ extension LightSettingView {
     @IBAction func sliderOneChanged(_ sender: Any) {
         let value : Int = Int(sliderOne.value)
         txtOne.text = String(value)
-        updateFix()
+        //updateFix()
     }
     
     @IBAction func sliderTwoChanged(_ sender: Any) {
         let value : Int = Int(sliderTwo.value)
         txtTwo.text = String(value)
-        updateFix()
+        //updateFix()
     }
     
     @IBAction func sliderThreeChanged(_ sender: Any) {
         let value : Int = Int(sliderThree.value)
         txtThree.text = String(value)
-        updateFix()
+        //updateFix()
     }
     
     @IBAction func sliderFourChanged(_ sender: Any) {
         let value : Int = Int(sliderFour.value)
         txtFour.text = String(value)
-        updateFix()
+        //updateFix()
     }
     @IBAction func sliderFiveChanged(_ sender: Any) {
         let value : Int = Int(sliderFive.value)
@@ -88,17 +92,17 @@ extension LightSettingView {
     @IBAction func sliderSixChanged(_ sender: Any) {
         let value : Int = Int(sliderSix.value)
         txtSix.text = String(value)
-        updateFix()
+        //updateFix()
     }
     @IBAction func sliderSevenChanged(_ sender: Any) {
         let value : Int = Int(sliderSeven.value)
         txtSeven.text = String(value)
-        updateFix()
+        //updateFix()
     }
     @IBAction func sliderEightChanged(_ sender: Any) {
         let value : Int = Int(sliderEight.value)
         txtEight.text = String(value)
-        updateFix()
+        //updateFix()
     }
     
     @IBAction func openAllClick(_ sender: Any) {
@@ -119,7 +123,7 @@ extension LightSettingView {
         txtSix.text = "100"
         txtSeven.text = "100"
         txtEight.text = "100"
-        updateFix()
+        //updateFix()
     }
     
     @IBAction func closeeAllClick(_ sender: Any) {
@@ -140,6 +144,6 @@ extension LightSettingView {
         txtSix.text = "0"
         txtSeven.text = "0"
         txtEight.text = "0"
-        updateFix()
-    }
+        //updateFix()
+    }    
 }

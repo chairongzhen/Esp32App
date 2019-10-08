@@ -22,6 +22,7 @@ class FixViewController: PPAlertBaseViewController {
         settingView.txtEight.addTarget(self, action: #selector(txtEightChanged(_:)), for: .allEditingEvents)
         settingView.btnOpenAll.setImage(UIImage(named: "openall")?.withRenderingMode(.alwaysOriginal), for: .normal)
         settingView.btnCloseAll.setImage(UIImage(named: "closeall")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        settingView.btnSave.addTarget(self, action: #selector(btnSaveClicked), for: .touchUpInside)
         getFixData()
         return settingView
     }()
@@ -74,7 +75,7 @@ extension FixViewController {
         if openid == "" { return }
         fixViewModel.updateFix(openid: openid, l1: self.lightSetting.txtOne.text!, l2: self.lightSetting.txtTwo.text!, l3: self.lightSetting.txtThree.text!, l4: self.lightSetting.txtFour.text!, l5: self.lightSetting.txtFive.text!, l6: self.lightSetting.txtSix.text!, l7: self.lightSetting.txtSeven.text!, l8: self.lightSetting.txtEight.text!) { (message) in
             if message == "success" {
-                
+                self.autoHideAlertMessage(message: "保存成功")
             } else {
                 self.autoHideAlertMessage(message: message)
             }
@@ -91,7 +92,7 @@ extension FixViewController {
     
     @objc func textChange(_ textField:UITextField) {
         let textField : UITextField = textField
-        print(textField)
+        //print(textField)
     }
     
     @objc func txtOneChanged(_ textField:UITextField) {
@@ -109,7 +110,7 @@ extension FixViewController {
             lightSetting.txtOne.text = "100"
         }
         lightSetting.sliderOne.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtTwoChanged(_ textField:UITextField) {
@@ -127,7 +128,7 @@ extension FixViewController {
             lightSetting.txtTwo.text = "100"
         }
         lightSetting.sliderTwo.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtThreeChanged(_ textField:UITextField) {
@@ -145,7 +146,7 @@ extension FixViewController {
             lightSetting.txtThree.text = "100"
         }
         lightSetting.sliderThree.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtFourChanged(_ textField:UITextField) {
@@ -163,7 +164,7 @@ extension FixViewController {
             lightSetting.txtFour.text = "100"
         }
         lightSetting.sliderFour.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtFiveChanged(_ textField:UITextField) {
@@ -181,7 +182,7 @@ extension FixViewController {
             lightSetting.txtFive.text = "100"
         }
         lightSetting.sliderFive.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtSixChanged(_ textField:UITextField) {
@@ -199,7 +200,7 @@ extension FixViewController {
             lightSetting.txtSix.text = "100"
         }
         lightSetting.sliderSix.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtSevenChanged(_ textField:UITextField) {
@@ -217,7 +218,7 @@ extension FixViewController {
             lightSetting.txtSeven.text = "100"
         }
         lightSetting.sliderSeven.setValue(Float(value)!,animated:true)
-        updateFix()
+        //updateFix()
     }
     
     @objc func txtEightChanged(_ textField:UITextField) {
@@ -235,6 +236,10 @@ extension FixViewController {
             lightSetting.txtEight.text = "100"
         }
         lightSetting.sliderEight.setValue(Float(value)!,animated:true)
+        //updateFix()
+    }
+    
+    @objc func btnSaveClicked() {
         updateFix()
     }
 }
