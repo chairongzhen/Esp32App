@@ -47,7 +47,7 @@ extension AddViewController {
         let midStr = result.value
         if(midStr.count > 0) {
             var mid : String = midStr.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")[0].replacingOccurrences(of: "mid:", with: "")
-            var midTemp  = midStr.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")
+            let midTemp  = midStr.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").split(separator: ",")
             if midTemp.count > 0 {
                 mid = midTemp[0].replacingOccurrences(of: "mid:", with: "")
             }

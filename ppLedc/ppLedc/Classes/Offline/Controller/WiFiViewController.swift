@@ -56,5 +56,7 @@ extension WiFiViewController {
             self.txtSsid.text = ssid as? String
             self.txtPwd.text = pwd as? String
         }
+        
+        //offlineViewModel.getInterfaces()
     }
 }

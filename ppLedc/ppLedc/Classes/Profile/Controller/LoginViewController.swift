@@ -90,9 +90,12 @@ extension LoginViewController {
         txtUser.layer.borderWidth = 0.5
         txtUser.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtUser.leftViewMode = UITextField.ViewMode.always
-        txtUser.placeholder = "请输入用户名"
+        //txtUser.placeholder = "请输入用户名"
+        txtUser.textColor = .darkText
         txtUser.autocorrectionType = UITextAutocorrectionType.no
         txtUser.autocapitalizationType = UITextAutocapitalizationType.none
+        let userPAttr = NSAttributedString(string: "请输入用户名", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtUser.attributedPlaceholder = userPAttr
 
         // username left icon
         let imgUser = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
@@ -109,7 +112,10 @@ extension LoginViewController {
         txtPwd.isSecureTextEntry = true
         txtPwd.leftView  = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtPwd.leftViewMode = UITextField.ViewMode.always
-        txtPwd.placeholder = "请输入密码"
+        //txtPwd.placeholder = "请输入密码"
+        txtPwd.textColor = .darkText
+        let pwdPAttr = NSAttributedString(string: "请输入密码", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtPwd.attributedPlaceholder = pwdPAttr
 
         // password left icon
         let imgPwd = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))

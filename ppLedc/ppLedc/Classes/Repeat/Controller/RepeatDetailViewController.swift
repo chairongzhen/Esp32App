@@ -20,6 +20,48 @@ class RepeatDetailViewController: PPAlertBaseViewController {
         settingView.txtSix.addTarget(self, action: #selector(txtSixChanged(_:)), for: .allEditingEvents)
         settingView.txtSeven.addTarget(self, action: #selector(txtSevenChanged(_:)), for: .allEditingEvents)
         settingView.txtEight.addTarget(self, action: #selector(txtEightChanged(_:)), for: .allEditingEvents)
+        
+        settingView.txtOne.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtOne.layer.borderWidth = 1
+        settingView.txtOne.layer.cornerRadius = 4
+        settingView.txtOne.backgroundColor = .white
+        settingView.txtOne.textColor = .darkText
+        settingView.txtTwo.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtTwo.layer.borderWidth = 1
+        settingView.txtTwo.layer.cornerRadius = 4
+        settingView.txtTwo.backgroundColor = .white
+        settingView.txtTwo.textColor = .darkText
+        settingView.txtThree.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtThree.layer.borderWidth = 1
+        settingView.txtThree.layer.cornerRadius = 4
+        settingView.txtThree.backgroundColor = .white
+        settingView.txtThree.textColor = .darkText
+        settingView.txtFour.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtFour.layer.borderWidth = 1
+        settingView.txtFour.layer.cornerRadius = 4
+        settingView.txtFour.backgroundColor = .white
+        settingView.txtFour.textColor = .darkText
+        settingView.txtFive.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtFive.layer.borderWidth = 1
+        settingView.txtFive.layer.cornerRadius = 4
+        settingView.txtFive.backgroundColor = .white
+        settingView.txtFive.textColor = .darkText
+        settingView.txtSix.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtSix.layer.borderWidth = 1
+        settingView.txtSix.layer.cornerRadius = 4
+        settingView.txtSix.backgroundColor = .white
+        settingView.txtSix.textColor = .darkText
+        settingView.txtSeven.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtSeven.layer.borderWidth = 1
+        settingView.txtSeven.layer.cornerRadius = 4
+        settingView.txtSeven.backgroundColor = .white
+        settingView.txtSeven.textColor = .darkText
+        settingView.txtEight.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtEight.layer.borderWidth = 1
+        settingView.txtEight.layer.cornerRadius = 4
+        settingView.txtEight.backgroundColor = .white
+        settingView.txtEight.textColor = .darkText
+        
         settingView.btnSave.layer.masksToBounds = true
         settingView.btnSave.layer.cornerRadius = 5.0
         settingView.btnSave.layer.borderWidth = 1.5
@@ -31,6 +73,7 @@ class RepeatDetailViewController: PPAlertBaseViewController {
     private lazy var imgTime : UIImageView = UIImageView()
     private lazy var timeStepper : UIStepper = UIStepper()
     private lazy var repeatViewModel : RepeatViewModel = RepeatViewModel()
+    private lazy var settingVM : SettingViewModel = SettingViewModel()
     private lazy var currentSelectedIndex : Int = 0
     
     override func viewDidLoad() {
@@ -89,8 +132,16 @@ extension RepeatDetailViewController {
         
         repeatViewModel.updateTagVals(openid: self.getOpenid(),tag: String(currentSelectedIndex), lights: lights) { (message) in
             if message == "success" {
-                self.autoHideAlertMessage(message: "保存成功")
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue:"cdchanged"), object: nil, userInfo: nil)
+                self.settingVM.updateSetting(openid: self.getOpenid(), repeatMode: "repeat", productionMode: "production", autoUpdateMode: "none") { (message) in
+                    if message == "success" {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"cdchanged"), object: nil, userInfo: nil)
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
+                        self.autoHideAlertMessage(message: "保存成功")
+                    } else {
+                        self.autoHideAlertMessage(message: message)
+                    }
+                }
+
             } else {
                 self.autoHideAlertMessage(message: "数据异常,请联系商家")
             }

@@ -54,6 +54,7 @@
 		F7A652A522E0635000B31AF6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A422E0635000B31AF6 /* Setting.swift */; };
 		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
 		F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A822E088ED00B31AF6 /* MyViewController.swift */; };
+		F7B5837A234D875F00EEEC00 /* CALayer-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */; };
 		F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242722EEE528005A6E0D /* WiFiViewController.swift */; };
 		F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B7242822EEE528005A6E0D /* WiFiViewController.xib */; };
 		F7B7242D22EEEC31005A6E0D /* OfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */; };
@@ -120,6 +121,7 @@
 		F7A652A422E0635000B31AF6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		F7A652A822E088ED00B31AF6 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer-Extension.swift"; sourceTree = "<group>"; };
 		F7B7242722EEE528005A6E0D /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		F7B7242822EEE528005A6E0D /* WiFiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WiFiViewController.xib; sourceTree = "<group>"; };
 		F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewController.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				F75D3F1422DB064A009E1299 /* UIColor-Extension.swift */,
 				F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */,
 				F72D40DA22FE6E0900C28959 /* String-Exension.swift */,
+				F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
 				F7B7242D22EEEC31005A6E0D /* OfflineViewController.swift in Sources */,
 				F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */,
+				F7B5837A234D875F00EEEC00 /* CALayer-Extension.swift in Sources */,
 				F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,

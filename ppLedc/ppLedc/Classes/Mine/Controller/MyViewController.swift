@@ -84,6 +84,7 @@ extension MyViewController : UITableViewDataSource,UITableViewDelegate {
         var cell:MyTableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellid) as? MyTableViewCell
         if cell == nil {
             cell = MyTableViewCell(style: .subtitle, reuseIdentifier: cellid)
+            cell?.backgroundColor = .white
         }
         
         if myViewMode.machines.count != 0 {

@@ -19,10 +19,12 @@ class RepeatSettingViewController: PPAlertBaseViewController {
     private lazy var btnAdd : UIButton = UIButton()
     private lazy var btnMinus : UIButton = UIButton()
     private lazy var btnModify : UIButton = UIButton()
+    private lazy var btnTest : UIButton = UIButton()
     private lazy var btnNext : UIButton = UIButton()
     private lazy var btnPrevious : UIButton = UIButton()
     private lazy var btnEmpty : UIButton = UIButton()
     private lazy var repeatViewModel : RepeatViewModel = RepeatViewModel()
+    private lazy var settingVM : SettingViewModel = SettingViewModel()
     
 //    private lazy var buttonGroupView : ButtonGroupView = {
 //       let groupView = ButtonGroupView.buttonGroupView()
@@ -37,6 +39,8 @@ class RepeatSettingViewController: PPAlertBaseViewController {
     private var l6val : [Int] = [0,0,0]
     private var l7val : [Int] = [0,0,0]
     private var l8val : [Int] = [0,0,0]
+    
+    private var timer: Timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(upDataChange(notif:)), name: NSNotification.Name(rawValue: "cdchanged"), object: nil)
@@ -58,7 +62,7 @@ extension RepeatSettingViewController {
     }
     
     private func drawButtonGroup() {
-        btnAdd.frame = CGRect(x: 30, y: 270, width: 44, height: 44)
+        btnAdd.frame = CGRect(x: 10, y: 270, width: 44, height: 44)
         btnAdd.setImage(UIImage(named: "repeatadd"), for: .normal)
         btnAdd.addTarget(self, action: #selector(btnAddClicked), for: .touchUpInside)
         if self.tags.contains(self.getCurrentTimeIndex()) {
@@ -68,29 +72,35 @@ extension RepeatSettingViewController {
         }
         self.view.addSubview(btnAdd)
         
-        btnMinus.frame = CGRect(x: 84, y: 270, width: 44, height: 44)
+        btnMinus.frame = CGRect(x: 64, y: 270, width: 44, height: 44)
         btnMinus.setImage(UIImage(named: "minus"), for: .normal)
         btnMinus.addTarget(self, action: #selector(btnMinusClicked), for: .touchUpInside)
         btnMinus.isEnabled = false
         self.view.addSubview(btnMinus)
         
-        btnModify.frame = CGRect(x: 138, y: 270, width: 44, height: 44)
+        btnModify.frame = CGRect(x: 118, y: 270, width: 44, height: 44)
         btnModify.setImage(UIImage(named: "modify"), for: .normal)
         btnModify.addTarget(self, action: #selector(btnModifyClicked), for: .touchUpInside)
         btnModify.isEnabled = false
         self.view.addSubview(btnModify)
         
-        btnNext.frame = CGRect(x: 192, y: 270, width: 44, height: 44)
+        btnTest.frame = CGRect(x: 172, y: 270, width: 44, height: 44)
+        btnTest.setImage(UIImage(named: "test"), for: .normal)
+        btnTest.addTarget(self, action: #selector(btnTestClicked), for: .touchUpInside)
+        self.view.addSubview(btnTest)
+        
+        
+        btnNext.frame = CGRect(x: 228, y: 270, width: 44, height: 44)
         btnNext.setImage(UIImage(named: "next"), for: .normal)
         btnNext.addTarget(self, action: #selector(btnNextClicked), for: .touchUpInside)
         self.view.addSubview(btnNext)
         
-        btnPrevious.frame = CGRect(x: 248, y: 270, width: 44, height: 44)
+        btnPrevious.frame = CGRect(x: 282, y: 270, width: 44, height: 44)
         btnPrevious.setImage(UIImage(named: "previous"), for: .normal)
         btnPrevious.addTarget(self, action: #selector(btnPreviousClicked), for: .touchUpInside)
         self.view.addSubview(btnPrevious)
         
-        btnEmpty.frame = CGRect(x: 302, y: 270, width: 44, height: 44)
+        btnEmpty.frame = CGRect(x: 326, y: 270, width: 44, height: 44)
         btnEmpty.setImage(UIImage(named: "trash"), for: .normal)
         btnEmpty.addTarget(self, action: #selector(btnEmptyClicked), for: .touchUpInside)
         self.view.addSubview(btnEmpty)
@@ -145,7 +155,17 @@ extension RepeatSettingViewController {
         self.view.addSubview(timeStepper)
     }
 
-
+    private func drawTestLine(timeline : Double) {
+        for line in chartView.xAxis.limitLines {
+            chartView.xAxis.removeLimitLine(line)
+        }
+        let currentTimeLine = ChartLimitLine(limit: timeline, label: "")
+        currentTimeLine.lineColor = .green
+        currentTimeLine.lineWidth = 2
+        chartView.xAxis.addLimitLine(currentTimeLine)
+        chartView.data?.notifyDataChanged()
+        chartView.notifyDataSetChanged()
+    }
     
     private func drawChartLine(timeline : Double) {
         for line in chartView.xAxis.limitLines {
@@ -525,6 +545,53 @@ extension RepeatSettingViewController {
                 self.autoHideAlertMessage(message: "数据异常,请联系商家")
             }
         }
+    }
+    
+    @objc private func btnTestClicked() {
+        if self.timer.isValid {
+            btnTest.setImage(UIImage(named: "test"), for: .normal)
+            self.timer.invalidate()
+            self.settingVM.updateSetting(openid: self.getOpenid(), repeatMode: "repeat", productionMode: "production", autoUpdateMode: "none") { (message) in
+                if message == "success" {
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
+                    self.autoHideAlertMessage(message: "中止测试,恢复产品模式")
+                } else {
+                    self.autoHideAlertMessage(message: message)
+                }
+            }
+        } else {
+            btnTest.setImage(UIImage(named: "stop"), for: .normal)
+            self.settingVM.updateSetting(openid: self.getOpenid(), repeatMode: "repeat", productionMode: "test", autoUpdateMode: "none") { (message) in
+                  if message == "success" {
+                      NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
+                      if #available(iOS 10.0, *) {
+                          var index = 0
+                          self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (t) in
+                              self.drawTestLine(timeline: Double(index))
+                              print(index)
+                              index += 1
+                              if(index > 143) {
+                                  self.timer.invalidate()
+                                  self.settingVM.updateSetting(openid: self.getOpenid(), repeatMode: "repeat", productionMode: "production", autoUpdateMode: "none") { (message) in
+                                      if message == "success" {
+                                          NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
+                                          self.autoHideAlertMessage(message: "测试完成,恢复产品模式")
+                                      } else {
+                                          self.autoHideAlertMessage(message: message)
+                                      }
+                                  }
+                              }
+                          })
+                      } else {
+                          // Fallback on earlier versions
+                      }
+                      //self.autoHideAlertMessage(message: "保存成功")
+                  } else {
+                      self.autoHideAlertMessage(message: message)
+                  }
+              }
+        }
+
     }
 }
 

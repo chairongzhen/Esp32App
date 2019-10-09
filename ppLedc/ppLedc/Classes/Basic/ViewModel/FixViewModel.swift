@@ -34,7 +34,7 @@ extension FixViewModel {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if(isSuccess) {
                 let content = resultDict["content"] as! [String: NSObject]
-                var data: Dictionary = content as Dictionary
+                let data: Dictionary = content as Dictionary
                 
                 let datafix: FixData = FixData()
                 datafix.l1 = data["l1"] as! Int

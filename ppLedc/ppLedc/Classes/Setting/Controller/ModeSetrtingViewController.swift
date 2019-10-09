@@ -26,6 +26,7 @@ class ModeSetrtingViewController: PPAlertBaseViewController {
         openid = self.getOpenid()
         getSettingData()
         setupUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(upDataChange(notif:)), name: NSNotification.Name(rawValue: "settingchanged"), object: nil)
     }
 
 }
@@ -65,6 +66,10 @@ extension ModeSetrtingViewController {
                 return
             }
         }
+    }
+    
+    @objc func upDataChange(notif: NSNotification){
+        getSettingData()
     }
     
     func setSettingData() {
@@ -116,6 +121,8 @@ extension ModeSetrtingViewController : UITableViewDataSource,UITableViewDelegate
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "selectCell")
             cell?.selectionStyle = .none
+            cell?.backgroundColor = .white
+            cell?.textLabel?.textColor = .darkText
         }
 
         if indexPath.section == 0 {

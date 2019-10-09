@@ -43,7 +43,7 @@ extension RepeatViewModel {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if(isSuccess) {
                 let content = resultDict["content"] as! [String: NSObject]
-                var data: Dictionary = content as Dictionary
+                let data: Dictionary = content as Dictionary
                 self.tags = data["tags"] as! [Int]
                 self.l1val = data["l1"] as! [Int]
                 self.l2val = data["l2"] as! [Int]

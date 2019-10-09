@@ -20,6 +20,48 @@ class FixViewController: PPAlertBaseViewController {
         settingView.txtSix.addTarget(self, action: #selector(txtSixChanged(_:)), for: .allEditingEvents)
         settingView.txtSeven.addTarget(self, action: #selector(txtSevenChanged(_:)), for: .allEditingEvents)
         settingView.txtEight.addTarget(self, action: #selector(txtEightChanged(_:)), for: .allEditingEvents)
+        
+        settingView.txtOne.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtOne.layer.borderWidth = 1
+        settingView.txtOne.layer.cornerRadius = 4
+        settingView.txtOne.backgroundColor = .white
+        settingView.txtOne.textColor = .darkText
+        settingView.txtTwo.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtTwo.layer.borderWidth = 1
+        settingView.txtTwo.layer.cornerRadius = 4
+        settingView.txtTwo.backgroundColor = .white
+        settingView.txtTwo.textColor = .darkText
+        settingView.txtThree.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtThree.layer.borderWidth = 1
+        settingView.txtThree.layer.cornerRadius = 4
+        settingView.txtThree.backgroundColor = .white
+        settingView.txtThree.textColor = .darkText
+        settingView.txtFour.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtFour.layer.borderWidth = 1
+        settingView.txtFour.layer.cornerRadius = 4
+        settingView.txtFour.backgroundColor = .white
+        settingView.txtFour.textColor = .darkText
+        settingView.txtFive.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtFive.layer.borderWidth = 1
+        settingView.txtFive.layer.cornerRadius = 4
+        settingView.txtFive.backgroundColor = .white
+        settingView.txtFive.textColor = .darkText
+        settingView.txtSix.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtSix.layer.borderWidth = 1
+        settingView.txtSix.layer.cornerRadius = 4
+        settingView.txtSix.backgroundColor = .white
+        settingView.txtSix.textColor = .darkText
+        settingView.txtSeven.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtSeven.layer.borderWidth = 1
+        settingView.txtSeven.layer.cornerRadius = 4
+        settingView.txtSeven.backgroundColor = .white
+        settingView.txtSeven.textColor = .darkText
+        settingView.txtEight.layer.borderColor = UIColor.lightGray.cgColor
+        settingView.txtEight.layer.borderWidth = 1
+        settingView.txtEight.layer.cornerRadius = 4
+        settingView.txtEight.backgroundColor = .white
+        settingView.txtEight.textColor = .darkText
+        
         settingView.btnOpenAll.setImage(UIImage(named: "openall")?.withRenderingMode(.alwaysOriginal), for: .normal)
         settingView.btnCloseAll.setImage(UIImage(named: "closeall")?.withRenderingMode(.alwaysOriginal), for: .normal)
         settingView.btnSave.addTarget(self, action: #selector(btnSaveClicked), for: .touchUpInside)
@@ -27,6 +69,7 @@ class FixViewController: PPAlertBaseViewController {
         return settingView
     }()
     private lazy var fixViewModel : FixViewModel = FixViewModel()
+    private lazy var settingVM : SettingViewModel = SettingViewModel()
     var button : UIButton = UIButton()
     var textField : UITextField = UITextField()
     override func viewDidLoad() {
@@ -75,7 +118,15 @@ extension FixViewController {
         if openid == "" { return }
         fixViewModel.updateFix(openid: openid, l1: self.lightSetting.txtOne.text!, l2: self.lightSetting.txtTwo.text!, l3: self.lightSetting.txtThree.text!, l4: self.lightSetting.txtFour.text!, l5: self.lightSetting.txtFive.text!, l6: self.lightSetting.txtSix.text!, l7: self.lightSetting.txtSeven.text!, l8: self.lightSetting.txtEight.text!) { (message) in
             if message == "success" {
-                self.autoHideAlertMessage(message: "保存成功")
+                self.settingVM.updateSetting(openid: openid, repeatMode: "fix", productionMode: "production", autoUpdateMode: "none") { (message) in
+                    if message == "success" {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
+                        self.autoHideAlertMessage(message: "保存成功")
+                    } else {
+                        self.autoHideAlertMessage(message: message)
+                    }
+                }
+                
             } else {
                 self.autoHideAlertMessage(message: message)
             }
@@ -91,7 +142,7 @@ extension FixViewController {
     
     
     @objc func textChange(_ textField:UITextField) {
-        let textField : UITextField = textField
+        //let textField : UITextField = textField
         //print(textField)
     }
     

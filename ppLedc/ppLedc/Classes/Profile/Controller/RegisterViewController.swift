@@ -71,7 +71,10 @@ extension RegisterViewController {
         txtUser.layer.borderWidth = 0.5
         txtUser.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtUser.leftViewMode = UITextField.ViewMode.always
-        txtUser.placeholder = "请输入用户名"
+        //txtUser.placeholder = "请输入用户名"
+        txtUser.textColor = .darkText
+        let userPAttr = NSAttributedString(string: "请输入用户名", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtUser.attributedPlaceholder = userPAttr
         txtUser.autocorrectionType = UITextAutocorrectionType.no
         txtUser.autocapitalizationType = UITextAutocapitalizationType.none
         let imgUser = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
@@ -87,7 +90,11 @@ extension RegisterViewController {
         txtPwd.isSecureTextEntry = true
         txtPwd.leftView  = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtPwd.leftViewMode = UITextField.ViewMode.always
-        txtPwd.placeholder = "请输入密码"
+        //txtPwd.placeholder = "请输入密码"
+        txtPwd.textColor = .darkText
+        let pwdPAttr = NSAttributedString(string: "请输入密码", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtPwd.attributedPlaceholder = userPAttr
+        
         
         // password left icon
         let imgPwd = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
@@ -104,7 +111,10 @@ extension RegisterViewController {
         txtConfirmPwd.isSecureTextEntry = true
         txtConfirmPwd.leftView  = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         txtConfirmPwd.leftViewMode = UITextField.ViewMode.always
-        txtConfirmPwd.placeholder = "确认密码"
+        //txtConfirmPwd.placeholder = "确认密码"
+        txtConfirmPwd.textColor = .darkText
+        let cpwdPAttr = NSAttributedString(string: "确认密码", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtConfirmPwd.attributedPlaceholder = cpwdPAttr
         
         // password left icon
         let imgPwd2 = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
@@ -122,6 +132,9 @@ extension RegisterViewController {
         nickName.placeholder = "请输入昵称(可为空)"
         nickName.autocorrectionType = UITextAutocorrectionType.no
         nickName.autocapitalizationType = UITextAutocapitalizationType.none
+        nickName.textColor = .darkText
+        let nickPAttr = NSAttributedString(string: "请输入昵称(可为空)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        nickName.attributedPlaceholder = nickPAttr
         
         // password left icon
         let imgPwd3 = UIImageView(frame: CGRect(x: 11, y: 11, width: 22, height: 22))
