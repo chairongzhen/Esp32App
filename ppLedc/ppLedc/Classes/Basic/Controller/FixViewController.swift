@@ -62,8 +62,8 @@ class FixViewController: PPAlertBaseViewController {
         settingView.txtEight.backgroundColor = .white
         settingView.txtEight.textColor = .darkText
         
-        settingView.btnOpenAll.setImage(UIImage(named: "openall")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        settingView.btnCloseAll.setImage(UIImage(named: "closeall")?.withRenderingMode(.alwaysOriginal), for: .normal)
+//        settingView.btnOpenAll.setImage(UIImage(named: "openall")?.withRenderingMode(.alwaysOriginal), for: .normal)
+//        settingView.btnCloseAll.setImage(UIImage(named: "closeall")?.withRenderingMode(.alwaysOriginal), for: .normal)
         settingView.btnSave.addTarget(self, action: #selector(btnSaveClicked), for: .touchUpInside)
         getFixData()
         return settingView

@@ -10,7 +10,9 @@ import UIKit
 
 class SystemViewController: PPAlertBaseViewController {
 
+    @IBOutlet weak var lbVersion: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
+ 

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
         
         //CheckVersion.checkVersion(kBundleId, nil)
         
-        //WXApi.registerApp(wechat_appId)
+        WXApi.registerApp(wechat_appId)
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = 	UIColor.orange
 //        self.window?.rootViewController = UINavigationController(rootViewController: OfflineViewController    ())
@@ -36,16 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
     
     
     
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let urlKey: String = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String
-        
-        if urlKey == "com.tencent.xin" {
-            // 微信 的回调
-            return  WXApi.handleOpen(url, delegate: self)
-        }
-        
-        return true
+        return  WXApi.handleOpen(url, delegate: self)
     }
+    
     
     func onResp(_ resp: BaseResp) {
         let sendRes: SendAuthResp? = resp as? SendAuthResp

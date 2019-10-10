@@ -155,17 +155,18 @@ extension RepeatSettingViewController {
         self.view.addSubview(timeStepper)
     }
 
-    private func drawTestLine(timeline : Double) {
+    private func drawTestLine(timeline : Double,color : UIColor) {
         for line in chartView.xAxis.limitLines {
             chartView.xAxis.removeLimitLine(line)
         }
         let currentTimeLine = ChartLimitLine(limit: timeline, label: "")
-        currentTimeLine.lineColor = .green
+        currentTimeLine.lineColor = color
         currentTimeLine.lineWidth = 2
         chartView.xAxis.addLimitLine(currentTimeLine)
         chartView.data?.notifyDataChanged()
         chartView.notifyDataSetChanged()
     }
+    
     
     private func drawChartLine(timeline : Double) {
         for line in chartView.xAxis.limitLines {
@@ -553,6 +554,9 @@ extension RepeatSettingViewController {
             self.timer.invalidate()
             self.settingVM.updateSetting(openid: self.getOpenid(), repeatMode: "repeat", productionMode: "production", autoUpdateMode: "none") { (message) in
                 if message == "success" {
+                    self.drawTestLine(timeline: Double(self.getCurrentTimeIndex()),color: UIColor.green)
+                    self.txtTime.text = kXAxises[self.getCurrentTimeIndex()]
+                    self.sliderTime.value = Float(self.getCurrentTimeIndex())
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
                     self.autoHideAlertMessage(message: "中止测试,恢复产品模式")
                 } else {
@@ -567,20 +571,30 @@ extension RepeatSettingViewController {
                       if #available(iOS 10.0, *) {
                           var index = 0
                           self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (t) in
-                              self.drawTestLine(timeline: Double(index))
-                              print(index)
-                              index += 1
+                            self.drawTestLine(timeline: Double(index),color: UIColor.green)
+                            self.txtTime.text = kXAxises[index]
+                            self.sliderTime.value = Float(index)
+                              //print(index)
+                              index += 6
+                            if(index == 144) {
+                                index = 143
+                            }
+                            else {
                               if(index > 143) {
-                                  self.timer.invalidate()
+                                self.timer.invalidate()
                                   self.settingVM.updateSetting(openid: self.getOpenid(), repeatMode: "repeat", productionMode: "production", autoUpdateMode: "none") { (message) in
                                       if message == "success" {
                                           NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
-                                          self.autoHideAlertMessage(message: "测试完成,恢复产品模式")
+                                        self.drawTestLine(timeline: Double(self.getCurrentTimeIndex()),color: UIColor.green)
+                                        self.txtTime.text = kXAxises[self.getCurrentTimeIndex()]
+                                        self.sliderTime.value = Float(self.getCurrentTimeIndex())
+                                        self.autoHideAlertMessage(message: "测试完成,恢复产品模式")
+                                        self.btnTest.setImage(UIImage(named: "test"), for: .normal)
                                       } else {
                                           self.autoHideAlertMessage(message: message)
                                       }
                                   }
-                              }
+                                }}
                           })
                       } else {
                           // Fallback on earlier versions

@@ -79,13 +79,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="yYD-O3-RBw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1bA-Mh-wBs"/>
-                <constraint firstItem="yYD-O3-RBw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="290-kq-9YC">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </constraint>
+                <constraint firstItem="yYD-O3-RBw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="290-kq-9YC"/>
                 <constraint firstItem="zSD-cY-p4b" firstAttribute="leading" secondItem="936-wL-fT8" secondAttribute="trailing" constant="10" id="Cjx-q0-kA7"/>
                 <constraint firstItem="V4U-QL-Zg5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ECF-be-zZi"/>
                 <constraint firstItem="yYD-O3-RBw" firstAttribute="leading" secondItem="RKp-al-DYn" secondAttribute="trailing" id="Qpr-i2-Keu"/>

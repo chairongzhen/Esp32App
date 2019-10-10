@@ -61,6 +61,29 @@ extension PPAlertBaseViewController {
         return result
     }
     
+    func getNowIndex() -> Int {
+        let now = Date()
+        let myFormatter = DateFormatter()
+        myFormatter.dateFormat = "h"
+        let hour : String = myFormatter.string(from: now)
+        myFormatter.dateFormat = "mm"
+        let min : String = myFormatter.string(from: now)
+        var result : String = ""
+        if min.count > 1 {
+            result = "\(hour):\(min.prefix(1))0"
+        } else {
+            result = "\(hour):\(min)"
+        }
+        var rIndex : Int = 0
+        for (index,val) in kXAxises.enumerated() {
+            if val == result {
+                rIndex = index
+                break;
+            }
+        }
+        return rIndex
+    }
+    
     func getSelectedTimeIndex(selected : String) -> Int {
         var result : Int = 0
         for (index,val) in kXAxises.enumerated() {

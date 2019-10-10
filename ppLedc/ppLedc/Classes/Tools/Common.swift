@@ -67,4 +67,4 @@ let apiOnline = "http://192.168.4.1/online"
 
 // wechat
 let wechat_appId = "wx2758cd51f692e56b"
-let wwechat_appSecret = "85de83538b70389f26776cdeb788f679"
+let wwechat_appSecret = "02338cf07258b83f41f3f37ca86803e5"

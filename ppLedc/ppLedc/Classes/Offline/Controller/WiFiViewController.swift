@@ -19,6 +19,22 @@ class WiFiViewController: PPAlertBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "WiFi设置"
+        txtSsid.layer.borderColor = UIColor.lightGray.cgColor
+        txtSsid.layer.borderWidth = 1
+        txtSsid.layer.cornerRadius = 4
+        txtSsid.backgroundColor = .white
+        txtSsid.textColor = .darkText
+        txtPwd.layer.borderColor = UIColor.lightGray.cgColor
+        txtPwd.layer.borderWidth = 1
+        txtPwd.layer.cornerRadius = 4
+        txtPwd.backgroundColor = .white
+        txtPwd.textColor = .darkText
+        let unamePAttr = NSAttributedString(string: "热点名", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtSsid.attributedPlaceholder = unamePAttr
+        let pwdPAttr = NSAttributedString(string: "密码", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        txtPwd.attributedPlaceholder = pwdPAttr
+        
+        
         getSsidInfo()
     }
     
@@ -57,6 +73,5 @@ extension WiFiViewController {
             self.txtPwd.text = pwd as? String
         }
         
-        //offlineViewModel.getInterfaces()
     }
 }
