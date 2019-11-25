@@ -55,7 +55,11 @@ extension BasicViewController {
     private func setupUI() {
 //        self.navigationController?.isNavigationBarHidden = false
         // cancel the scrollview inner margin
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         
         // setting title view
         view.addSubview(pageTitleView)

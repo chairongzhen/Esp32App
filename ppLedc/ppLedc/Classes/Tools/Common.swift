@@ -64,6 +64,7 @@ let apiWxLogin = "https://www.polypite.com/service/wxlogin"
 let apiOn = "http://192.168.4.1/ioson"
 let apiOff = "http://192.168.4.1/iosoff"
 let apiOnline = "http://192.168.4.1/online"
+let apiUpdateTime = "http://192.168.4.1/updatetime"
 
 // wechat
 let wechat_appId = "wx2758cd51f692e56b"

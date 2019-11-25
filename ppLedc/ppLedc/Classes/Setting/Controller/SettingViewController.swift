@@ -45,7 +45,13 @@ class SettingViewController: PPBaseViewController {
 extension SettingViewController {
     private func setupUI() {
         // cancel the scrollview inner margin
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+        
+
         
         
         // setting title view

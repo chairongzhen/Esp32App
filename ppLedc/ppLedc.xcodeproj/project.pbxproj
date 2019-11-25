@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		F712F40022DB773700585544 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712F3FF22DB773700585544 /* SettingViewController.swift */; };
 		F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B52F722D81CB100167B97 /* AppDelegate.swift */; };
 		F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71B52FE22D81CB300167B97 /* Assets.xcassets */; };
-		F71B530222D81CB300167B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B530022D81CB300167B97 /* LaunchScreen.storyboard */; };
 		F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B535922D8DB0000167B97 /* Setting.storyboard */; };
 		F71B536822D8DB0000167B97 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B535C22D8DB0000167B97 /* Mine.storyboard */; };
 		F71B536922D8DB0000167B97 /* Basic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B535F22D8DB0000167B97 /* Basic.storyboard */; };
@@ -21,6 +20,7 @@
 		F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71B536B22D8DB1D00167B97 /* Main.storyboard */; };
 		F71B537022D8DBF800167B97 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B536F22D8DBF800167B97 /* MainViewController.swift */; };
 		F71B537A22D8DF1500167B97 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B537922D8DF1500167B97 /* BasicViewController.swift */; };
+		F71FF1372355E2720067F0C2 /* EspSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71FF1362355E2720067F0C2 /* EspSettingViewController.swift */; };
 		F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F729C03D22F7148F00336A4F /* AddViewController.swift */; };
 		F729C04022F7148F00336A4F /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F729C03E22F7148F00336A4F /* AddViewController.xib */; };
 		F72D40D922FDC00900C28959 /* WechatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72D40D822FDC00900C28959 /* WechatUser.swift */; };
@@ -54,6 +54,7 @@
 		F7A652A522E0635000B31AF6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A422E0635000B31AF6 /* Setting.swift */; };
 		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
 		F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A822E088ED00B31AF6 /* MyViewController.swift */; };
+		F7AACE3A2361F475002858DA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AACE392361F475002858DA /* Launch Screen.storyboard */; };
 		F7B5837A234D875F00EEEC00 /* CALayer-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */; };
 		F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242722EEE528005A6E0D /* WiFiViewController.swift */; };
 		F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B7242822EEE528005A6E0D /* WiFiViewController.xib */; };
@@ -79,7 +80,6 @@
 		F71B52F422D81CB100167B97 /* ppLedc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ppLedc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F71B52F722D81CB100167B97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F71B52FE22D81CB300167B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F71B530122D81CB300167B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F71B530322D81CB300167B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71B535922D8DB0000167B97 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		F71B535C22D8DB0000167B97 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -88,6 +88,7 @@
 		F71B536B22D8DB1D00167B97 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F71B536F22D8DBF800167B97 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F71B537922D8DF1500167B97 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		F71FF1362355E2720067F0C2 /* EspSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspSettingViewController.swift; sourceTree = "<group>"; };
 		F729C03D22F7148F00336A4F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		F729C03E22F7148F00336A4F /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		F72D40D822FDC00900C28959 /* WechatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WechatUser.swift; sourceTree = "<group>"; };
@@ -121,12 +122,14 @@
 		F7A652A422E0635000B31AF6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		F7A652A822E088ED00B31AF6 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		F7AACE392361F475002858DA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer-Extension.swift"; sourceTree = "<group>"; };
 		F7B7242722EEE528005A6E0D /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		F7B7242822EEE528005A6E0D /* WiFiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WiFiViewController.xib; sourceTree = "<group>"; };
 		F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewController.swift; sourceTree = "<group>"; };
 		F7B7242C22EEEC31005A6E0D /* OfflineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineViewController.xib; sourceTree = "<group>"; };
 		F7B7242F22EF00EE005A6E0D /* OfflineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewModel.swift; sourceTree = "<group>"; };
+		F7CEFF80238BD72900F07A27 /* ppLedc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ppLedc.entitlements; sourceTree = "<group>"; };
 		F7F9ADF422E0ABA8003DC0E2 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		F7F9ADF922E0BA18003DC0E2 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
 		F7F9ADFB22E0BD5D003DC0E2 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
@@ -185,12 +188,13 @@
 		F71B52F622D81CB100167B97 /* ppLedc */ = {
 			isa = PBXGroup;
 			children = (
+				F7CEFF80238BD72900F07A27 /* ppLedc.entitlements */,
 				F71B531022D8653D00167B97 /* Classes */,
 				F71B52F722D81CB100167B97 /* AppDelegate.swift */,
 				F71B52FE22D81CB300167B97 /* Assets.xcassets */,
-				F71B530022D81CB300167B97 /* LaunchScreen.storyboard */,
 				F71B530322D81CB300167B97 /* Info.plist */,
 				F70F614B22FD75CE009E5034 /* ppLight_bridge.h */,
+				F7AACE392361F475002858DA /* Launch Screen.storyboard */,
 			);
 			path = ppLedc;
 			sourceTree = "<group>";
@@ -229,6 +233,7 @@
 				F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */,
 				F72F676222ECA8C500787029 /* SystemViewController.swift */,
 				F72F676322ECA8C500787029 /* SystemViewController.xib */,
+				F71FF1362355E2720067F0C2 /* EspSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -609,8 +614,8 @@
 				F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */,
 				F72F676522ECA8C500787029 /* SystemViewController.xib in Resources */,
 				F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */,
+				F7AACE3A2361F475002858DA /* Launch Screen.storyboard in Resources */,
 				F7B7242E22EEEC31005A6E0D /* OfflineViewController.xib in Resources */,
-				F71B530222D81CB300167B97 /* LaunchScreen.storyboard in Resources */,
 				F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */,
 				F729C04022F7148F00336A4F /* AddViewController.xib in Resources */,
 				F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */,
@@ -652,26 +657,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/CheckVersion_Swift/CheckVersion_Swift.framework",
-				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ppLedc/Pods-ppLedc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CheckVersion_Swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ppLedc/Pods-ppLedc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ppLedc/Pods-ppLedc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -713,6 +707,7 @@
 				F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */,
 				F7B5837A234D875F00EEEC00 /* CALayer-Extension.swift in Sources */,
 				F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */,
+				F71FF1372355E2720067F0C2 /* EspSettingViewController.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,
@@ -730,17 +725,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F71B530022D81CB300167B97 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F71B530122D81CB300167B97 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F71B530422D81CB300167B97 /* Debug */ = {
@@ -865,16 +849,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ppLedc/ppLedc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YVWC7NXGPA;
+				DEVELOPMENT_TEAM = 5SBAWUCDXV;
 				INFOPLIST_FILE = ppLedc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rzchai.ppLedc;
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polypite.pplight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/chairongzhen/swift/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -887,16 +875,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ppLedc/ppLedc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YVWC7NXGPA;
+				DEVELOPMENT_TEAM = 5SBAWUCDXV;
 				INFOPLIST_FILE = ppLedc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rzchai.ppLedc;
+				MARKETING_VERSION = 1.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polypite.pplight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/chairongzhen/swift/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

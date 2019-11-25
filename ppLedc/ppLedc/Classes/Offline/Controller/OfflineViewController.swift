@@ -16,11 +16,17 @@ class OfflineViewController: PPAlertBaseViewController {
     @IBOutlet weak var btnMain: UIButton!
     private lazy var offlineViewModel : OfflineViewModel = OfflineViewModel()
     
+
+    @IBOutlet weak var btnTimeUpdate: UIButton!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "离线操作"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "WiFi设置", style: .plain, target: self, action: #selector(gotoWiFi))
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+
         
     }
     
@@ -43,6 +49,17 @@ extension OfflineViewController {
     
     @IBAction func btnOffClicked(_ sender: Any) {
         offlineViewModel.allOff { (message) in
+        }
+    }
+    
+
+    @IBAction func btnTimeUpdateClicked(_ sender: Any) {
+        let now = NSDate()
+        let timeInterval:TimeInterval = now.timeIntervalSince1970
+        let timeStamp = Int(timeInterval)
+        offlineViewModel.updateTime(timestamp: timeStamp) { (message) in
+            self.autoHideAlertMessage(message: "同步成功")
+            print("message")
         }
     }
     

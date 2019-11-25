@@ -45,7 +45,11 @@ class MineViewController: PPBaseViewController {
 extension MineViewController {
     private func setupUI() {
         // cancel the scrollview inner margin
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         
         // setting title view
         view.addSubview(pageTitleView)

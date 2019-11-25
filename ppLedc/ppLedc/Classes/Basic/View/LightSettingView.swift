@@ -87,7 +87,7 @@ extension LightSettingView {
     @IBAction func sliderFiveChanged(_ sender: Any) {
         let value : Int = Int(sliderFive.value)
         txtFive.text = String(value)
-        updateFix()
+        //updateFix()
     }
     @IBAction func sliderSixChanged(_ sender: Any) {
         let value : Int = Int(sliderSix.value)

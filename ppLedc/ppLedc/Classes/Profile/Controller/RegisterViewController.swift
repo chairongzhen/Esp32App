@@ -93,7 +93,7 @@ extension RegisterViewController {
         //txtPwd.placeholder = "请输入密码"
         txtPwd.textColor = .darkText
         let pwdPAttr = NSAttributedString(string: "请输入密码", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        txtPwd.attributedPlaceholder = userPAttr
+        txtPwd.attributedPlaceholder = pwdPAttr
         
         
         // password left icon

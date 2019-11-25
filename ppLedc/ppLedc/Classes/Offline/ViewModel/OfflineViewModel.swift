@@ -58,5 +58,19 @@ extension OfflineViewModel {
             }
         }
     }
-        
+    
+     func updateTime(timestamp: Int,  finished: @escaping (_ message: String) ->()) {
+           UIApplication.shared.isNetworkActivityIndicatorVisible = true
+           let updateTimeUrl : String  = apiUpdateTime + "?timestamp=\(timestamp)"
+           NetworkTools.internatRequest(type: .GET,URLString: updateTimeUrl) { (result) in
+               UIApplication.shared.isNetworkActivityIndicatorVisible = false
+               let res = result as! String
+               if(res == "success") {
+                   finished("success")
+
+               } else {
+                   finished("failed")
+               }
+           }
+       }
 }

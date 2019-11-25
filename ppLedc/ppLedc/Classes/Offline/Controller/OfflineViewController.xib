@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +13,7 @@
                 <outlet property="btnClose" destination="Mib-tp-XoH" id="gnS-xD-BqD"/>
                 <outlet property="btnMain" destination="y6T-o5-OmM" id="TJK-pm-xaQ"/>
                 <outlet property="btnOpen" destination="1vF-Ms-XMq" id="CyG-DI-TmS"/>
+                <outlet property="btnTimeUpdate" destination="w5O-ga-CiL" id="GpV-mF-5n2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -72,6 +71,21 @@
                         <action selector="btnMainClicked:" destination="-1" eventType="touchUpInside" id="8oj-vz-kJ8"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5O-ga-CiL">
+                    <rect key="frame" x="157" y="583" width="100" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6BN-Uw-yn3"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Rqw-2E-G5K"/>
+                        <constraint firstAttribute="height" constant="30" id="hfi-VI-3Yd"/>
+                        <constraint firstAttribute="width" constant="100" id="tI5-jz-ZFW"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title=" 同步时间"/>
+                    <connections>
+                        <action selector="btnTimeUpdateClicked:" destination="-1" eventType="touchUpInside" id="sL5-ke-PoV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -80,9 +94,11 @@
                 <constraint firstItem="1vF-Ms-XMq" firstAttribute="top" secondItem="EVX-3q-VYd" secondAttribute="bottom" constant="20" id="9Zc-Ah-Sv1"/>
                 <constraint firstItem="Mib-tp-XoH" firstAttribute="top" secondItem="1vF-Ms-XMq" secondAttribute="bottom" constant="20" id="EZr-6l-wFt"/>
                 <constraint firstItem="Mib-tp-XoH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TP2-lt-amT"/>
+                <constraint firstItem="w5O-ga-CiL" firstAttribute="top" secondItem="y6T-o5-OmM" secondAttribute="bottom" constant="20" id="YJf-XA-5aA"/>
                 <constraint firstItem="y6T-o5-OmM" firstAttribute="top" secondItem="Mib-tp-XoH" secondAttribute="bottom" constant="20" id="dj7-WY-qIT"/>
                 <constraint firstItem="EVX-3q-VYd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eYZ-7R-hbe"/>
                 <constraint firstItem="1vF-Ms-XMq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xND-5r-QIJ"/>
+                <constraint firstItem="w5O-ga-CiL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zkW-jF-oe5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>

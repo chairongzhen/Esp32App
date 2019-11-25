@@ -401,7 +401,7 @@ extension RepeatSettingViewController {
                     self.l5val.append(0)
                     self.l6val.append(0)
                     self.l7val.append(0)
-                    self.l8val.append(0)
+                    self.l8val.append(0) 
                 }
                 self.tags.append(144)
                 self.l1val.append(self.l1val[0])
