@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E31844711BD11D94F2DED83 /* Pods_ppLedc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B578069C95F6B523D90F2062 /* Pods_ppLedc.framework */; };
+		F70467F1258F906100362CE7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70467F0258F906000362CE7 /* UIViewController-Extension.swift */; };
 		F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712F3FB22DB72B700585544 /* RepeatViewController.swift */; };
 		F712F3FE22DB75E100585544 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712F3FD22DB75E100585544 /* MineViewController.swift */; };
 		F712F40022DB773700585544 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712F3FF22DB773700585544 /* SettingViewController.swift */; };
@@ -50,6 +51,14 @@
 		F75D3F1122DA1A9F009E1299 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1022DA1A9F009E1299 /* Common.swift */; };
 		F75D3F1322DB026C009E1299 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1222DB026C009E1299 /* PageContentView.swift */; };
 		F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75D3F1422DB064A009E1299 /* UIColor-Extension.swift */; };
+		F76F53BB24D7030000D36424 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53B924D7030000D36424 /* FirstViewController.swift */; };
+		F76F53BC24D7030000D36424 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F53BA24D7030000D36424 /* FirstViewController.xib */; };
+		F76F53C224D719C500D36424 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76F53C124D719C500D36424 /* Home.storyboard */; };
+		F76F53C524D71A4400D36424 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53C324D71A4400D36424 /* HomeViewController.swift */; };
+		F76F53C624D71A4400D36424 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F53C424D71A4400D36424 /* HomeViewController.xib */; };
+		F76F53C824D72A1F00D36424 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53C724D72A1F00D36424 /* UIImage-Extension.swift */; };
+		F76F53CB24D72C0900D36424 /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53C924D72C0900D36424 /* NewLoginViewController.swift */; };
+		F76F53CC24D72C0900D36424 /* NewLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F53CA24D72C0900D36424 /* NewLoginViewController.xib */; };
 		F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */; };
 		F7A652A522E0635000B31AF6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A422E0635000B31AF6 /* Setting.swift */; };
 		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
@@ -73,6 +82,7 @@
 		76851A2A0FFCF3D32E3451C7 /* Pods-ppLedc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ppLedc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc.debug.xcconfig"; sourceTree = "<group>"; };
 		B578069C95F6B523D90F2062 /* Pods_ppLedc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ppLedc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B2EF08513908DFF7FF72CB /* Pods-ppLedc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ppLedc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc.release.xcconfig"; sourceTree = "<group>"; };
+		F70467F0258F906000362CE7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
 		F70F614B22FD75CE009E5034 /* ppLight_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppLight_bridge.h; sourceTree = "<group>"; };
 		F712F3FB22DB72B700585544 /* RepeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatViewController.swift; sourceTree = "<group>"; };
 		F712F3FD22DB75E100585544 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +128,14 @@
 		F75D3F1022DA1A9F009E1299 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		F75D3F1222DB026C009E1299 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		F75D3F1422DB064A009E1299 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		F76F53B924D7030000D36424 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F76F53BA24D7030000D36424 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		F76F53C124D719C500D36424 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F76F53C324D71A4400D36424 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F76F53C424D71A4400D36424 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F76F53C724D72A1F00D36424 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		F76F53C924D72C0900D36424 /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
+		F76F53CA24D72C0900D36424 /* NewLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewLoginViewController.xib; sourceTree = "<group>"; };
 		F7A6529D22E009BE00B31AF6 /* ModeSetrtingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSetrtingViewController.swift; sourceTree = "<group>"; };
 		F7A652A422E0635000B31AF6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +220,7 @@
 		F71B531022D8653D00167B97 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F76F53B724D702AD00D36424 /* FirstScreen */,
 				F7B7242222EEE181005A6E0D /* Offline */,
 				F758E2A222DC0F32009E29B6 /* Profile */,
 				F71B536022D8DB0000167B97 /* Main */,
@@ -438,6 +457,8 @@
 			children = (
 				F758E2B022DC4A92009E29B6 /* LoginViewController.swift */,
 				F758E2B222DC6AE8009E29B6 /* RegisterViewController.swift */,
+				F76F53C924D72C0900D36424 /* NewLoginViewController.swift */,
+				F76F53CA24D72C0900D36424 /* NewLoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,8 +499,30 @@
 				F7FC61F822DDE3FD0009027C /* NSDate-Extension.swift */,
 				F72D40DA22FE6E0900C28959 /* String-Exension.swift */,
 				F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */,
+				F76F53C724D72A1F00D36424 /* UIImage-Extension.swift */,
+				F70467F0258F906000362CE7 /* UIViewController-Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F76F53B724D702AD00D36424 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F76F53B824D702DD00D36424 /* Controller */,
+			);
+			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		F76F53B824D702DD00D36424 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F76F53C124D719C500D36424 /* Home.storyboard */,
+				F76F53B924D7030000D36424 /* FirstViewController.swift */,
+				F76F53BA24D7030000D36424 /* FirstViewController.xib */,
+				F76F53C324D71A4400D36424 /* HomeViewController.swift */,
+				F76F53C424D71A4400D36424 /* HomeViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F7A652A122E061B200B31AF6 /* ViewModel */ = {
@@ -579,7 +622,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = rzchai;
 				TargetAttributes = {
 					F71B52F322D81CB100167B97 = {
@@ -611,10 +654,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71B536C22D8DB1D00167B97 /* Main.storyboard in Resources */,
+				F76F53CC24D72C0900D36424 /* NewLoginViewController.xib in Resources */,
 				F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */,
 				F72F676522ECA8C500787029 /* SystemViewController.xib in Resources */,
 				F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */,
 				F7AACE3A2361F475002858DA /* Launch Screen.storyboard in Resources */,
+				F76F53BC24D7030000D36424 /* FirstViewController.xib in Resources */,
+				F76F53C224D719C500D36424 /* Home.storyboard in Resources */,
 				F7B7242E22EEEC31005A6E0D /* OfflineViewController.xib in Resources */,
 				F71B52FF22D81CB300167B97 /* Assets.xcassets in Resources */,
 				F729C04022F7148F00336A4F /* AddViewController.xib in Resources */,
@@ -623,6 +669,7 @@
 				F71B536822D8DB0000167B97 /* Mine.storyboard in Resources */,
 				F753E09A22E35A2300FEA8A3 /* LightSettingView.xib in Resources */,
 				F71B536922D8DB0000167B97 /* Basic.storyboard in Resources */,
+				F76F53C624D71A4400D36424 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,8 +723,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F758E2BB22DC969B009E29B6 /* PPUtil.swift in Sources */,
+				F70467F1258F906100362CE7 /* UIViewController-Extension.swift in Sources */,
 				F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */,
 				F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */,
+				F76F53CB24D72C0900D36424 /* NewLoginViewController.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
 				F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */,
@@ -686,7 +735,9 @@
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,
 				F72D40DB22FE6E0900C28959 /* String-Exension.swift in Sources */,
 				F712F40022DB773700585544 /* SettingViewController.swift in Sources */,
+				F76F53C524D71A4400D36424 /* HomeViewController.swift in Sources */,
 				F7A652A522E0635000B31AF6 /* Setting.swift in Sources */,
+				F76F53C824D72A1F00D36424 /* UIImage-Extension.swift in Sources */,
 				F7A6529E22E009BE00B31AF6 /* ModeSetrtingViewController.swift in Sources */,
 				F75D3F1522DB064A009E1299 /* UIColor-Extension.swift in Sources */,
 				F72D40D922FDC00900C28959 /* WechatUser.swift in Sources */,
@@ -710,6 +761,7 @@
 				F71FF1372355E2720067F0C2 /* EspSettingViewController.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
+				F76F53BB24D7030000D36424 /* FirstViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,
 				F7F9ADF522E0ABA8003DC0E2 /* MyTableViewCell.swift in Sources */,
 				F7F9ADFA22E0BA18003DC0E2 /* MyViewModel.swift in Sources */,
@@ -753,6 +805,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -814,6 +867,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -852,6 +906,7 @@
 				CODE_SIGN_ENTITLEMENTS = ppLedc/ppLedc.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5SBAWUCDXV;
 				INFOPLIST_FILE = ppLedc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -859,7 +914,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.polypite.pplight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -878,6 +933,7 @@
 				CODE_SIGN_ENTITLEMENTS = ppLedc/ppLedc.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5SBAWUCDXV;
 				INFOPLIST_FILE = ppLedc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -885,7 +941,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 3.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.polypite.pplight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

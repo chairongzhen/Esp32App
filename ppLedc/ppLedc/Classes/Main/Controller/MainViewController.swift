@@ -11,14 +11,15 @@ import UIKit
 class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        addChildVc(storyName: "Basic")
+        addChildVc(storyName: "Home")
+//        addChildVc(storyName: "Basic")
         addChildVc(storyName: "Repeat")
         addChildVc(storyName: "Mine")
         addChildVc(storyName: "Setting")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+         self.navigationController?.isNavigationBarHidden = false
     }
     
     private func addChildVc(storyName: String) {

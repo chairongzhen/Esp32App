@@ -11,7 +11,7 @@ import UIKit
 class RepeatDetailViewController: PPAlertBaseViewController {
     private lazy var detailSettingView : DetailSettingView = {
         let settingView : DetailSettingView = DetailSettingView.detailSettingView()
-        settingView.frame = CGRect(x: 0, y: 50, width: kScreenW, height: kScreenH)
+        settingView.frame = CGRect(x: 0, y: 100, width: kScreenW, height: kScreenH)
         settingView.txtOne.addTarget(self, action: #selector(txtOneChanged(_:)), for: .allEditingEvents)
         settingView.txtTwo.addTarget(self, action: #selector(txtTwoChanged(_:)), for: .allEditingEvents)
         settingView.txtThree.addTarget(self, action: #selector(txtThreeChanged(_:)), for: .allEditingEvents)
@@ -161,10 +161,10 @@ extension RepeatDetailViewController {
     }
     
     private func drawTimeTextField() {
-        imgTime.frame = CGRect(x: kScreenW / 2  - 45, y: 13, width: 18, height: 18)
+        imgTime.frame = CGRect(x: kScreenW / 2  - 45, y: 73, width: 18, height: 18)
         imgTime.image = UIImage(named: "clock")
         self.view.addSubview(imgTime)
-        txtTime.frame = CGRect(x: kScreenW / 2 - 45 , y: 10, width: 90, height: 25)
+        txtTime.frame = CGRect(x: kScreenW / 2 - 45 , y: 70, width: 90, height: 25)
 
         //txtTime.text = self.getCurrentTimeLine()
         txtTime.text = self.getSelectedtimeLine(value: currentSelectedIndex)
@@ -178,7 +178,7 @@ extension RepeatDetailViewController {
     }
     
     private func drawTimeStepper() {
-        timeStepper.frame = CGRect(x: kScreenW / 2 - 50, y: 40, width: 50, height: 30)
+        timeStepper.frame = CGRect(x: kScreenW / 2 - 50, y: 100, width: 50, height: 30)
         timeStepper.maximumValue = 143
         timeStepper.minimumValue = 0
         timeStepper.stepValue = 1

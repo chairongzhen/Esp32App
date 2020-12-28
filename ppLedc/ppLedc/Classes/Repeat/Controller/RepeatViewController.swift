@@ -13,7 +13,7 @@ class RepeatViewController: PPBaseViewController {
     
     private lazy var pageTitleView : PageTitleView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles  = ["循环设置","亮度设置"]
+        let titles  = ["工作模式","手动设置"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
         return titleView
@@ -27,7 +27,7 @@ class RepeatViewController: PPBaseViewController {
         // Setting the child controller
         var childVcs = [UIViewController]()
         childVcs.append(RepeatSettingViewController())
-        childVcs.append(RepeatDetailViewController())
+        childVcs.append(FixViewController())
 //        for _ in 0..<1 {
 //            var vc = UIViewController()
 //            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))

@@ -1,21 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "quit@3x-1.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "idiom" : "iphone",
       "filename" : "quit@3x.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "quit@3x-2.png",
       "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

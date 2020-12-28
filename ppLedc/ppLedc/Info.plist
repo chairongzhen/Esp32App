@@ -34,13 +34,14 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
 		<string>wechat</string>
+		<string>weixinULAPI</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -61,6 +62,14 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>需要使用相机,需要您的允许</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>需要使用您的位置信息</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>需要使用您的位置信息</string>
+	<key>NSLocationUsageDescription</key>
+	<string>需要使用您的位置信息</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要使用您的位置信息</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
@@ -76,13 +85,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-       <string>移动考勤需要使用您的位置信息</string>
-       <key>NSLocationAlwaysUsageDescription</key>
-       <string>移动考勤需要使用您的位置信息</string>
-       <key>NSLocationUsageDescription</key>
-       <string>移动考勤需要使用您的位置信息</string>
-       <key>NSLocationWhenInUseUsageDescription</key>
-       <string>移动考勤需要使用您的位置信息</string>
 </dict>
 </plist>

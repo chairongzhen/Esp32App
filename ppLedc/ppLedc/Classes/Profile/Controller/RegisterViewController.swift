@@ -174,7 +174,7 @@ extension RegisterViewController {
         
         profileVM.userRegister(username: txtUser.text!, pwd: txtPwd.text!, nickname: nickName.text!) { (message) in
             if message == "success" {
-                self.present(LoginViewController(), animated: true, completion: nil)
+                self.present(NewLoginViewController(), animated: true, completion: nil)
             } else {
                 self.autoHideAlertMessage(message: message)
                 return

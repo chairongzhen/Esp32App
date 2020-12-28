@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
         
         //CheckVersion.checkVersion(kBundleId, nil)
         
-        WXApi.registerApp(wechat_appId)
+        WXApi.registerApp(wechat_appId, universalLink: "https://www.polypite.com")
         // Override point for customization after application launch.
         UITabBar.appearance().tintColor = 	UIColor.orange
 
@@ -53,12 +53,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
             let userinfo = UserDefaults.standard
             let username: Any? = userinfo.object(forKey: "username")
             if username != nil {
-                print(userinfo.object(forKey: "openid") as Any)
+//                print(userinfo.object(forKey: "openid") as Any)
+                self.window?.rootViewController  = UINavigationController(rootViewController: FirstViewController())
             } else {
-                self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+                self.window?.rootViewController = UINavigationController(rootViewController: NewLoginViewController())
             }
         }
-
+ 
     
 
         return true 
