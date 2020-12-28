@@ -55,7 +55,6 @@
 		F76F53BC24D7030000D36424 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F53BA24D7030000D36424 /* FirstViewController.xib */; };
 		F76F53C224D719C500D36424 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76F53C124D719C500D36424 /* Home.storyboard */; };
 		F76F53C524D71A4400D36424 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53C324D71A4400D36424 /* HomeViewController.swift */; };
-		F76F53C624D71A4400D36424 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F53C424D71A4400D36424 /* HomeViewController.xib */; };
 		F76F53C824D72A1F00D36424 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53C724D72A1F00D36424 /* UIImage-Extension.swift */; };
 		F76F53CB24D72C0900D36424 /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76F53C924D72C0900D36424 /* NewLoginViewController.swift */; };
 		F76F53CC24D72C0900D36424 /* NewLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76F53CA24D72C0900D36424 /* NewLoginViewController.xib */; };
@@ -132,7 +131,6 @@
 		F76F53BA24D7030000D36424 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		F76F53C124D719C500D36424 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F76F53C324D71A4400D36424 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F76F53C424D71A4400D36424 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F76F53C724D72A1F00D36424 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
 		F76F53C924D72C0900D36424 /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
 		F76F53CA24D72C0900D36424 /* NewLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewLoginViewController.xib; sourceTree = "<group>"; };
@@ -520,7 +518,6 @@
 				F76F53B924D7030000D36424 /* FirstViewController.swift */,
 				F76F53BA24D7030000D36424 /* FirstViewController.xib */,
 				F76F53C324D71A4400D36424 /* HomeViewController.swift */,
-				F76F53C424D71A4400D36424 /* HomeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -669,7 +666,6 @@
 				F71B536822D8DB0000167B97 /* Mine.storyboard in Resources */,
 				F753E09A22E35A2300FEA8A3 /* LightSettingView.xib in Resources */,
 				F71B536922D8DB0000167B97 /* Basic.storyboard in Resources */,
-				F76F53C624D71A4400D36424 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,7 +914,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.polypite.pplight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/chairongzhen/swift/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/rzchai/Documents/mine/ios/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -945,7 +941,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.polypite.pplight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/chairongzhen/swift/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/rzchai/Documents/mine/ios/Esp32App/ppLedc/ppLedc/ppLight_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

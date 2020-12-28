@@ -136,7 +136,7 @@ extension RepeatDetailViewController {
                     if message == "success" {
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:"cdchanged"), object: nil, userInfo: nil)
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:"settingchanged"), object: nil, userInfo: nil)
-                        self.autoHideAlertMessage(message: "保存成功")
+                        self.navigationController?.popViewController(animated: true)
                     } else {
                         self.autoHideAlertMessage(message: message)
                     }

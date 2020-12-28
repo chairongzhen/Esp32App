@@ -18,7 +18,7 @@ class HomeViewController: PPBaseViewController {
         super.viewDidLoad()
 //        self.navigationController?.isNavigationBarHidden = true
 //        self.navigationController?.navigationBar.isHidden = true
-        setupUI()
+//        setupUI()
     }
 
 }

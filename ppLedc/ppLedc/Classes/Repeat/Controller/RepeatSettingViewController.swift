@@ -452,8 +452,8 @@ extension RepeatSettingViewController {
 //        let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
 //        mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
 //        pageContentView.setCurrentIndex(currentIndex: 1)
-//        let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"s"), object: nil, userInfo: ["currentTimeIndex":currentIndx])
+        let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue:"s"), object: nil, userInfo: ["currentTimeIndex":currentIndx])
         let detailPage = RepeatDetailViewController()
         self.navigationController!.pushViewController(detailPage, animated: true)
     }
@@ -472,12 +472,14 @@ extension RepeatSettingViewController {
     }
     
     @objc private func btnModifyClicked() {
-        let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
-        let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
-        mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
-        pageContentView.setCurrentIndex(currentIndex: 1)
+//        let pageContentView : PageContentView = self.locatePageContentView(currentView: self)
+//        let mainViewController : RepeatViewController = self.locateMainController(currentView: pageContentView) as! RepeatViewController
+//        mainViewController.changeTitleIndex(sourceIndex: 0, targetIndex: 1)
+//        pageContentView.setCurrentIndex(currentIndex: 1)
         let currentIndx : Int =  UserDefaults.standard.object(forKey: "currentTimeIndex") as! Int
         NotificationCenter.default.post(name: NSNotification.Name(rawValue:"s"), object: nil, userInfo: ["currentTimeIndex":currentIndx])
+        let detailPage = RepeatDetailViewController()
+        self.navigationController!.pushViewController(detailPage, animated: true)
     }
     
     @objc private func btnNextClicked() {
