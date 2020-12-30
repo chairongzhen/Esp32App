@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9E31844711BD11D94F2DED83 /* Pods_ppLedc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B578069C95F6B523D90F2062 /* Pods_ppLedc.framework */; };
+		A91101EE259B49B800FAF4C2 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91101ED259B49B800FAF4C2 /* FirstViewModel.swift */; };
+		A95DEE64259C60F900984DB4 /* PPFormBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95DEE63259C60F900984DB4 /* PPFormBaseViewController.swift */; };
 		F70467F1258F906100362CE7 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70467F0258F906000362CE7 /* UIViewController-Extension.swift */; };
 		F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712F3FB22DB72B700585544 /* RepeatViewController.swift */; };
 		F712F3FE22DB75E100585544 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F712F3FD22DB75E100585544 /* MineViewController.swift */; };
@@ -79,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		76851A2A0FFCF3D32E3451C7 /* Pods-ppLedc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ppLedc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc.debug.xcconfig"; sourceTree = "<group>"; };
+		A91101ED259B49B800FAF4C2 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		A95DEE63259C60F900984DB4 /* PPFormBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPFormBaseViewController.swift; sourceTree = "<group>"; };
 		B578069C95F6B523D90F2062 /* Pods_ppLedc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ppLedc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B2EF08513908DFF7FF72CB /* Pods-ppLedc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ppLedc.release.xcconfig"; path = "Pods/Target Support Files/Pods-ppLedc/Pods-ppLedc.release.xcconfig"; sourceTree = "<group>"; };
 		F70467F0258F906000362CE7 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
@@ -181,6 +185,14 @@
 				D6B2EF08513908DFF7FF72CB /* Pods-ppLedc.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A91101EC259B498300FAF4C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A91101ED259B49B800FAF4C2 /* FirstViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F71B52EB22D81CB100167B97 = {
@@ -317,6 +329,7 @@
 				F71B536F22D8DBF800167B97 /* MainViewController.swift */,
 				F758E2BE22DC9D00009E29B6 /* PPBaseViewController.swift */,
 				F72F172322DF6C7F00A14316 /* PPAlertBaseViewController.swift */,
+				A95DEE63259C60F900984DB4 /* PPFormBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,6 +519,7 @@
 		F76F53B724D702AD00D36424 /* FirstScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A91101EC259B498300FAF4C2 /* ViewModel */,
 				F76F53B824D702DD00D36424 /* Controller */,
 			);
 			path = FirstScreen;
@@ -722,6 +736,7 @@
 				F70467F1258F906100362CE7 /* UIViewController-Extension.swift in Sources */,
 				F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */,
 				F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */,
+				A95DEE64259C60F900984DB4 /* PPFormBaseViewController.swift in Sources */,
 				F76F53CB24D72C0900D36424 /* NewLoginViewController.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
@@ -749,6 +764,7 @@
 				F753E09622E359CF00FEA8A3 /* LightSettingView.swift in Sources */,
 				F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */,
 				F758E2A922DC1DDB009E29B6 /* NewTableViewCell.swift in Sources */,
+				A91101EE259B49B800FAF4C2 /* FirstViewModel.swift in Sources */,
 				F75D3F0D22D9BDD9009E1299 /* UIBarButtonItem-Extension.swift in Sources */,
 				F7B7242D22EEEC31005A6E0D /* OfflineViewController.swift in Sources */,
 				F72D8DCE22E5F3CF0094A800 /* FixViewModel.swift in Sources */,

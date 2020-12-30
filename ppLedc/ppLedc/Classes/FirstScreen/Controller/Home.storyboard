@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05Z-ou-pDg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05Z-ou-pDg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2b-Fo-s5Z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2b-Fo-s5Z">
                                 <rect key="frame" x="20" y="428" width="374" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -30,20 +30,20 @@
                                     <action selector="goMain:" destination="OMs-0Z-DTU" eventType="touchUpInside" id="Q7i-xb-0Dy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-Co-4Bw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVZ-Co-4Bw">
                                 <rect key="frame" x="50" y="508" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="g7H-Lr-sr2"/>
                                     <constraint firstAttribute="height" constant="30" id="x1t-gK-uxm"/>
                                 </constraints>
-                                <state key="normal" title="开启">
+                                <state key="normal" title="全开">
                                     <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onOpen:" destination="OMs-0Z-DTU" eventType="touchUpInside" id="7VO-8z-ZO7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlT-LH-pZr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlT-LH-pZr">
                                 <rect key="frame" x="264" y="508" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6EK-h1-6F8"/>
@@ -51,14 +51,14 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dKa-4L-Ain"/>
                                     <constraint firstAttribute="height" constant="30" id="dNg-vb-0wF"/>
                                 </constraints>
-                                <state key="normal" title="关闭">
+                                <state key="normal" title="全关">
                                     <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onOff:" destination="OMs-0Z-DTU" eventType="touchUpInside" id="skA-c3-ruI"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="KB8-rS-JBJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="loginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KB8-rS-JBJ">
                                 <rect key="frame" x="157" y="278" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2Mu-cp-D01"/>
@@ -72,6 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fVQ-vJ-D5I"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QVZ-Co-4Bw" firstAttribute="leading" secondItem="qdK-Ea-o2a" secondAttribute="leadingMargin" constant="30" id="1Fm-wp-4WX"/>
@@ -87,10 +88,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="S2b-Fo-s5Z" secondAttribute="trailing" id="r3c-Jx-4cK"/>
                             <constraint firstItem="S2b-Fo-s5Z" firstAttribute="centerY" secondItem="qdK-Ea-o2a" secondAttribute="centerY" id="zVt-NT-ohH"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fVQ-vJ-D5I"/>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="3pc-va-Ncx"/>
                     <connections>
+                        <outlet property="btnClose" destination="jlT-LH-pZr" id="f4s-tS-7r4"/>
+                        <outlet property="btnOpen" destination="QVZ-Co-4Bw" id="iCn-fD-hMd"/>
+                        <outlet property="btnRepeat" destination="S2b-Fo-s5Z" id="sMT-q3-84Q"/>
                         <outlet property="imgProfile" destination="KB8-rS-JBJ" id="1Ex-Rl-M7b"/>
                         <outlet property="lbUserName" destination="uaQ-8d-9yp" id="CiV-a6-br9"/>
                     </connections>
@@ -121,6 +124,6 @@
     </scenes>
     <resources>
         <image name="basic" width="26" height="26"/>
-        <image name="user" width="36" height="36"/>
+        <image name="loginLogo" width="60" height="60"/>
     </resources>
 </document>
