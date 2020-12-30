@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = WechatOpenSDK;
+			productName = WechatOpenSDK;
 		};
 /* End PBXAggregateTarget section */
 
@@ -368,7 +369,7 @@
 		121FB24E8A811FD7348FE91D46C9EB43 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		1255A758D0C35746CF325F774330E214 /* Charts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Charts-prefix.pch"; sourceTree = "<group>"; };
 		127610F67E5B2323B8B0816E2E307909 /* IAxisValueFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IAxisValueFormatter.swift; path = Source/Charts/Formatters/IAxisValueFormatter.swift; sourceTree = "<group>"; };
-		14DAEF3FC92F9C8F9C9C0D5D5BBB2210 /* SwiftyFORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyFORM.framework; path = SwiftyFORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DAEF3FC92F9C8F9C9C0D5D5BBB2210 /* SwiftyFORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyFORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		151CB5E33AB21B76A528DC93E484C5DE /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Source/Charts/Animation/Animator.swift; sourceTree = "<group>"; };
 		155D0EC7A1037678E45DCF35DC09DB0A /* TableViewSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewSection.swift; path = Source/Form/TableViewSection.swift; sourceTree = "<group>"; };
 		158482D4138E0ACAD5B943FE5D3C07FD /* PieChartDataEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDataEntry.swift; path = Source/Charts/Data/Implementations/Standard/PieChartDataEntry.swift; sourceTree = "<group>"; };
@@ -414,7 +415,7 @@
 		34EB3E6A96E542126FC49F2C5CC017D9 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		35F097F8EC4E811218599D0B2DE186BF /* CellDeselector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellDeselector.swift; path = Source/Form/CellDeselector.swift; sourceTree = "<group>"; };
 		362733C55E0CDF7FDDD93248FE7E65D9 /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = Source/Charts/Highlight/Range.swift; sourceTree = "<group>"; };
-		3652B113DC334A3FDA0C14F6794A5F69 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QRCodeReader.framework; path = QRCodeReader.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3652B113DC334A3FDA0C14F6794A5F69 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B67818795FD2A4F1D059A0786A0216 /* RadarChartRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarChartRenderer.swift; path = Source/Charts/Renderers/RadarChartRenderer.swift; sourceTree = "<group>"; };
 		392975F642112E21FD279E7B053194A1 /* SwiftyFORM-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyFORM-umbrella.h"; sourceTree = "<group>"; };
 		3973AC024AF7DE701461894B3ADE5314 /* MarkerImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkerImage.swift; path = Source/Charts/Components/MarkerImage.swift; sourceTree = "<group>"; };
@@ -454,7 +455,7 @@
 		5A6E611EB457B0CD99AF16EB6168B304 /* UITableView+PrevNext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+PrevNext.swift"; path = "Source/Util/UITableView+PrevNext.swift"; sourceTree = "<group>"; };
 		5BE1CC9C3D94F009FA50C22B1406B981 /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Source/Form/Validator.swift; sourceTree = "<group>"; };
 		5D1ECDBCA5AB1B1BD300D7CD470F231A /* ReloadPersistentValidationStateVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReloadPersistentValidationStateVisitor.swift; path = Source/Form/ReloadPersistentValidationStateVisitor.swift; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DABDC9DF926CD0C37364F4469C171AD /* IBarLineScatterCandleBubbleChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IBarLineScatterCandleBubbleChartDataSet.swift; path = Source/Charts/Data/Interfaces/IBarLineScatterCandleBubbleChartDataSet.swift; sourceTree = "<group>"; };
 		5E7B75C688FCE9EE7E6236B5975B746C /* AccessoryButtonDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessoryButtonDelegate.swift; path = Source/Form/AccessoryButtonDelegate.swift; sourceTree = "<group>"; };
 		5ED8A03E8E4384A2872ABA3F82EA7E28 /* AssignAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssignAppearance.swift; path = Source/Form/AssignAppearance.swift; sourceTree = "<group>"; };
@@ -485,7 +486,7 @@
 		805721A5D666721CE8D4953960D195A9 /* PrecisionSlider_InnerZoomMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecisionSlider_InnerZoomMode.swift; path = Source/PrecisionSlider/PrecisionSlider_InnerZoomMode.swift; sourceTree = "<group>"; };
 		805BD56A7691376FE29C81B65F86BEBA /* CheckVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckVersion.swift; path = CheckVersion_Swift/Classes/CheckVersion.swift; sourceTree = "<group>"; };
 		80AF60BA3C66E4F6171F5E628FE2EBE8 /* BarChartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartData.swift; path = Source/Charts/Data/Implementations/Standard/BarChartData.swift; sourceTree = "<group>"; };
-		811856014187F38C72A8F931C706421C /* Pods_ppLedc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ppLedc.framework; path = "Pods-ppLedc.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		811856014187F38C72A8F931C706421C /* Pods_ppLedc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ppLedc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		816F6C7D7CE8F9EE7E26E7A174DC5DB5 /* FormTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormTableView.swift; path = Source/Form/FormTableView.swift; sourceTree = "<group>"; };
 		81BC4F949D1B683DB2F0ECDCBA2C9530 /* Pods-ppLedc-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ppLedc-frameworks.sh"; sourceTree = "<group>"; };
 		8263B6445D6FACDFAAEBA224B259C410 /* AttributedTextCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributedTextCell.swift; path = Source/Cells/AttributedTextCell.swift; sourceTree = "<group>"; };
@@ -524,9 +525,9 @@
 		9C4E63675B766CEAC4F2AB90C6B5E23A /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		9C5413AD822219A5DBE353DA27D04D18 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
 		9D40FC504417153FC58CDDD2C2DD9247 /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC955F3697C3D7ADCFF783E579A9B11 /* PrecisionSliderFormItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecisionSliderFormItem.swift; path = Source/FormItems/PrecisionSliderFormItem.swift; sourceTree = "<group>"; };
-		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Charts.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C1B977ED8804E8AEEC884E7359EE58 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E692BD3B87CBE7DDD3E1F14C878E66 /* SubmitButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubmitButton.swift; path = Source/Util/SubmitButton.swift; sourceTree = "<group>"; };
 		A252BD641D0B87F44E3FDE09B9ADE366 /* BarLineChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarLineChartViewBase.swift; path = Source/Charts/Charts/BarLineChartViewBase.swift; sourceTree = "<group>"; };
 		A2BDC0B5948C5EA340E5AD648C78B9DE /* TableViewSectionPart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewSectionPart.swift; path = Source/Form/TableViewSectionPart.swift; sourceTree = "<group>"; };
@@ -601,7 +602,7 @@
 		D7EF8E8E9D4509D0C090C4A7510425DD /* Pods-ppLedc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ppLedc-dummy.m"; sourceTree = "<group>"; };
 		D81AB15947E4DCCCCE647D246C3F341D /* PrecisionSlider_InnerCollectionViewCells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecisionSlider_InnerCollectionViewCells.swift; path = Source/PrecisionSlider/PrecisionSlider_InnerCollectionViewCells.swift; sourceTree = "<group>"; };
 		D88EF241CC8978248C69144EBA8A9FBB /* CombinedChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartView.swift; path = Source/Charts/Charts/CombinedChartView.swift; sourceTree = "<group>"; };
-		D99AD7894C49117E6E4C551C6F09F863 /* CheckVersion_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CheckVersion_Swift.framework; path = CheckVersion_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99AD7894C49117E6E4C551C6F09F863 /* CheckVersion_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CheckVersion_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AEDE01E25824313E2A33218956F7A0 /* PrecisionSlider_InnerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecisionSlider_InnerModel.swift; path = Source/PrecisionSlider/PrecisionSlider_InnerModel.swift; sourceTree = "<group>"; };
 		DAE61C7ACE4C43F6C67727FA25E7D111 /* Platform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Source/Charts/Utils/Platform.swift; sourceTree = "<group>"; };
 		DC6DB4E50E4F3C4E537032FA50F22BC8 /* AnimatedZoomViewJob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedZoomViewJob.swift; path = Source/Charts/Jobs/AnimatedZoomViewJob.swift; sourceTree = "<group>"; };
@@ -788,7 +789,6 @@
 				9BF07C93BF1C73A162452474E9919A8A /* Core */,
 				12199CC197F04DA3486C332F090F39EF /* Support Files */,
 			);
-			name = Charts;
 			path = Charts;
 			sourceTree = "<group>";
 		};
@@ -814,7 +814,6 @@
 				FE7D4A045175478368FC18FA40B63E61 /* Validation.swift */,
 				4AA6DB87C2A1E546E046EF3FFAD4EAD3 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -833,7 +832,6 @@
 				9C5413AD822219A5DBE353DA27D04D18 /* ToggleTorchButton.swift */,
 				26B673F9FAEAD669EF1B627FC072D2B1 /* Support Files */,
 			);
-			name = QRCodeReader.swift;
 			path = QRCodeReader.swift;
 			sourceTree = "<group>";
 		};
@@ -1125,7 +1123,6 @@
 				F7AB411E539D64D4497D7C1632BF5691 /* WillDisplayCellDelegate.swift */,
 				FFAD75B937D1C55BC8D431761A5F0423 /* Support Files */,
 			);
-			name = SwiftyFORM;
 			path = SwiftyFORM;
 			sourceTree = "<group>";
 		};
@@ -1176,7 +1173,6 @@
 				B092E4401DCB389EADE33772A2B41F4C /* Frameworks */,
 				C775758F32706BB1DE2D1535C21239E3 /* Support Files */,
 			);
-			name = WechatOpenSDK;
 			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
@@ -1187,7 +1183,6 @@
 				C0AFC83B02C008560EB02F26570094BF /* UIAlertController+tip.swift */,
 				276B93604F773C602343B16B958BC77D /* Support Files */,
 			);
-			name = CheckVersion_Swift;
 			path = CheckVersion_Swift;
 			sourceTree = "<group>";
 		};
@@ -1382,6 +1377,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					2F8FCAFAB0D14408910CFEE6F773CA81 = {
+						LastSwiftMigration = 1210;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1841,7 +1841,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1867,7 +1867,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CheckVersion_Swift/CheckVersion_Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CheckVersion_Swift/CheckVersion_Swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1879,7 +1879,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2105,7 +2105,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2140,7 +2140,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2209,7 +2209,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2243,7 +2243,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2278,7 +2278,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Charts/Charts-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Charts/Charts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2304,7 +2304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2329,7 +2329,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Charts/Charts-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Charts/Charts-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2363,7 +2363,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CheckVersion_Swift/CheckVersion_Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CheckVersion_Swift/CheckVersion_Swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2375,7 +2375,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

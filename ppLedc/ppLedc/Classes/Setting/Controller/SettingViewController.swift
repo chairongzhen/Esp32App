@@ -13,7 +13,7 @@ class SettingViewController: PPFormBaseViewController {
     let nickname = UserDefaults.standard.value(forKey: "nickname")
     
     override func populate(_ builder: FormBuilder) {
-        var ssid = getUsedSSID()
+        let ssid = getUsedSSID()
         print(ssid)
         builder += SectionHeaderTitleFormItem().title("网络信息")
         builder += StaticTextFormItem().title("时区").value("中国")
