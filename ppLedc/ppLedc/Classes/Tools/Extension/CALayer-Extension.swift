@@ -10,18 +10,18 @@ import UIKit
 
 extension CALayer {
     
-//    var borderColorWithUIColor : UIColor {
-//        
-//        set {
-//            
-//            self.borderColor = newValue.cgColor
-//            
-//        }
-//        
-//        get {
-//            
-//            return self.borderColorWithUIColor
-//        }
-//    }
+    var borderColorWithUIColor : UIColor {
+        
+        set {
+            
+            self.borderColor = newValue.cgColor
+            
+        }
+        
+        get {
+            
+            return self.borderColorWithUIColor
+        }
+    }
     
 }

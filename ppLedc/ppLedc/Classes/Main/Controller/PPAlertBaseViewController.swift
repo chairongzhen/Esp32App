@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SystemConfiguration.CaptiveNetwork
 
 class PPAlertBaseViewController: UIViewController {
 
@@ -171,5 +172,48 @@ extension PPAlertBaseViewController {
             return false
         }
     }
+    
+    func getUsedSSID() -> String {
+        let interfaces = CNCopySupportedInterfaces()
+        var ssid = ""
+        if interfaces != nil {
+            let interfacesArray = CFBridgingRetain(interfaces) as! Array<AnyObject>
+            if interfacesArray.count > 0 {
+                let interfaceName = interfacesArray[0] as! CFString
+                let ussafeInterfaceData = CNCopyCurrentNetworkInfo(interfaceName)
+                if (ussafeInterfaceData != nil) {
+                    let interfaceData = ussafeInterfaceData as! Dictionary<String, Any>
+                    ssid = interfaceData["SSID"]! as! String
+                }
+            }
+        }
+        return ssid
+    }
+    
+        func getInterfaces() -> Bool {
+            guard let unwrappedCFArrayInterfaces = CNCopySupportedInterfaces() else {
+                print("this must be a simulator, no interfaces found")
+                return false
+            }
+            guard let swiftInterfaces = (unwrappedCFArrayInterfaces as NSArray) as? [String] else {
+                print("System error: did not come back as array of Strings")
+                return false
+            }
+            for interface in swiftInterfaces {
+                print("Looking up SSID info for \(interface)") // en0
+                guard let unwrappedCFDictionaryForInterface = CNCopyCurrentNetworkInfo(interface as CFString) else {
+                    print("System error: \(interface) has no information")
+                    return false
+                }
+                guard let SSIDDict = (unwrappedCFDictionaryForInterface as NSDictionary) as? [String: AnyObject] else {
+                    print("System error: interface information is not a string-keyed dictionary")
+                    return false
+                }
+                for d in SSIDDict.keys {
+                    print("\(d): \(SSIDDict[d]!)")
+                }
+            }
+            return true
+        }
     
 }

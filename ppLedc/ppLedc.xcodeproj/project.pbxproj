@@ -65,6 +65,12 @@
 		F7A652A722E063EF00B31AF6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */; };
 		F7A652A922E088ED00B31AF6 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A652A822E088ED00B31AF6 /* MyViewController.swift */; };
 		F7AACE3A2361F475002858DA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AACE392361F475002858DA /* Launch Screen.storyboard */; };
+		F7B20B90259F7CD5005BFFF8 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B20B8E259F7CD5005BFFF8 /* ResetViewController.swift */; };
+		F7B20B91259F7CD5005BFFF8 /* ResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B20B8F259F7CD5005BFFF8 /* ResetViewController.xib */; };
+		F7B20B95259F8559005BFFF8 /* SelectWiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B20B93259F8559005BFFF8 /* SelectWiFiViewController.swift */; };
+		F7B20B96259F8559005BFFF8 /* SelectWiFiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B20B94259F8559005BFFF8 /* SelectWiFiViewController.xib */; };
+		F7B20BB325A06F44005BFFF8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B20BB125A06F44005BFFF8 /* TestViewController.swift */; };
+		F7B20BB425A06F44005BFFF8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B20BB225A06F44005BFFF8 /* TestViewController.xib */; };
 		F7B5837A234D875F00EEEC00 /* CALayer-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */; };
 		F7B7242922EEE528005A6E0D /* WiFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7242722EEE528005A6E0D /* WiFiViewController.swift */; };
 		F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B7242822EEE528005A6E0D /* WiFiViewController.xib */; };
@@ -143,6 +149,12 @@
 		F7A652A622E063EF00B31AF6 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		F7A652A822E088ED00B31AF6 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		F7AACE392361F475002858DA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F7B20B8E259F7CD5005BFFF8 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		F7B20B8F259F7CD5005BFFF8 /* ResetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResetViewController.xib; sourceTree = "<group>"; };
+		F7B20B93259F8559005BFFF8 /* SelectWiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWiFiViewController.swift; sourceTree = "<group>"; };
+		F7B20B94259F8559005BFFF8 /* SelectWiFiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectWiFiViewController.xib; sourceTree = "<group>"; };
+		F7B20BB125A06F44005BFFF8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		F7B20BB225A06F44005BFFF8 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		F7B58379234D875F00EEEC00 /* CALayer-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer-Extension.swift"; sourceTree = "<group>"; };
 		F7B7242722EEE528005A6E0D /* WiFiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiViewController.swift; sourceTree = "<group>"; };
 		F7B7242822EEE528005A6E0D /* WiFiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WiFiViewController.xib; sourceTree = "<group>"; };
@@ -287,6 +299,10 @@
 				F733ED4122E186AB0089CD54 /* QRCodeViewController.swift */,
 				F729C03D22F7148F00336A4F /* AddViewController.swift */,
 				F729C03E22F7148F00336A4F /* AddViewController.xib */,
+				F7B20B8E259F7CD5005BFFF8 /* ResetViewController.swift */,
+				F7B20B8F259F7CD5005BFFF8 /* ResetViewController.xib */,
+				F7B20B93259F8559005BFFF8 /* SelectWiFiViewController.swift */,
+				F7B20B94259F8559005BFFF8 /* SelectWiFiViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -570,6 +586,8 @@
 				F7B7242822EEE528005A6E0D /* WiFiViewController.xib */,
 				F7B7242B22EEEC31005A6E0D /* OfflineViewController.swift */,
 				F7B7242C22EEEC31005A6E0D /* OfflineViewController.xib */,
+				F7B20BB125A06F44005BFFF8 /* TestViewController.swift */,
+				F7B20BB225A06F44005BFFF8 /* TestViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -669,6 +687,7 @@
 				F7B7242A22EEE528005A6E0D /* WiFiViewController.xib in Resources */,
 				F72F676522ECA8C500787029 /* SystemViewController.xib in Resources */,
 				F72F583322EAC948001E18F5 /* DetailSettingView.xib in Resources */,
+				F7B20BB425A06F44005BFFF8 /* TestViewController.xib in Resources */,
 				F7AACE3A2361F475002858DA /* Launch Screen.storyboard in Resources */,
 				F76F53BC24D7030000D36424 /* FirstViewController.xib in Resources */,
 				F76F53C224D719C500D36424 /* Home.storyboard in Resources */,
@@ -677,9 +696,11 @@
 				F729C04022F7148F00336A4F /* AddViewController.xib in Resources */,
 				F71B536722D8DB0000167B97 /* Setting.storyboard in Resources */,
 				F71B536A22D8DB0000167B97 /* Repeat.storyboard in Resources */,
+				F7B20B91259F7CD5005BFFF8 /* ResetViewController.xib in Resources */,
 				F71B536822D8DB0000167B97 /* Mine.storyboard in Resources */,
 				F753E09A22E35A2300FEA8A3 /* LightSettingView.xib in Resources */,
 				F71B536922D8DB0000167B97 /* Basic.storyboard in Resources */,
+				F7B20B96259F8559005BFFF8 /* SelectWiFiViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,10 +759,12 @@
 				F729C03F22F7148F00336A4F /* AddViewController.swift in Sources */,
 				A95DEE64259C60F900984DB4 /* PPFormBaseViewController.swift in Sources */,
 				F76F53CB24D72C0900D36424 /* NewLoginViewController.swift in Sources */,
+				F7B20B95259F8559005BFFF8 /* SelectWiFiViewController.swift in Sources */,
 				F7FC61F422DDD4D70009027C /* NetworkTools.swift in Sources */,
 				F73D681F22E9B0F300345F19 /* RepeatViewModel.swift in Sources */,
 				F72F583522EACF38001E18F5 /* RepeatDetailViewController.swift in Sources */,
 				F72F172422DF6C7F00A14316 /* PPAlertBaseViewController.swift in Sources */,
+				F7B20B90259F7CD5005BFFF8 /* ResetViewController.swift in Sources */,
 				F71B52F822D81CB100167B97 /* AppDelegate.swift in Sources */,
 				F7FC61F922DDE3FD0009027C /* NSDate-Extension.swift in Sources */,
 				F72D40DB22FE6E0900C28959 /* String-Exension.swift in Sources */,
@@ -772,6 +795,7 @@
 				F72F583122EAC7E1001E18F5 /* DetailSettingView.swift in Sources */,
 				F71FF1372355E2720067F0C2 /* EspSettingViewController.swift in Sources */,
 				F712F3FC22DB72B700585544 /* RepeatViewController.swift in Sources */,
+				F7B20BB325A06F44005BFFF8 /* TestViewController.swift in Sources */,
 				F758E2B322DC6AE8009E29B6 /* RegisterViewController.swift in Sources */,
 				F76F53BB24D7030000D36424 /* FirstViewController.swift in Sources */,
 				F7FC61F722DDDCF40009027C /* ProfileViewModel.swift in Sources */,
@@ -918,7 +942,7 @@
 				CODE_SIGN_ENTITLEMENTS = ppLedc/ppLedc.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5SBAWUCDXV;
 				INFOPLIST_FILE = ppLedc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -945,7 +969,7 @@
 				CODE_SIGN_ENTITLEMENTS = ppLedc/ppLedc.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 5SBAWUCDXV;
 				INFOPLIST_FILE = ppLedc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;

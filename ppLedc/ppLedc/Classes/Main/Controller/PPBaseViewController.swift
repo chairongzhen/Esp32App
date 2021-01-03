@@ -20,6 +20,21 @@ class PPBaseViewController: UIViewController {
 
 
 extension PPBaseViewController {
+    func getOpenid() -> String {
+        guard let openid : String =  UserDefaults.standard.object(forKey: "openid") as? String else {
+            return ""
+        }
+        return openid
+    }
+    func autoHideAlertMessage(message: String) {
+        let alertController = UIAlertController(title: message,
+                                                message: nil, preferredStyle: .alert)
+        self.present(alertController, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.presentedViewController?.dismiss(animated: false, completion: nil)
+            
+        }
+    }   
     private func setupNavigationBar() {
         // 设置左侧item
         let btn = UIButton()
@@ -46,6 +61,7 @@ extension PPBaseViewController {
     }
     
     @objc private func addNew() {
-        self.tabBarController?.selectedIndex = 2
+                let step1 = AddViewController()
+                self.navigationController!.pushViewController(step1, animated: true)
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,7 +39,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt1-6W-I4U">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt1-6W-I4U">
                     <rect key="frame" x="157" y="498" width="100" height="30"/>
                     <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -47,7 +47,7 @@
                         <constraint firstAttribute="width" constant="100" id="X4w-dM-IAF"/>
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" title="保存并上传"/>
+                    <state key="normal" title="确认连接"/>
                     <connections>
                         <action selector="btnSave:" destination="-1" eventType="touchUpInside" id="9KM-tr-fLA"/>
                     </connections>
@@ -69,18 +69,27 @@
                         <constraint firstAttribute="height" constant="30" id="bb2-ta-Efd"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置完后,请返回测试页,进入app主程序" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EP-yZ-r52">
-                    <rect key="frame" x="100.5" y="548" width="213" height="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当设备指标灯常灯即联网成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EP-yZ-r52">
+                    <rect key="frame" x="127.5" y="548" width="159.5" height="15"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如未出现连接按钮,因为未切换wifi,请回到上一步切换" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYm-AJ-W5X">
+                    <rect key="frame" x="65" y="573" width="284" height="15"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="KrW-Uq-wOB" firstAttribute="top" secondItem="Gk8-Fh-dtV" secondAttribute="bottom" constant="30" id="19p-3j-OSf"/>
                 <constraint firstItem="Gk8-Fh-dtV" firstAttribute="top" secondItem="oaT-Zi-jy6" secondAttribute="bottom" constant="17" id="1oE-Cz-O4A"/>
+                <constraint firstItem="FYm-AJ-W5X" firstAttribute="top" secondItem="5EP-yZ-r52" secondAttribute="bottom" constant="10" id="AhW-iR-NGv"/>
                 <constraint firstItem="Gk8-Fh-dtV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Apd-Gu-RpG"/>
                 <constraint firstItem="Vt1-6W-I4U" firstAttribute="top" secondItem="KrW-Uq-wOB" secondAttribute="bottom" constant="35" id="BOe-f7-xTc"/>
                 <constraint firstItem="Rrv-fc-hDz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LxC-nm-3lz"/>
@@ -91,9 +100,9 @@
                 <constraint firstItem="KrW-Uq-wOB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kad-o3-ZJ0"/>
                 <constraint firstItem="KrW-Uq-wOB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="qiY-YG-0ZN"/>
                 <constraint firstItem="5EP-yZ-r52" firstAttribute="top" secondItem="Vt1-6W-I4U" secondAttribute="bottom" constant="20" id="u0O-tp-Qob"/>
+                <constraint firstItem="FYm-AJ-W5X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vi7-6U-na4"/>
                 <constraint firstItem="Gk8-Fh-dtV" firstAttribute="top" secondItem="Rrv-fc-hDz" secondAttribute="bottom" constant="20" id="z8y-8W-mj7"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="150.66964285714286"/>
         </view>
     </objects>

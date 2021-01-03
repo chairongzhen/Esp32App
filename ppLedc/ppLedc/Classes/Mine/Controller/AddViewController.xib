@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,26 +75,36 @@
                     <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step1" translatesAutoresizingMaskIntoConstraints="NO" id="dqD-wI-yMk">
+                    <rect key="frame" x="107" y="253" width="200" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="kQL-Jw-uWF"/>
+                        <constraint firstAttribute="height" constant="150" id="wrx-00-Jbt"/>
+                    </constraints>
+                </imageView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="yYD-O3-RBw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1bA-Mh-wBs"/>
                 <constraint firstItem="yYD-O3-RBw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="290-kq-9YC"/>
                 <constraint firstItem="zSD-cY-p4b" firstAttribute="leading" secondItem="936-wL-fT8" secondAttribute="trailing" constant="10" id="Cjx-q0-kA7"/>
                 <constraint firstItem="V4U-QL-Zg5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ECF-be-zZi"/>
+                <constraint firstItem="yYD-O3-RBw" firstAttribute="top" secondItem="dqD-wI-yMk" secondAttribute="bottom" constant="30" id="JSo-tc-gSS"/>
                 <constraint firstItem="yYD-O3-RBw" firstAttribute="leading" secondItem="RKp-al-DYn" secondAttribute="trailing" id="Qpr-i2-Keu"/>
                 <constraint firstItem="936-wL-fT8" firstAttribute="leading" secondItem="yYD-O3-RBw" secondAttribute="trailing" constant="15" id="UZf-VA-Y3b"/>
                 <constraint firstItem="RKp-al-DYn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ath-a4-KNg"/>
                 <constraint firstItem="zSD-cY-p4b" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fKh-GK-do6"/>
                 <constraint firstItem="936-wL-fT8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fjP-RO-kCf"/>
                 <constraint firstItem="V4U-QL-Zg5" firstAttribute="top" secondItem="yYD-O3-RBw" secondAttribute="bottom" constant="15" id="r68-sT-B9V"/>
+                <constraint firstItem="dqD-wI-yMk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ytE-RX-R8e"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="143"/>
         </view>
     </objects>
     <resources>
         <image name="add_h" width="22" height="22"/>
         <image name="scan_h" width="22" height="22"/>
+        <image name="step1" width="122" height="116"/>
     </resources>
 </document>

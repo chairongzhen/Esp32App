@@ -13,9 +13,7 @@ class WiFiViewController: PPAlertBaseViewController {
     @IBOutlet weak var txtSsid: UITextField!
     @IBOutlet weak var txtPwd: UITextField!
     @IBOutlet weak var btnConnect: UIButton!
-    
     private lazy var offlineViewModel : OfflineViewModel = OfflineViewModel()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "WiFi设置"
@@ -33,9 +31,14 @@ class WiFiViewController: PPAlertBaseViewController {
         txtSsid.attributedPlaceholder = unamePAttr
         let pwdPAttr = NSAttributedString(string: "密码", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         txtPwd.attributedPlaceholder = pwdPAttr
-        
-        
         getSsidInfo()
+        btnConnect.isHidden = false
+        if isEspAp() {
+            btnConnect.isHidden = false
+        } else {
+            btnConnect.isHidden = true
+        }
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,11 +60,16 @@ extension WiFiViewController {
             self.autoHideAlertMessage(message:  "密码不能为空")
             return;
         }
+
         
         offlineViewModel.settingWiFi(ssid: txtSsid.text!, pwd: txtPwd.text!) { (message) in
             self.autoHideAlertMessage(message: "操作成功,请稍等设备正在连接中")
-            print("message")
+            self.navigationController?.popToRootViewController(animated: true)
+
         }
+        
+        Thread.sleep(forTimeInterval: 0.5)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     private func getSsidInfo() {
@@ -74,4 +82,17 @@ extension WiFiViewController {
         }
         
     }
+    
+    private func isEspAp() -> Bool {
+        var isAP : Bool = false
+        let currentSSID = getUsedSSID()
+        let apPattern = "^esp_[\\da-zA-Z]{12}$"
+        let regex = try? NSRegularExpression(pattern: apPattern, options: [])
+        if let results = regex?.matches(in: currentSSID, options: [], range: NSRange(location: 0, length: currentSSID.count)), results.count != 0 {
+            
+            isAP = true
+        }
+        return isAP
+    }
+    
 }
