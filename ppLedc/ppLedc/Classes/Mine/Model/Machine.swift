@@ -13,6 +13,7 @@ class Machine: NSObject {
     @objc var mname : String = ""
     @objc var ip : String = ""
     @objc var online : String = ""
+    @objc var version : String = ""
     
     override init() {
         super.init()

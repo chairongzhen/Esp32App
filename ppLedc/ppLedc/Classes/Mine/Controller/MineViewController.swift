@@ -96,7 +96,6 @@ extension MineViewController {
     }
     
     @objc private func timerAction() {
-        print("here again")
         loadBinds()
     }
 }

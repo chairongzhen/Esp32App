@@ -25,9 +25,9 @@ class MyTableViewCell: UITableViewCell {
             // 2. set pic
             iconImv.image = UIImage(named: "light")
             
-            // 3. set status111
+            // 3. set status
             if machine.online == "online" {
-                statusLabel.text = " 内网地址:\(machine.ip)"
+                statusLabel.text = " IP:\(machine.ip) Ver: \(machine.version)"
             } else {
                 statusLabel.text = "离线"
             }
