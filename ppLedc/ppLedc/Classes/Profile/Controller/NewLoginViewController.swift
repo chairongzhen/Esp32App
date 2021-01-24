@@ -10,19 +10,25 @@ import UIKit
 
 class NewLoginViewController: UIViewController,UITextFieldDelegate {
     private lazy var profileVM : ProfileViewModel = ProfileViewModel()
+    @IBOutlet weak var txtPwd: UITextField!
+    @IBOutlet weak var txtUser: UITextField!
+    
+    @IBOutlet weak var btnWechat: UIButton!
+    
+    @IBOutlet weak var btnLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "用户登陆"
         NotificationCenter.default.addObserver(self, selector: #selector(upDataChange(notif:)), name: NSNotification.Name(rawValue: "wlogin"), object: nil)
         self.hideKeyboardWhenTappedAround()
+        btnWechat.isHidden = true;
+        if WXApi.isWXAppInstalled() {
+            btnWechat.isHidden = false;
+        }
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var txtPwd: UITextField!
-    @IBOutlet weak var txtUser: UITextField!
-    
 
-    @IBOutlet weak var btnLogin: UIButton!
     
 }
 
