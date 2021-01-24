@@ -37,10 +37,10 @@ extension PPBaseViewController {
     }   
     private func setupNavigationBar() {
         // 设置左侧item
-        let btn = UIButton()
-        btn.setImage(UIImage(named: "logo"), for: .normal)
-        btn.sizeToFit()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+//        let btn = UIButton()
+//        btn.setImage(UIImage(named: "logo"), for: .normal)
+//        btn.sizeToFit()
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         // 设置右侧item
         let checkout = UIBarButtonItem(image: UIImage(named: "quit"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.quit))
         let offline = UIBarButtonItem(image: UIImage(named: "offline"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.offline))

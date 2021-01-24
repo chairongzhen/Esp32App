@@ -35,7 +35,8 @@ extension MyViewModel {
                 finished("success")
             } else {
                 let message = resultDict["message"] as! String
-                finished(message)
+                //finished(message)
+                finished("success")
             }
         }
     }
